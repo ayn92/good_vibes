@@ -223,3 +223,156 @@ h2 {
     top: 1040px;
     left: 230px;
 }
+
+
+
+.skill {
+    padding-top: 80px;
+}
+
+.sub_good_skill {
+    font-size: 65px;
+    color: #344699;
+    -webkit-text-stroke: 1px #f4f2ef;
+    text-shadow: 5px 5px 0 #f4f2ef;
+    display: flex;
+    justify-content: center;
+
+}
+
+.sub_skill {
+    font-family: 'bovine-mvb', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #f4f2ef;
+    font-size: 88px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.naminami {
+    width: 259px;
+    padding-top: 66px;
+    position: relative;
+}
+
+.desing{
+    width: 153px;
+    position: absolute;
+}
+
+.coding {
+    width: 147px;
+}
+
+.movie {
+    width: 117px;
+}
+
+.skill_title {
+    font-family: "futura-pt", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 25px;
+    padding: 47px 0 19px 0;
+}
+
+.skill_text {
+    font-family: "hiragino-kaku-gothic-pron", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: #f4f2ef;
+    font-size: 17px;
+}
+
+.skill_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+.switching {
+    display: flex;
+    justify-content: center;
+}
+
+.kira_switching {
+    width: 38px;
+    padding-top: 80px;
+}
+
+
+
+.moku_top {
+    width: 1307px;
+    padding-top: 90px;
+    position: relative;
+}
+
+.sub_good_wroks {
+    font-size: 65px;
+    color: #f4f2ef;
+    -webkit-text-stroke: 1px #344699;
+    text-shadow: 5px 5px 0 #344699;
+    position: absolute;
+    top: 73%;
+    left: 40%;
+}
+
+.sub_wroks {
+    font-size: 88px;
+    position: absolute;
+    top: 75%;
+    left: 36%;
+
+}
+
+.wroks_btn {
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    top: 60%;
+    left: 70%;
+}
+
+
+
+
+.contact_top_text {
+    font-family: "hiragino-kaku-gothic-pron", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: #f4f2ef;
+    font-size: 25px;
+    padding-top: 94px;
+
+}
+
+.contact_bg {
+    width: 435px;
+    padding-top: 36px;
+    position: relative;
+}
+
+.contact_good {
+    font-family: 'bovine-mvb', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #f4f2ef;
+    font-size: 56px;
+    position: absolute;
+    bottom: 180px;
+    left: 100px;
+}
+
+.contact {
+    font-family: 'bovine-mvb', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #f4f2ef;
+    font-size: 70px;
+}
