@@ -3,6 +3,7 @@
 body {
     max-width: 1336px;
     background-color: #344699;
+    position: relative;
 }
 
 .nav_menu {
@@ -73,60 +74,50 @@ h1 {
     padding: 0 0 0 487px;
 }
 
-.box,
-.box:before,
-.box:after,
-.box-body,
-.box-body:before {
+.kira_orn_solid {
+    width: 78px;
     position: absolute;
-    background-color: #f4f2ef;
-    width: 730px;
-    height: 690px;
+    top: 185px;
+    right: 89px;
+
 }
 
-.box:before {
-    transform: rotate(22deg);
-    content: '';
+.kira_orn {
+    width: 65px;
+    position: absolute;
+    top: 224px;
+    right: 154px;
 }
 
-.box:after {
-    transform: rotate(-22deg);
-    content: '';
+.kira_orn_2 {
+    width: 40px;
+    position: absolute;
+    top: 528px;
+    left: 255px;
 }
 
-.box-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    z-index: 1;
+.kira_wh {
+    width: 40px;
+    position: absolute;
+    top: 213px;
+    right: 213px;
+
 }
 
-.box-body:before {
-    transform: rotate(45deg);
-    content: '';
-    z-index: -1;
-}
-
-.box-body p {
-    font-family: 'hiragino-kaku-gothic-pron', sans-serif;
-    font-style: normal;
-    font-weight: 200;
-    padding: 0.2rem;
-    font-size: 20px;
-    color: #344699;
-}
-
-.bottom_space {
-    margin-bottom: 1.7em;
+.kira_wh_solid {
+    width: 86px;
+    position: absolute;
+    top: 483px;
+    left: 183px;
 }
 
 
 
-.about {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 280px 18px 0 0;
+
+.toge_top {
+    width: 850px;
+    padding: 100px 0 0 500px;
+    position: relative;
 }
 
 h2 {
@@ -134,18 +125,20 @@ h2 {
     font-style: normal;
     font-weight: 400;
     color: #344699;
-    position: absolute;
-    z-index: 100;
-    text-align: center;
+    display: flex;
+    justify-content: end;
+    z-index: 1000;
+
 }
 
 .sub_good {
     font-size: 65px;
     color: #f4f2ef;
     -webkit-text-stroke: 1px #344699;
-    position: relative;
-    z-index: 100;
     text-shadow: 5px 5px 0 #344699;
+    position: absolute;
+    top: 900px;
+    right: 315px;
 }
 
 .sub_about {
@@ -155,23 +148,78 @@ h2 {
     color: #344699;
     font-size: 88px;
     position: absolute;
-    z-index: 100;
+    top: 963px;
+    right: 264px;
+}
+
+.name {
+    font-family: "futura-pt-bold", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #344699;
+    font-size: 53px;
+    position: absolute;
+    top: 1070px;
+    right: 245px;
+}
+
+.about_top_text {
+    font-family: "hiragino-kaku-gothic-pron", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: #344699;
+    font-size: 20px;
+    position: absolute;
+    top: 1440px;
+    right: 130px;
+
 }
 
 
+.about_btn {
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    top: 1390px;
+    right: 240px;
+}
+
 .viwemore {
-    font-family: 'futura-pt-condensed', sans-serif;
+    font-family: "futura-pt-bold", sans-serif;
+    font-weight: 700;
     font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
+    font-size: 23px;
     color: #f4f2ef;
     background-color: #ff7041;
     width: 172px;
     height: 47px;
     border-radius: 23.5px;
-    margin: 100px;
     border: none;
-    position: absolute;
-    z-index: 100;
 }
 
+.arrow{
+    position: relative;
+  }
+  
+  .arrow::after{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    vertical-align: middle;
+    width: 0.3em;   /* arrow size */
+    height: 0.3em;  /* arrow size */
+    border-top: 2px solid #f4f2ef;
+    border-right: 2px solid #f4f2ef;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+
+.about_top_photo {
+    width: 413px;
+    position: absolute;
+    top: 1040px;
+    left: 230px;
+}
