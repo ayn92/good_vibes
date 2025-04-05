@@ -9,17 +9,15 @@ body {
 
 /* ヘッダー */
 
-.nav_menu {
+.header_menu {
     font-family: "futura-pt-bold", "sans-serif";
     font-style: normal;
     font-weight: 700;
     font-size: 17px;
     display: flex;
     justify-content: right;
-}
-
-.nav_item {
-    padding: 36px 40px 47px 0;
+    gap: 40px;
+    align-items: baseline;
 }
 
 .conect {
@@ -77,32 +75,34 @@ h1 {
     padding: 0 0 0 487px;
 }
 
+
+
 .kira_orn_solid {
     width: 78px;
     position: absolute;
-    top: 185px;
-    right: 89px;
+    top: 136px;
+    right: 85px;
 
 }
 
 .kira_orn {
     width: 65px;
     position: absolute;
-    top: 224px;
-    right: 154px;
+    top: 190px;
+    right: 147px;
 }
 
 .kira_orn_2 {
     width: 40px;
     position: absolute;
-    top: 528px;
-    left: 255px;
+    top: 513px;
+    left: 247px;
 }
 
 .kira_wh {
     width: 40px;
     position: absolute;
-    top: 213px;
+    top: 175px;
     right: 213px;
 
 }
@@ -110,7 +110,7 @@ h1 {
 .kira_wh_solid {
     width: 86px;
     position: absolute;
-    top: 483px;
+    top: 450px;
     left: 183px;
 }
 
@@ -312,6 +312,7 @@ h2 {
     font-size: 17px;
     text-align: left;
     width: 337px;
+    line-height: 1.35;
 }
 
 .skill_content {
@@ -346,7 +347,7 @@ h2 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-170%);
+    transform: translate(-37%,-252%);
     text-align: center;
 }
 
@@ -371,6 +372,8 @@ h2 {
     display: flex;
     position: absolute;
     padding-top: 100px;
+    gap: 100px;
+    justify-content: center;
 }
 
 .works_img > img{
@@ -380,8 +383,9 @@ h2 {
 }
 
 .works_btn {
-    display: flex;
-    justify-content: end;
+    position: absolute;
+    top: 85%;
+    left: 77%;
 }
 
 
@@ -463,26 +467,23 @@ h2 {
 
 /* フッター */
 
-.box {
+.footer_menu {
     background-color: #f4f2ef;
     width: 100%;
     height: 87px;
     position: absolute;
     bottom: 0;
+    display: flex;
+    /*j-content: left;*/
+    gap: 44px;
+    align-items: center;
+    padding-left: 50px;
 }
 
-.nav_footer {
+.footer_item {
     font-family: "futura-pt-bold", "sans-serif";
     font-style: normal;
     font-weight: 700;
     color: #344699;
     font-size: 17px;
-    display: flex;
-    justify-content: left;
-    padding-left: 50px;
-}
-
-.nav_item_fo {
-    padding: 36px 40px 47px 0;
-    color: #344699;
 }
