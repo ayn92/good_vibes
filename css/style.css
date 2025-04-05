@@ -44,12 +44,16 @@ h1 {
     -webkit-text-stroke: 0.5px #f4f2ef;
 }
 
+.home {
+    padding-top: 60px;
+}
+
 .title_desing{
-    padding: 0 0 0 130px;
+    padding-left: 100px;
 }
 
 .title_feeling {
-    padding: 0 0 0 247px;
+    padding-left: 185px;
 }
 
 .main_title {
@@ -64,11 +68,11 @@ h1 {
     justify-content: center;
     align-items: center;
     background-position: center;
-    margin-left: 184px;
+    margin: 0 auto;
 }
 
 .title_idea {
-    padding: 15px 0 0 385px;
+    padding: 15px 0 0 400px;
 }
 
 .title_thinking {
@@ -80,38 +84,38 @@ h1 {
 .kira_orn_solid {
     width: 78px;
     position: absolute;
-    top: 136px;
-    right: 85px;
+    top: 198px;
+    right: 90px;
 
 }
 
 .kira_orn {
     width: 65px;
     position: absolute;
-    top: 190px;
+    top: 250px;
     right: 147px;
 }
 
 .kira_orn_2 {
-    width: 40px;
+    width: 50px;
     position: absolute;
-    top: 513px;
-    left: 247px;
+    top: 580px;
+    left: 230px;
 }
 
 .kira_wh {
     width: 40px;
     position: absolute;
-    top: 175px;
-    right: 213px;
+    top: 235px;
+    right: 210px;
 
 }
 
 .kira_wh_solid {
-    width: 86px;
+    width: 100px;
     position: absolute;
-    top: 450px;
-    left: 183px;
+    top: 510px;
+    left: 150px;
 }
 
 
@@ -126,7 +130,7 @@ h1 {
 .toge_top {
     width: 900px;
     position: relative;
-    padding-top: 130px;
+    padding-top: 170px;
 }
 
 .about_contents {
