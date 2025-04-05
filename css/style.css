@@ -4,6 +4,7 @@ body {
     max-width: 1336px;
     background-color: #344699;
     position: relative;
+    margin: 0 auto;
 }
 
 /* ヘッダー */
@@ -118,12 +119,12 @@ h1 {
 
 .about_top {
     position: relative;
-    width: 850px;
+    width: 900px;
     margin-left: auto;
 }
 
 .toge_top {
-    width: 850px;
+    width: 900px;
     position: relative;
     padding-top: 130px;
 }
@@ -173,24 +174,23 @@ h2 {
 
 }
 
-span {
-    color: #344699;
-    line-height: 1.35;
-    padding-bottom: 20px;
-}
-
-.about_top_text {
+.about_top_text > p {
+    width: 550px;
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
     font-style: normal;
     font-weight: 300;
     color: #344699;
     font-size: 20px;
+    line-height: 1.35;
+    padding-bottom: 20px;
 }
+
 
 
 .about_btn {
     display: flex;
     justify-content: end;
+    padding-top: 20px;
 }
 
 .viwemore {
@@ -204,12 +204,14 @@ span {
     height: 47px;
     border-radius: 23.5px;
     border: none;
+    position: relative;
+    padding-bottom: 7px;
 }
 
-.arrow{
+/*.arrow{
     position: relative;
-  }
-  
+  }*/
+
   .arrow::after{
     position: absolute;
     top: 0;
@@ -223,20 +225,21 @@ span {
     border-right: 2px solid #f4f2ef;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
+    right: 13px;
   }
   
 
 .about_top_photo {
     width: 413px;
     position: absolute;
-    top: 1040px;
-    left: 230px;
+    top: 26%;
+    left: 14%;
 }
 
 /* SKILL */
 
 .skill {
-    padding-top: 80px;
+    padding-top: 95px;
     text-align: center;
     margin: auto;
 }
@@ -271,7 +274,7 @@ span {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-48%,-36%);
     z-index: 1000;
 }
 
@@ -280,7 +283,7 @@ span {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-49%,-31%);
     z-index: 1000;
 }
 
@@ -289,7 +292,7 @@ span {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-47%,-25%);
     z-index: 1000;
 }
 
@@ -298,7 +301,7 @@ span {
     font-weight: 600;
     font-style: normal;
     font-size: 25px;
-    padding: 47px 0 19px 0;
+    padding: 30px 0 18px 0;
 }
 
 .skill_text {
@@ -307,11 +310,14 @@ span {
     font-weight: 300;
     color: #f4f2ef;
     font-size: 17px;
+    text-align: left;
+    width: 337px;
 }
 
 .skill_content {
+    width: 1366px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 
@@ -332,8 +338,8 @@ span {
 .works_top {
     width: 1307px;
     position: relative;
-    text-align: center;
     padding-top: 92px;
+    text-align: center;
 }
 
 .works_contens {
@@ -341,11 +347,12 @@ span {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-170%);
+    text-align: center;
 }
 
 .moku_top {
-    width: 1307px;
-    padding-top: 90px;
+    width: 1336px;
+    padding: 90px 0 0 55px;
 }
 
 .sub_good_works {
@@ -357,6 +364,19 @@ span {
 
 .sub_works {
     font-size: 88px;
+}
+
+.works_img {
+    width: 463px;
+    display: flex;
+    position: absolute;
+    padding-top: 100px;
+}
+
+.works_img > img{
+    width: 463px;
+    border-radius: 91px;
+
 }
 
 .works_btn {
@@ -376,11 +396,13 @@ span {
     font-size: 25px;
     padding-top: 94px;
     text-align: center;
+    line-height: 1.2;
 }
 
 .contact_btn {
     text-align: center;
     position: relative;
+    padding-bottom: 80px;
 }
 
 .contact_bg {
@@ -392,7 +414,7 @@ span {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-40%);
+    transform: translate(-50%,-73%);
 }
 
 .contact_good {
@@ -411,12 +433,42 @@ span {
     font-size: 70px;
 }
 
+.kira_wh_solid_con {
+    width: 72px;
+    position: absolute;
+    left: 316px;
+    bottom: 310px;
+}
+
+.kira_orn_con {
+    width: 43px;
+    position: absolute;
+    left: 371px;
+    bottom: 290px;
+}
+
+.kira_wh_con {
+    width: 43px;
+    position: absolute;
+    right: 365px;
+    bottom: 200px;
+}
+
+.kira_orn_solid_con {
+    width: 72px;
+    position: absolute;
+    right: 310px;
+    bottom: 150px;
+}
+
 /* フッター */
 
 .box {
     background-color: #f4f2ef;
-    width: 1366px;
+    width: 100%;
     height: 87px;
+    position: absolute;
+    bottom: 0;
 }
 
 .nav_footer {
@@ -427,4 +479,10 @@ span {
     font-size: 17px;
     display: flex;
     justify-content: left;
+    padding-left: 50px;
+}
+
+.nav_item_fo {
+    padding: 36px 40px 47px 0;
+    color: #344699;
 }
