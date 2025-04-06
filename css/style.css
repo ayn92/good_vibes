@@ -118,7 +118,7 @@ h1 {
 }
 
 
-/* about */
+/* top-about */
 
 .about_top {
     position: relative;
@@ -178,18 +178,16 @@ h2 {
 
 }
 
-.about_top_text > p {
+.about_top_text p {
     width: 550px;
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
     font-style: normal;
     font-weight: 300;
-    color: #344699;
     font-size: 20px;
+    color: #344699;
     line-height: 1.35;
-    padding-bottom: 20px;
+    padding-top: 25px;
 }
-
-
 
 .about_btn {
     display: flex;
@@ -212,11 +210,8 @@ h2 {
     padding-bottom: 7px;
 }
 
-/*.arrow{
-    position: relative;
-  }*/
 
-  .arrow::after{
+.arrow::after{
     position: absolute;
     top: 0;
     bottom: 0;
@@ -230,7 +225,7 @@ h2 {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     right: 13px;
-  }
+}
   
 
 .about_top_photo {
@@ -241,7 +236,7 @@ h2 {
     transform: translate(-116%,-198%);
 }
 
-/* SKILL */
+/* top-SKILL */
 
 .skill {
     padding-top: 95px;
@@ -338,7 +333,7 @@ h2 {
     padding-top: 80px;
 }
 
-/* WORKS */
+/* top-WORKS */
 
 .works_top {
     position: relative;
@@ -392,7 +387,7 @@ h2 {
 
 
 
-/* CONTACT */
+/* top-CONTACT */
 
 .contact_top_text {
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
@@ -409,6 +404,8 @@ h2 {
     text-align: center;
     position: relative;
     padding-bottom: 80px;
+    background-color:transparent;
+    border: none;
 }
 
 .contact_bg {
@@ -506,6 +503,9 @@ h2 {
 }
 
 
+
+/* about */
+
 .about_title {
     width: 100%;
     height: 845px;
@@ -554,7 +554,7 @@ h2 {
     z-index: 1000;
 }
 
-.about_text {
+.about_text p {
     width: 550px;
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
     font-style: normal;
@@ -565,6 +565,14 @@ h2 {
     position: absolute;
     top: 13%;
     left: 50%;
+}
+
+.about_text_2 {
+    padding-top: 370px;
+}
+
+.about_text_3 {
+    padding-top: 420px;
 }
 
 .about_myphoto {
@@ -676,7 +684,7 @@ h2 {
 
 
 
-
+/* works */
 
 .works {
     width: 100%;
@@ -735,3 +743,95 @@ h2 {
     padding: 10px;
 }
 
+
+/* contact */
+
+.contact_title {
+    background-color: #f4f2ef;
+    width: 100%;
+    height: 1300px;
+    text-align: center;
+}
+
+.contact_text {
+    font-family: "hiragino-kaku-gothic-pron", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: #344699;
+    font-size: 20px;
+    line-height: 1.35;
+    padding: 100px;
+}
+
+.c_form {
+    max-width: 690px;
+    margin: 0 auto;
+}
+
+.c_form_item {
+	display: flex;
+	justify-content: space-evenly;
+	margin-bottom: 30px;
+    color: #344699;
+}
+
+.c_form_label,
+.c_form_input {
+	padding: 10px;
+}
+.c_form_label {
+	width: 90%;
+}
+.c_form_input {
+	width: 90%;
+	font-size: 16px;
+	border: solid 1px #344699;
+	border-radius: 4px;
+}
+.c_form_input:focus-visible {
+	outline: #344699 auto 1px;
+}
+.c_form_required {
+	color: #f4f2ef;
+	background-color: #344699;
+	border-radius: 4px;
+	padding: 5px 5px;
+	margin: 0 0 0 18px;
+}
+textarea.c_form_input {
+	height: 160px;
+}
+.c_form_submit {
+	text-align: center;
+    font-family: dela-gothic-one, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+.c_form_submit button {
+	font-size: 23px;
+	font-weight: bold;
+	color: #344699;
+	background-color: #f4f2ef;
+	border: solid 1px #344699;
+	border-radius: 10px;
+	padding: 5px 32px;
+	transition: 0.4s;
+	cursor: pointer;
+}
+.c_form_submit button:hover {
+	color: #344699;
+	background-color: transparent;
+}
+
+.footer_menu_3 {
+    background-color: #344699;
+    width: 100%;
+    height: 87px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: left;
+    gap: 44px;
+    align-items: center;
+    padding-left: 50px;
+}
