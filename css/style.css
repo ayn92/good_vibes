@@ -791,6 +791,32 @@ h2 {
 }
 
 
+/**** works詳細 ****/
+.works_detail_contens {
+    text-align: center;
+}
+.works_contens_title {
+    font-family: "futura-pt-bold", "sans-serif";
+    font-style: normal;
+    font-weight: 700;
+    color: #344699;
+    font-size: 54px;
+}
+.works_contens_thumbnail > img {
+    width: 800px;
+    border-radius: 86px;
+}
+.works_detail_text {
+    font-family: "hiragino-kaku-gothic-pron", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: #344699;
+    font-size: 18px;
+    padding: 80px;
+    line-height: 1.65;
+}
+
+
 /* contact */
 
 .contact_title {
