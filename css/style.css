@@ -869,10 +869,6 @@ textarea.c_form_input {
 	cursor: pointer;
     box-shadow: 3px 3px #344699;
 }
-.c_form_submit button:hover {
-	color: #f4f2ef;
-	background-color: #344699;
-}
 
 
 .footer_menu_3 {
