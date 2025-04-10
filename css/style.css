@@ -807,7 +807,7 @@ h2 {
     color: #344699;
     font-size: 20px;
     line-height: 1.35;
-    padding: 100px 0 50px 0;
+    padding: 180px 0 30px 0;
 }
 
 .c_form {
@@ -882,4 +882,76 @@ textarea.c_form_input {
     gap: 44px;
     align-items: center;
     padding-left: 50px;
+}
+
+
+.thanks_text {
+    font-family: 'bovine-mvb', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    line-height: 0.9;
+    position: relative;
+    z-index: 1000;
+    padding: 70px;
+}
+
+.thankyou {
+    color: #344699;
+}
+.verymuch {
+    color: #f4f2ef;
+    -webkit-text-stroke: 0.5px #344699;
+}
+.circle {
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+    z-index: -1000;
+}
+.c_form_submit_2 {
+	text-align: center;
+    margin-top: 50px;
+}
+.c_form_submit_2 button {
+    font-family: "futura-pt-bold", "sans-serif";
+    font-style: normal;
+    font-weight: 700;
+	font-size: 20px;
+	color: #344699;
+	background-color: #f4f2ef;
+	border: solid 1px #344699;
+	border-radius: 10px;
+	padding: 8px 23px;
+	transition: 0.4s;
+	cursor: pointer;
+    box-shadow: 3px 3px #344699;
+}
+.kira_orn_solid_thx {
+    width: 110px;
+    position: absolute;
+    top: 60px;
+    left: 380px;
+}
+.kira_orn_thx {
+    width: 65px;
+    position: absolute;
+    top: 142px;
+    left: 450px;
+}
+.kira_orn_solid_thx_r {
+    width: 55px;
+    position: absolute;
+    top: 260px;
+    right: 395px;
+}
+.kira_orn_thx_r {
+    width: 95px;
+    position: absolute;
+    top: 275px;
+    right: 440px;
 }
