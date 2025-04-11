@@ -41,6 +41,9 @@ a:hover {
 .conect:hover {
     background-color: #f4f2ef;
 }
+.header_conect {
+    padding: 10px;
+}
 
 
 /* メインビジュアル */
@@ -206,7 +209,7 @@ h2 {
     padding-top: 20px;
 }
 
-.viwemore {
+.viewmore {
     font-family: "futura-pt-bold", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -218,14 +221,16 @@ h2 {
     border-radius: 23.5px;
     border: none;
     position: relative;
-    padding-bottom: 7px;
 }
-.viwemore:hover {
+.viewmore:hover {
     background-color: #f4f2ef;
     border: #ff7041 solid 1px;
 }
-.arrow:hover {
+.viewmore:hover .arrow {
     color: #ff7041;
+}
+.viewmore:hover .arrow::after {
+    border-color: #ff7041;
 }
 
 
@@ -746,14 +751,19 @@ h2 {
 
 .works_box {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 70px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .works_thumbnail > img {
-    width: 361px;
+    width: 100%;
     border-radius: 59px;
+}
+.works_detail {
+    width: 30%;
 }
 
 .works_sub {
