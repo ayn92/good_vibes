@@ -4,10 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>
+    <title>GOOD VIBES</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/vqq5gsx.css">
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'hrp7ecw',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
 </head>
 
 <body>
@@ -20,18 +30,18 @@
                 <li class="header_item"><a href="index.html">HOME</a></li>
                 <li class="header_item"><a href="about.html">ABOUT</a></li>
                 <li class="header_item"><a href="works.html">WORKS</a></li>
-                <li class="conect"><a href="contact.html" class="header_conect">CONTACT</a></li>
+                <li class="conect"><a href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
     </header>
     <!-- メインビジュアル -->
     <section class="home">
         <div class="title">
-            <h1 class="title_desing">GOOD DESING</h1>
-            <h1 class="title_feeling">GOOD FEELING</h1>
-            <h1 class="main_title"><a href="#">GOOD VIBES</a></h1>
-            <h1 class="title_idea">GOOD IDEA</h1>
-            <h1 class="title_thinking">GOOD THINKING</h1>
+            <h1 class="title_desing">GOOD <br class="sp_br">DESING</h1>
+            <h1 class="title_feeling">GOOD <br class="sp_br">FEELING</h1>
+            <h1 class="main_title"><a href="#">GOOD <br class="sp_br">VIBES</a></h1>
+            <h1 class="title_idea">GOOD <br class="sp_br">IDEA</h1>
+            <h1 class="title_thinking">GOOD <br class="sp_br">THINKING</h1>
         </div>
 
         <div>
@@ -139,9 +149,9 @@
             </div>
 
             <div class="works_btn">
-                <button class="viewmore">
-                    <a href="works.html" class="arrow">viwe more</a>
-                </button>
+                <a href="works.html" class="viewmore">
+                    <span class="arrow">view more</span>
+                </a>
             </div>
 
         </div>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>
+    <title>GOOD VIBES | CONTACT</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/vqq5gsx.css">
@@ -45,30 +45,130 @@
             ご依頼やお問い合わせは、どうぞお気軽にご連絡ください。<br>
             皆様との素敵なご縁を心よりお待ちしております。</p>
 
+        <!-- 問い合わせ入力画面 -->
+        <form>
+            <div class="c_form_item">
+                <label class="c_form_label" for="field_name">
+                    <span class="label_name">お名前</span>
+                    <span class="c_form_required">必須</span>
+                </label>
+                <input name="name" class="c_form_input" id="field-name" placeholder="相馬朱菜" type="text"
+                    required="required">
+            </div>
+
+            <div class="c_form_item">
+                <label class="c_form_label" for="field_co">
+                    <span class="label_co">会社名</span>
+                </label>
+                <input name="co" class="c_form_input" id="field-co" placeholder="株式会社〇〇" type="text"
+                    required="required">
+            </div>
+
+            <div class="c_form_item">
+                <label class="c_form_label" for="field_mail">
+                    <span class="label_mail">メールアドレス</span>
+                    <span class="c_form_required">必須</span>
+                </label>
+                <input name="mail" class="c_form_input" id="field-mail" placeholder="sample@gmail.com" type="email"
+                    required="required">
+            </div>
+
+            <div class="c_form_item">
+                <label class="c_form_label" for="field_message">
+                    <span class="label_message">お問い合わせ内容</span>
+                </label>
+                <textarea name="message" class="c_form_input" id="field-message" placeholder="お問い合わせ内容"></textarea>
+            </div>
+            <div class="c_form_submit">
+                <button type="submit">
+                    <span class="arrow">
+                        入力内容を確認する
+                    </span>
+                </button>
+            </div>
+            <!--<div class="about_btn">
+                <a href="about.html" class="viewmore">
+                    <span class="arrow">view more</span>
+                </a>
+            </div>-->
+        </form>
+
+        <!-- 問い合わせ内容確認画面 -->
         <form
             action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScuAXKJp3U_O5t_lUzBgCEWO0B0giWl9mSMzTntMU5PfT1Lvw/formResponse"
             method="POST" class="c_form">
+
+            <div class="c_form_item_conf">
+                <label class="c_form_label_conf" for="field_name">
+                    <span class="label_name">お名前</span>
+                </label>
+                <input name="entry.1406817588" class="c_form_input" id="field-name" placeholder="相馬 朱菜" type="text"
+                    readonly>
+            </div>
+
+            <div class="c_form_item_conf">
+                <label class="c_form_label_conf" for="field_co">
+                    <span class="label_co">会社名</span>
+                </label>
+                <input name="entry.1084443443" class="c_form_input" id="field-co" placeholder="株式会社〇〇" type="text"
+                    readonly>
+            </div>
+
+            <div class="c_form_item_conf_conf">
+                <label class="c_form_label" for="field_mail">
+                    <span class="label_mail">メールアドレス</span>
+                </label>
+                <input name="entry.1842694792" class="c_form_input" id="field-mail" placeholder="sample@gmail.com"
+                    type="email" readonly>
+            </div>
+
+            <div class="c_form_item_conf">
+                <label class="c_form_label" for="field_message">
+                    <span class="label_message">お問い合わせ内容</span>
+                </label>
+                <textarea name="entry.994569456" class="c_form_input" id="field-message" placeholder="お問い合わせ内容"
+                    readonly></textarea>
+            </div>
+
+            <div class="form-group button_wrap">
+                <button type="button" class="corr_btn">修正</button>
+                <button type="submit" class="send_btn">送信</button>
+            </div>
+        </form>
+
+        <!--<form
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScuAXKJp3U_O5t_lUzBgCEWO0B0giWl9mSMzTntMU5PfT1Lvw/formResponse"
+            method="POST" class="c_form">
             <div class="c_form_item">
-                <label class="c_form_label" for="field_name">お名前<label class="c_form_label"
-                        for="field_name"></label><span class="c_form_required">必須</span></label>
+                <label class="c_form_label" for="field_name">
+                    <span class="label_name">お名前</span>
+                    <span class="c_form_required">必須</span>
+                </label>
                 <input name="entry.1406817588" class="c_form_input" id="field-name" placeholder="相馬 朱菜" type="text"
                     required="required">
             </div>
 
             <div class="c_form_item">
-                <label class="c_form_label" for="field_co">会社名</label>
+                <label class="c_form_label" for="field_co">
+                    <span class="label_co">会社名</span>
+                </label>
                 <input name="entry.1084443443" class="c_form_input" id="field-co" placeholder="株式会社〇〇" type="text"
                     required="required">
             </div>
 
             <div class="c_form_item">
-                <label class="c_form_label" for="field_mail">メールアドレス<span class="c_form_required">必須</span></label>
+                <label class="c_form_label" for="field_mail">
+                    <span class="label_mail">メールアドレス</span>
+                    <span class="c_form_required">必須</span>
+                </label>
                 <input name="entry.1842694792" class="c_form_input" id="field-mail" placeholder="sample@gmail.com"
                     type="email" required="required">
             </div>
 
             <div class="c_form_item">
-                <label class="c_form_label" for="field_message">お問い合わせ内容</label>
+                <label class="c_form_label" for="field_message">
+                    <span class="label_message">お問い合わせ内容</span>
+                </label>
                 <textarea name="entry.994569456" class="c_form_input" id="field-message"
                     placeholder="お問い合わせ内容"></textarea>
             </div>
@@ -76,19 +176,87 @@
                 <button type="submit">入力内容を確認する</button>
             </div>
         </form>
-    </div>
+    </div>-->
 
-    <!-- フッター -->
-    <footer>
-        <nav>
-            <ul class="footer_menu_3">
-                <li class="footer_item_2"><a href="index.html">HOME</a></li>
-                <li class="footer_item_2"><a href="about.html">ABOUT</a></li>
-                <li class="footer_item_2"><a href="works.html">WORKS</a></li>
-            </ul>
-        </nav>
-    </footer>
+        <div class="contact_title">
+            <p class="contact_text">この度はお問い合わせをいただき、誠にありがとうございます。<br>
+                担当者より順次ご連絡をさせていただきます。</p>
+            <div class="thanks_text">
+                <h3 class="thankyou">THANK<br>YOU</h3>
+                <h3 class="verymuch">VERY<br>MUCH!</h3>
+                <img src="./image/SVG/circle.svg" alt="オレンジ線の円" class="circle">
 
+                <img src="./image/SVG/kira_orn_sen.svg" alt="オレンジ線のキラキラ" class="kira_orn_solid_thx">
+                <img src="./image/SVG/kira_orn.svg" alt="オレンジ塗りのキラキラ" class="kira_orn_thx">
+                <img src="./image/SVG/kira_orn_sen.svg" alt="オレンジ線のキラキラ" class="kira_orn_solid_thx_r">
+                <img src="./image/SVG/kira_orn.svg" alt="オレンジ塗りのキラキラ" class="kira_orn_thx_r">
+            </div>
+
+            <div class="c_form_submit_2">
+                <button type="submit_2">HOME</button>
+            </div>
+        </div>
+
+        <!-- フッター -->
+        <footer>
+            <nav>
+                <ul class="footer_menu_3">
+                    <li class="footer_item_2"><a href="index.html">HOME</a></li>
+                    <li class="footer_item_2"><a href="about.html">ABOUT</a></li>
+                    <li class="footer_item_2"><a href="works.html">WORKS</a></li>
+                </ul>
+            </nav>
+        </footer>
+
+        <script type="text/javascript">
+            let submitted = false;
+        </script>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="
+            if(submitted){
+              $('.confirm_form').hide()
+              $('.completed_form').show()
+        
+              $('.progress_circle.confirm').removeClass('active')
+              $('.progress_label.confirm').removeClass('active')
+              $('.progress_circle.complete').addClass('active')
+              $('.progress_label.complete').addClass('active')
+            }
+          "></iframe>
+
+
+        <script>
+            $(function () {
+                $('.input_form').on('submit', function (event) {
+                    event.preventDefault()
+
+                    // 入力された内容を取得
+                    let name = $('.input_form input[name="name"]').val()
+                    let mail = $('.input_form input[name="email"]').val()
+                    let message = $('.input_form textarea[name="message"]').val()
+
+                    if (name && co && mail && message) {
+                        // 入力フォームを非表示
+                        $('.input_form').hide()
+                        // 確認画面を表示
+                        $('.confirm_form').show()
+
+                        // 入力された内容を挿入
+                        $('.confirm_form #name').val(name)
+                        $('.confirm_form #co').val(co)
+                        $('.confirm_form #email').val(mail)
+                        $('.confirm_form #message').val(message)
+
+                        // 修正ボタンが押された時
+                        $('.fix_button').on('click', function () {
+                            // 入力画面を表示
+                            $('.input_form').show()
+                            // 確認画面を非表示
+                            $('.confirm_form').hide()
+                        })
+                    }
+                })
+            })
+        </script>
 
 </body>
 

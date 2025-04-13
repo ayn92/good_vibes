@@ -4,10 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>prtfolio</title>
+    <title>GOOD VIBES | WORKS詳細</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/vqq5gsx.css">
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'hrp7ecw',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
 </head>
 
 <body>
@@ -34,7 +44,7 @@
         </div>
 
         <div class="works_detail_contens">
-            <p class="works_sub">web site</p>
+            <p class="works_detail_sub">web site</p>
             <h3 class="works_contens_title">Portfolio</h3>
             <div class="works_contens_thumbnail">
                 <img src="./image/png/pf.png" alt="ポートフォリオ">
@@ -43,16 +53,36 @@
             <p class="works_detail_text">私のポートフォリオ（当サイト）です。<br>
                 コンセプト設計からデザイン、コーディングまで一貫して制作しました。<br>
                 テーマは『GOOD VIBES』。ワクワク感を大切にし、<br>
-                楽しんでいただけるようなWebサイトを目指しました。<br>
+                楽しんでいただけるようなWebサイトを目指しました。</p>
 
-                メインカラーは青を使用し、落ち着きすぎないように太めなフォントや<br>
+            <p class="works_detail_text_2">メインカラーは青を使用し、落ち着きすぎないように太めなフォントや<br>
                 図形を取り入れ、ポップな印象に仕上げています。<br>
                 さらに、アニメーションを加えることで、動きのある楽しい雰囲気を演出しました。<br>
                 また、強調したい部分にはオレンジを使用し、<br>
                 シンプルながらも視認性を高め、わかりやすさを重視しています。</p>
-            <div>
-                <p>担当範囲</p>
-                <p>デザイン・コーディング</p>
+
+            <div class="detail_works">
+                <p class="detail_box">担当範囲</p>
+                <p class="detail_box_contens">デザイン・コーディング</p>
+            </div>
+
+            <div class="detail_works">
+                <p class="detail_box">制作期間</p>
+                <p class="detail_box_contens">デザイン 1ヶ月<br>コーディング 1ヶ月</p>
+            </div>
+
+            <div class="detail_works">
+                <p class="detail_box">使用ツール</p>
+                <p class="detail_box_contens">Illustrator / Photoshop<br>VS code</p>
+            </div>
+
+            <div class="pf_img">
+                <img src="./image/png/portfolio_whole_pc.png" alt="ポートフォリオ_PC" class="pf_pc">
+                <img src="./image/png/portfolio_whole_sp.png" alt="ポートフォリオ_SP" class="pf_sp">
+            </div>
+
+            <div class="back_btn">
+                <a href="works.html">一覧に戻る</a>
             </div>
         </div>
     </section>
