@@ -157,7 +157,7 @@ h1 {
 
 .about_top {
     position: relative;
-    width: 60%;
+    width: 63%;
     padding-left: 500px;
 }
 
@@ -171,9 +171,8 @@ h1 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-45%);
+    transform: translate(-5%,-45%);
     text-align: center;
-    padding-left: 500px;
 }
 
 h2 {
@@ -278,7 +277,7 @@ h2 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-116%,-198%);
+    transform: translate(-116%,-200%);
 }
 
 /* top-SKILL */
@@ -437,17 +436,28 @@ h2 {
 }
 
 .works_btn {
-    display: flex;
-    justify-content: end;
     position: absolute;
     top: 85%;
     right: 20%;
+}
+.works_viewmore {
+    font-family: "futura-pt-bold", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 23px;
+    color: #f4f2ef;
+    background-color: #ff7041;
+    width: 30%;
+    height: 47px;
+    border-radius: 23.5px;
+    border: none;
+    position: relative;
+    line-height: 44px;
 }
 
 
 
 /* top-CONTACT */
-
 .contact_top_text {
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
     font-style: normal;
@@ -629,7 +639,7 @@ h2 {
 }
 
 .blue_toge {
-    width: 558px;
+    width: 39%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -659,7 +669,7 @@ h2 {
 }
 
 .about_myphoto {
-    width: 380px;
+    width: 27%;
     height: 498px;
     padding: 75px 0 75px 0;
 }
@@ -1117,6 +1127,18 @@ textarea.c_form_input {
 	cursor: pointer;
     box-shadow: 3px 3px #344699;
 }
+.c_arrow::after{
+    position: absolute;
+    margin: auto;
+    content: "";
+    vertical-align: middle;
+    width: 0.3em;   /* arrow size */
+    height: 0.3em;  /* arrow size */
+    border-top: 2px solid #344699;
+    border-right: 2px solid #344699;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
 
 .footer_menu_3 {
     background-color: #344699;
@@ -1224,29 +1246,29 @@ textarea.c_form_input {
     font-family: "dela-gothic-one", sans-serif;
     font-style: normal;
     font-weight: 400;
-	font-size: 23px;
+	font-size: 16px;
 	color: #344699;
 	background-color: #f4f2ef;
 	border: solid 1px #344699;
 	border-radius: 10px;
-	padding: 5px 32px;
+	padding: 10px 33px;
 	transition: 0.4s;
 	cursor: pointer;
-    box-shadow: 3px 3px #344699;
+    box-shadow: 5px 5px #344699;
 }
 .send_btn {
     font-family: "dela-gothic-one", sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 23px;
+    font-size: 20px;
     color: #344699;
     background-color: #f4f2ef;
     border: solid 1px #344699;
-    border-radius: 10px;
-    padding: 5px 32px;
+    border-radius: 13px;
+    padding: 15px 34px;
     transition: 0.4s;
     cursor: pointer;
-    box-shadow: 3px 3px #344699;
+    box-shadow: 5px 5px #344699;
 }
 
 @media screen and (max-width: 767px) {
