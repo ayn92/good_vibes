@@ -277,7 +277,7 @@ h2 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-116%,-200%);
+    transform: translate(-114%,-200%);
 }
 
 /* top-SKILL */
@@ -453,6 +453,31 @@ h2 {
     border: none;
     position: relative;
     line-height: 44px;
+}
+.works_viewmore:hover {
+    background-color: #f4f2ef;
+    border: #ff7041 solid 1px;
+}
+.works_viewmore:hover .arrow {
+    color: #ff7041;
+}
+.works_viewmore:hover .arrow::after {
+    border-color: #ff7041;
+}
+.arrow::after{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    vertical-align: middle;
+    width: 0.3em;   /* arrow size */
+    height: 0.3em;  /* arrow size */
+    border-top: 2px solid #f4f2ef;
+    border-right: 2px solid #f4f2ef;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    right: 13px;
 }
 
 
@@ -964,6 +989,7 @@ h3.works_contens_title {
     padding: 20px 0 20px 0;
     max-width: 550px;
     margin: 0 auto;
+    text-align: start;
 }
 .detail_box {
     background-color: #344699;
@@ -1298,8 +1324,9 @@ textarea.c_form_input {
 
     .about_top {
         width: 100%;
+        padding: 0;
     }
     .toge_top {
-        width: 130%;
+        width: 110%;
     }
 }

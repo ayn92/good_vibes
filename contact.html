@@ -46,7 +46,7 @@
             皆様との素敵なご縁を心よりお待ちしております。</p>
 
         <!-- 問い合わせ入力画面 -->
-        <form>
+        <form class="input_form">
             <div class="c_form_item">
                 <label class="c_form_label" for="field_name">
                     <span class="label_name">お名前</span>
@@ -60,8 +60,7 @@
                 <label class="c_form_label" for="field_co">
                     <span class="label_co">会社名</span>
                 </label>
-                <input name="co" class="c_form_input" id="field-co" placeholder="株式会社〇〇" type="text"
-                    required="required">
+                <input name="co" class="c_form_input" id="field-co" placeholder="株式会社〇〇" type="text">
             </div>
 
             <div class="c_form_item">
@@ -96,7 +95,7 @@
         <!-- 問い合わせ内容確認画面 -->
         <form
             action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScuAXKJp3U_O5t_lUzBgCEWO0B0giWl9mSMzTntMU5PfT1Lvw/formResponse"
-            method="POST" class="c_form">
+            method="POST" class="c_form confirm_form">
 
             <div class="c_form_item_conf">
                 <label class="c_form_label_conf" for="field_name">
@@ -178,7 +177,7 @@
         </form>
     </div>-->
 
-        <div class="contact_title">
+        <div class="contact_title completed_form">
             <p class="contact_text">この度はお問い合わせをいただき、誠にありがとうございます。<br>
                 担当者より順次ご連絡をさせていただきます。</p>
             <div class="thanks_text">
@@ -215,11 +214,6 @@
             if(submitted){
               $('.confirm_form').hide()
               $('.completed_form').show()
-        
-              $('.progress_circle.confirm').removeClass('active')
-              $('.progress_label.confirm').removeClass('active')
-              $('.progress_circle.complete').addClass('active')
-              $('.progress_label.complete').addClass('active')
             }
           "></iframe>
 
@@ -231,7 +225,8 @@
 
                     // 入力された内容を取得
                     let name = $('.input_form input[name="name"]').val()
-                    let mail = $('.input_form input[name="email"]').val()
+                    let co = $('.input_form input[name="co"]').val()
+                    let mail = $('.input_form input[name="mail"]').val()
                     let message = $('.input_form textarea[name="message"]').val()
 
                     if (name && co && mail && message) {
@@ -241,13 +236,13 @@
                         $('.confirm_form').show()
 
                         // 入力された内容を挿入
-                        $('.confirm_form #name').val(name)
-                        $('.confirm_form #co').val(co)
-                        $('.confirm_form #email').val(mail)
-                        $('.confirm_form #message').val(message)
+                        $('.confirm_form #field-name').val(name)
+                        $('.confirm_form #field-co').val(co)
+                        $('.confirm_form #field-mail').val(mail)
+                        $('.confirm_form #field-message').val(message)
 
                         // 修正ボタンが押された時
-                        $('.fix_button').on('click', function () {
+                        $('.corr_btn').on('click', function () {
                             // 入力画面を表示
                             $('.input_form').show()
                             // 確認画面を非表示
