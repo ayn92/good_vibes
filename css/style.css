@@ -71,9 +71,21 @@ h1 {
 
 .title_desing{
     padding-left: 30px;
+    font-family: 'bovine-mvb', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #344699;
+    font-size: 90px;
+    -webkit-text-stroke: 0.5px #f4f2ef;
 }
 
 .title_feeling {
+    font-family: 'bovine-mvb', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #344699;
+    font-size: 90px;
+    -webkit-text-stroke: 0.5px #f4f2ef;
     padding-left: 100px;
 }
 
@@ -97,16 +109,28 @@ h1 {
 }
 
 .title_idea {
+    font-family: 'bovine-mvb', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #344699;
+    font-size: 90px;
+    -webkit-text-stroke: 0.5px #f4f2ef;
     padding: 15px 0 0 265px;
 }
 
 .title_thinking {
+    font-family: 'bovine-mvb', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #344699;
+    font-size: 90px;
+    -webkit-text-stroke: 0.5px #f4f2ef;
     padding-left: 365px;
 }
 
 
 .kira_orn_solid {
-    width: 7%;
+    width: 95px;
     position: absolute;
     top: 180px;
     right: 133px;
@@ -124,21 +148,21 @@ h1 {
 
 
 .kira_orn {
-    width: 5%;
+    width: 65px;
     position: absolute;
     top: 248px;
     right: 200px;
 }
 
 .kira_orn_2 {
-    width: 5%;
+    width: 60px;
     position: absolute;
     top: 588px;
     left: 250px;
 }
 
 .kira_wh {
-    width: 3%;
+    width: 45px;
     position: absolute;
     top: 220px;
     right: 255px;
@@ -146,10 +170,16 @@ h1 {
 }
 
 .kira_wh_solid {
-    width: 8%;
+    width: 115px;
     position: absolute;
     top: 512px;
     left: 166px;
+}
+.kira_wh_sp,
+.kira_orn_solid_sp,
+.kira_orn_sp,
+.kira_wh_solid_sp {
+    display: none;
 }
 
 
@@ -236,7 +266,7 @@ h2 {
     font-size: 23px;
     color: #f4f2ef;
     background-color: #ff7041;
-    width: 30%;
+    width: 176px;
     height: 47px;
     border-radius: 23.5px;
     border: none;
@@ -440,28 +470,29 @@ h2 {
     top: 85%;
     right: 20%;
 }
-.works_viewmore {
+.viewmore {
     font-family: "futura-pt-bold", sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 23px;
     color: #f4f2ef;
     background-color: #ff7041;
-    width: 30%;
+    width: 176px;
     height: 47px;
     border-radius: 23.5px;
     border: none;
     position: relative;
     line-height: 44px;
+    display: block;
 }
-.works_viewmore:hover {
+.viewmore:hover {
     background-color: #f4f2ef;
     border: #ff7041 solid 1px;
 }
-.works_viewmore:hover .arrow {
+.viewmore:hover .arrow {
     color: #ff7041;
 }
-.works_viewmore:hover .arrow::after {
+.viewmore:hover .arrow::after {
     border-color: #ff7041;
 }
 .arrow::after{
@@ -471,8 +502,8 @@ h2 {
     margin: auto;
     content: "";
     vertical-align: middle;
-    width: 0.3em;   /* arrow size */
-    height: 0.3em;  /* arrow size */
+    width: 0.3em;   
+    height: 0.3em; 
     border-top: 2px solid #f4f2ef;
     border-right: 2px solid #f4f2ef;
     -webkit-transform: rotate(45deg);
@@ -755,21 +786,19 @@ h2 {
     padding-bottom: 50px;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
-
 .me_dog > img {
     width: 50%;
-}
-
-.mask {
     width: 50%;
     height: 50%;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
     opacity: 0;
-    background-color: rgba(41, 98, 205, 0.7);
     transition: all 0.2s ease;
+    transform: translateX(-50%);
+    transition: .4s ease-in-out;
 }
 .caption {
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
@@ -780,8 +809,11 @@ h2 {
     text-align: center;
     color: #f4f2ef;
 }
-.mask:hover {
-    opacity: 1;
+.me_dog img:img:SVG/hover_dog_1.svg {
+	top: -100%;
+}
+.me_dog:hover  img:SVG/hover_dog_1.svg {
+    top: 50%;
 }
 
 
@@ -983,7 +1015,6 @@ h3.works_contens_title {
     color: #344699;
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 100px;
     border-bottom: solid 1px #344699;
     padding: 20px 0 20px 0;
@@ -1004,6 +1035,7 @@ h3.works_contens_title {
 p.detail_box_contens {
     color: #344699;
     font-size: 20px;
+    line-height: 1.6;
 }
 .pf_img {
     padding: 90px 0 30px 0; 
@@ -1070,22 +1102,22 @@ span.label_name,
     font-style: normal;
     font-size: 20px;
 }
-.label_name::after {
+.input_form .label_name::after {
     content: "NAME";
     font-size: 17px;
     padding-top: 6px;
 }
-.label_co::after {
+.input_form .label_co::after {
     content: "COMPANY NAME";
     font-size: 17px;
     padding-top: 6px;
 }
-.label_mail::after {
+.input_form .label_mail::after {
     content: "MAIL ADDRESS";
     font-size: 17px;
     padding-top: 6px;
 }
-.label_message::after {
+.input_form .label_message::after {
     content: "MESSAGE";
     font-size: 17px;
     padding-top: 6px;
@@ -1152,9 +1184,11 @@ textarea.c_form_input {
 	transition: 0.4s;
 	cursor: pointer;
     box-shadow: 3px 3px #344699;
+    position: relative;
 }
 .c_arrow::after{
     position: absolute;
+    top: 50%;
     margin: auto;
     content: "";
     vertical-align: middle;
@@ -1163,7 +1197,7 @@ textarea.c_form_input {
     border-top: 2px solid #344699;
     border-right: 2px solid #344699;
     -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+    transform: rotate(45deg) translateY(-50%);
 }
 
 .footer_menu_3 {
@@ -1213,7 +1247,6 @@ textarea.c_form_input {
 }
 .c_form_submit_2 {
 	text-align: center;
-    margin-top: 50px;
 }
 .c_form_submit_2 button {
     font-family: "futura-pt-bold", "sans-serif";
@@ -1258,15 +1291,15 @@ textarea.c_form_input {
 	margin-bottom: 30px;
     color: #344699;
     font-size: 22px;
-    text-align: left;
 }
 .c_form_label_conf {
-    width: 70%;
-    display: flex;
-    align-items: flex-start;
-    padding: 10px;
+    width: 45%;
+    padding: 15px;
     color: #f4f2ef;
-    background-color: #344699
+    border: solid 1px #334699;
+    background-color: #344699;
+    text-align: center;
+    border-radius: 15px 0 0 15px;
 }
 .corr_btn {
     font-family: "dela-gothic-one", sans-serif;
@@ -1281,6 +1314,21 @@ textarea.c_form_input {
 	transition: 0.4s;
 	cursor: pointer;
     box-shadow: 5px 5px #344699;
+    position: relative;
+}
+.c_arrow_left::after {
+    position: absolute;
+    top: 44%;
+    left: 22%;
+    margin: auto;
+    content: "";
+    vertical-align: middle;
+    width: 0.3em;   /* arrow size */
+    height: 0.3em;  /* arrow size */
+    border-top: 2px solid #344699;
+    border-right: 2px solid #344699;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(-135deg) translateY(-50%);
 }
 .send_btn {
     font-family: "dela-gothic-one", sans-serif;
@@ -1295,19 +1343,63 @@ textarea.c_form_input {
     transition: 0.4s;
     cursor: pointer;
     box-shadow: 5px 5px #344699;
+    position: relative;
+}
+.confirm_form,
+.completed_form {
+    display: none;
+}
+.confirm_form input,
+.confirm_form textarea {
+  background: transparent;
+  border: none;
+  padding: 0;
+  width: 100%;
+  padding-left: 30px;
+}
+
+.confirm_form input:focus,
+.confirm_form textarea:focus {
+  outline: none;
+}
+
+.confirm_form .form_group:not(.message) {
+  align-items: center;
+}
+
+.confirm_form label {
+  margin: 0;
+}
+
+.confirm_form textarea {
+  resize: none;
+}
+
+.confirm_form .button_wrap {
+  display: flex;
+  margin: 100px;
+  gap: 60px;
+}
+
+@media screen and (max-width: 892px) {
+    .main_title {
+        width: 80%;
+        height: 300px;
+    }
 }
 
 @media screen and (max-width: 767px) {
     .sp_br {
         display: block; /*767px未満で改行タグを有効に。*/
       }
-      
+      .title {
+        display: inline-block;
+        text-align: center;
+    }
     .main_title {
         width: 80%;
         height: 300px;
-    }
-    h1 {
-        text-align: center;
+        margin-bottom: 30px;
     }
     .title_desing{
         padding: 24px 160px 30px 0;
@@ -1316,10 +1408,47 @@ textarea.c_form_input {
         padding: 0 0 30px 240px;
     }
     .title_idea {
-        padding-top: 30px;
+        width: 50%;
+        padding: 0;
     }
     .title_thinking {
         padding-left: 255px;
+    }
+    .kira_wh_solid {
+        top: 370px;
+        left: 55px;
+    }
+    .kira_orn_2 {
+        top: 460px;
+        left: 140px;
+    }
+    .kira_wh_sp {
+        display: block;
+        width: 100px;
+        position: absolute;
+        top: 22%;
+        left: 60%;
+    }
+    .kira_orn_solid_sp {
+        display: block;
+        width: 50px;
+        position: absolute;
+        top: 24%;
+        left: 70%;
+    }
+    .kira_orn_sp {
+        display: block;
+        width: 90px;
+        position: absolute;
+        top: 27%;
+        left: 8%;
+    }
+    .kira_wh_solid_sp {
+        display: block;
+        width: 45px;
+        position: absolute;
+        top: 28.5%;
+        left: 18%;
     }
 
     .about_top {
@@ -1328,5 +1457,20 @@ textarea.c_form_input {
     }
     .toge_top {
         width: 110%;
+    }
+    .about_contents {
+        transform: translate(-50%, -50%)
+    } 
+    .sub_good {
+        -webkit-text-stroke: 1px #ff7041;
+        text-shadow: 5px 5px 0 #ff7041;
+        padding-top: 0;
+    }
+    .sub_about {
+        color: #ff7041;
+    }
+    .about_top_photo {
+        width: 45%;
+        transform: translate(-50%, -120%);
     }
 }
