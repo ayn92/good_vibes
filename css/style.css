@@ -403,7 +403,7 @@ h2 {
 
 .skill_content {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 
@@ -1472,5 +1472,26 @@ textarea.c_form_input {
     .about_top_photo {
         width: 45%;
         transform: translate(-50%, -120%);
+    }
+
+
+    .skill_content {
+        display: flex;
+        flex-direction: column;
+    }
+    .skill_text {
+        display: inline-block;
+    }
+    .naminami {
+        width: 400px;
+    }
+    .desing {
+        width: 200px;
+    }
+    .coding {
+        width: 200px;
+    }
+    .movie {
+        width: 170px;
     }
 }
