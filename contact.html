@@ -140,7 +140,7 @@
         </form>
 
         <div class="contact_title completed_form">
-            <p class="contact_text">この度はお問い合わせをいただき、誠にありがとうございます。<br>
+            <p class="contact_text_completed">この度はお問い合わせをいただき、誠にありがとうございます。<br>
                 担当者より順次ご連絡をさせていただきます。</p>
             <div class="thanks_text">
                 <h3 class="thankyou">THANK<br>YOU</h3>
@@ -196,6 +196,7 @@
                         $('.input_form').hide()
                         // 確認画面を表示
                         $('.confirm_form').show()
+                        $('.contact_text').hide()
 
                         // 入力された内容を挿入
                         $('.confirm_form #field-name').val(name)

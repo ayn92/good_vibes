@@ -107,6 +107,9 @@ h1 {
     transform: translateY(4px);
     box-shadow: none;
 }
+.main_title a {
+    text-align: center;
+}
 
 .title_idea {
     font-family: 'bovine-mvb', sans-serif;
@@ -130,7 +133,7 @@ h1 {
 
 
 .kira_orn_solid {
-    width: 95px;
+    width: 110px;
     position: absolute;
     top: 180px;
     right: 133px;
@@ -139,42 +142,82 @@ h1 {
   }
   @keyframes anime1 {
     from {
-      transform: scale(0,0);
-    }
+          transform: scale(0,0);
+        }
     to {
-      transform: scale(1,1);
-    }
-  }
-
-
+          transform: scale(1,1);
+        }
+}
 .kira_orn {
     width: 65px;
     position: absolute;
     top: 248px;
-    right: 200px;
+    right: 200px;    
+    animation: anime2 2s ease 0s infinite alternate;
+    transform-origin:center;
+}
+@keyframes anime2 {
+    from {
+          transform: scale(0,0);
+        }
+    to {
+          transform: scale(1,1);
+        }
 }
 
 .kira_orn_2 {
     width: 60px;
     position: absolute;
     top: 588px;
-    left: 250px;
+    left: 250px;   
+    animation: anime2 1s ease 0s infinite alternate;
+    transform-origin:center;
 }
+@keyframes anime2 {
+    from {
+          transform: scale(1,1);
+        }
+    to {
+          transform: scale(0,0);
+        }
+}
+
 
 .kira_wh {
     width: 45px;
     position: absolute;
     top: 220px;
     right: 255px;
-
+    animation: anime2 1s ease 0s infinite alternate;
+    transform-origin:center;
+}
+@keyframes anime2 {
+    from {
+          transform: scale(0,0);
+        }
+    to {
+          transform: scale(1,1);
+        }
 }
 
 .kira_wh_solid {
-    width: 115px;
+    width: 130px;
     position: absolute;
     top: 512px;
     left: 166px;
+    animation: anime2 2s ease 0s infinite alternate;
+    transform-origin:center;
 }
+@keyframes anime2 {
+    from {
+          transform: scale(0,0);
+        }
+    to {
+          transform: scale(1,1);
+        }
+}
+
+
 .kira_wh_sp,
 .kira_orn_solid_sp,
 .kira_orn_sp,
@@ -448,6 +491,7 @@ h2 {
 
 .sub_works {
     font-size: 88px;
+    padding-bottom: 50px;
 }
 
 .works_img {
@@ -771,7 +815,6 @@ h2 {
     height: 787px;
     text-align: center;
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 140px;
 }
@@ -784,18 +827,12 @@ h2 {
 
 .me_dog {
     padding-bottom: 50px;
-    position: relative;
     overflow: hidden;
     cursor: pointer;
 }
 .me_dog > img {
-    width: 50%;
-    width: 50%;
-    height: 50%;
+    width: 30%;
     position: absolute;
-    top: 0;
-    left: 50%;
-    opacity: 0;
     transition: all 0.2s ease;
     transform: translateX(-50%);
     transition: .4s ease-in-out;
@@ -1078,11 +1115,19 @@ form {
 .contact_title {
     background-color: #f4f2ef;
     width: 100%;
-    height: 1300px;
     text-align: center;
 }
 
 .contact_text {
+    font-family: "hiragino-kaku-gothic-pron", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: #344699;
+    font-size: 20px;
+    line-height: 1.35;
+    padding: 50px 0 70px 0;
+}
+.contact_text_completed {
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -1204,7 +1249,6 @@ textarea.c_form_input {
     background-color: #344699;
     width: 100%;
     height: 87px;
-    position: absolute;
     bottom: 0;
     display: flex;
     justify-content: left;
@@ -1380,6 +1424,9 @@ textarea.c_form_input {
   margin: 100px;
   gap: 60px;
 }
+.contact_title.completed_form {
+    margin-bottom: 100px;
+}
 
 @media screen and (max-width: 892px) {
     .main_title {
@@ -1426,28 +1473,28 @@ textarea.c_form_input {
         display: block;
         width: 100px;
         position: absolute;
-        top: 22%;
+        top: 16%;
         left: 60%;
     }
     .kira_orn_solid_sp {
         display: block;
         width: 50px;
         position: absolute;
-        top: 24%;
+        top: 17.5%;
         left: 70%;
     }
     .kira_orn_sp {
         display: block;
         width: 90px;
         position: absolute;
-        top: 27%;
+        top: 19%;
         left: 8%;
     }
     .kira_wh_solid_sp {
         display: block;
         width: 45px;
         position: absolute;
-        top: 28.5%;
+        top: 20.5%;
         left: 18%;
     }
 
@@ -1457,6 +1504,7 @@ textarea.c_form_input {
     }
     .toge_top {
         width: 110%;
+        padding-top: 600px;
     }
     .about_contents {
         transform: translate(-50%, -50%)
@@ -1471,13 +1519,18 @@ textarea.c_form_input {
     }
     .about_top_photo {
         width: 45%;
-        transform: translate(-50%, -120%);
+        transform: translate(-50%, -270%);
+    }
+    .about_btn {
+        display: flex;
+        justify-content: center;
     }
 
 
     .skill_content {
         display: flex;
         flex-direction: column;
+        gap: 100px;
     }
     .skill_text {
         display: inline-block;
@@ -1493,5 +1546,30 @@ textarea.c_form_input {
     }
     .movie {
         width: 170px;
+    }
+
+    .works_contens {
+        transform: translate(-50%, -120%);
+    }
+
+    .contact_bg {
+        width: 55%;
+
+    }
+    .kira_wh_solid_con {
+        left: 55px;
+        bottom: 270px;
+    }
+    .kira_orn_con {
+        left: 125px;
+        bottom: 249px;
+    }
+    .kira_wh_con {
+        right: 114px;
+        bottom: 156px;
+    }
+    .kira_orn_solid_con {
+        right: 44px;
+        bottom: 108px;
     }
 }
