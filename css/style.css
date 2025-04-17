@@ -846,7 +846,7 @@ h2 {
     text-align: center;
     color: #f4f2ef;
 }
-.me_dog img:img:SVG/hover_dog_1.svg {
+.me_dog img:SVG/hover_dog_1.svg {
 	top: -100%;
 }
 .me_dog:hover  img:SVG/hover_dog_1.svg {
@@ -1501,6 +1501,9 @@ textarea.c_form_input {
     .about_top {
         width: 100%;
         padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
     }
     .toge_top {
         width: 110%;
@@ -1508,7 +1511,7 @@ textarea.c_form_input {
     }
     .about_contents {
         transform: translate(-50%, -50%)
-    } 
+        } 
     .sub_good {
         -webkit-text-stroke: 1px #ff7041;
         text-shadow: 5px 5px 0 #ff7041;
