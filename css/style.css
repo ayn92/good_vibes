@@ -239,6 +239,9 @@ h1 {
     position: relative;
     padding-top: 170px;
 }
+.toge_top_sp {
+    display: none;
+}
 
 .about_contents {
     position: absolute;
@@ -351,6 +354,9 @@ h2 {
     top: 50%;
     left: 50%;
     transform: translate(-114%,-200%);
+}
+.about_top_photo_sp {
+    display: none;
 }
 
 /* top-SKILL */
@@ -553,6 +559,9 @@ h2 {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     right: 13px;
+}
+.moku_top_sp {
+    display: none;
 }
 
 
@@ -819,23 +828,34 @@ h2 {
     gap: 140px;
 }
 
-.prf_me_contens {
-    display: flex;
-    gap: 50px;
-}
-
 
 .me_dog {
-    padding-bottom: 50px;
     overflow: hidden;
     cursor: pointer;
+    width: 283px;
+    height: 257px;
+    position: relative;
 }
 .me_dog > img {
-    width: 30%;
+    width: 100%;
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     transition: all 0.2s ease;
-    transform: translateX(-50%);
     transition: .4s ease-in-out;
+    clip-path: ellipse(290px 133px at center);
+}
+.over-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.dog_ellipse02 {
+    clip-path: ellipse(290px 133px at 50% 27%);
+}
+.dog_ellipse03 {
+    clip-path: ellipse(290px 133px at 50% 74%);
 }
 .caption {
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
@@ -846,10 +866,10 @@ h2 {
     text-align: center;
     color: #f4f2ef;
 }
-.me_dog img:SVG/hover_dog_1.svg {
+.me_dog img:nth-of-type(2) {
 	top: -100%;
 }
-.me_dog:hover  img:SVG/hover_dog_1.svg {
+.me_dog:hover img:nth-of-type(2) {
     top: 50%;
 }
 
@@ -1505,10 +1525,18 @@ textarea.c_form_input {
         flex-direction: column;
     }
 
-    .toge_top {
-        width: 110%;
+    .toge_top_sp {
+        display: block;
         padding-top: 600px;
+        width: calc(100% + 120px);
+        margin-left: -60px;
+        margin-right: -60px;
     }
+
+    .toge_top {
+        display: none;
+    }
+
     .about_contents {
         transform: translate(-50%, -50%)
         } 
@@ -1521,12 +1549,25 @@ textarea.c_form_input {
         color: #ff7041;
     }
     .about_top_photo {
-        width: 45%;
-        transform: translate(-50%, -270%);
+        display: none;
+    }
+    .about_top_photo_sp {
+        display: block;
+        width: 67%;
+        transform: translate(25%, 40%);
+    }
+    .name {
+        position: absolute;
+        top: 67%;
+        left: 18%;
+    }
+    .about_top_text {
+        padding-top: 200px;
     }
     .about_btn {
         display: flex;
         justify-content: center;
+        padding-top: 50px;
     }
 
 
@@ -1553,6 +1594,12 @@ textarea.c_form_input {
 
     .works_contens {
         transform: translate(-50%, -120%);
+    }
+    .moku_top {
+        display: none;
+    }
+    .moku_top_sp {
+        display: block;
     }
 
     .contact_bg {
