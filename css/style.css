@@ -19,6 +19,11 @@ body {
     align-items: baseline;
 }
 
+.sp_btn,
+.sp_nav {
+    display: none;
+}
+
 a:hover {
     color: #ff7041;
 }
@@ -1111,7 +1116,7 @@ a {
 }
 h3.works_contens_title {
     text-align: left;
-    padding: 0 0 20px 350px;
+    padding: 13px 0 20px 350px;
 }
 .detail_works {
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
@@ -1540,19 +1545,20 @@ form.c_form.confirm_form {
 .contact_title.completed_form {
     margin-bottom: 100px;
 }
+.c_form_submit button:hover {
+        transform: translateY(4px);
+        box-shadow: none;
+}
 
 @media screen and (max-width: 892px) {
     .main_title {
         width: 80%;
         height: 300px;
     }
-}
-
-@media screen and (max-width: 767px) {
     .sp_br {
         display: block; /*767px未満で改行タグを有効に。*/
       }
-      .title {
+    .title {
         display: inline-block;
         text-align: center;
     }
@@ -1574,6 +1580,69 @@ form.c_form.confirm_form {
     .title_thinking {
         padding-left: 255px;
     }
+}
+
+@media screen and (max-width: 767px) {
+    .pc_nav,
+    .header_menu {
+        display: none;
+    }
+    .sp_menu {
+        font-family: "futura-pt-bold", "sans-serif";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        color: #f4f2ef;
+        background-color: #ff7041;
+        width: 172px;
+        height: 47px;
+        border-radius: 23.5px;
+        margin: 20px 20px 0 0;
+        border: none;
+	    cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .sp_btn {
+        display: block;
+    }
+    .sp_manu:hover a {
+        background-color: #f4f2ef;
+        color: #ff7041;
+    }
+    .sp_nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+    }
+    /*.sp_br {
+        display: block; /*767px未満で改行タグを有効に。
+      }
+    .title {
+        display: inline-block;
+        text-align: center;
+    }
+    .main_title {
+        width: 80%;
+        height: 300px;
+        margin-bottom: 30px;
+    }
+    .title_desing{
+        padding: 24px 160px 30px 0;
+    }
+    .title_feeling {
+        padding: 0 0 30px 240px;
+    }
+    .title_idea {
+        width: 50%;
+        padding: 0;
+    }
+    .title_thinking {
+        padding-left: 255px;
+    } */
     .kira_wh_solid {
         top: 370px;
         left: 55px;
