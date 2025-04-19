@@ -267,6 +267,9 @@ h2 {
     text-shadow: 5px 5px 0 #344699;
     padding-top: 100px;
 }
+.sub_good_sp {
+    display: none;
+}
 
 .sub_about {
     font-family: 'bovine-mvb', sans-serif;
@@ -402,6 +405,9 @@ h2 {
     width: 259px;
     animation: naminami 10s infinite linear;
     transform-origin: center center; 
+}
+.naminami_sp {
+    display: none;
 }
 
 .desing{
@@ -584,7 +590,7 @@ h2 {
 }
 
 .contact_bg {
-    width: 30%;
+    width: 410px;
     padding: 40px;
     position: relative;
 }
@@ -1442,7 +1448,7 @@ textarea.c_form_input {
 .confirm_form .button_wrap {
   display: flex;
   margin: 100px;
-  gap: 60px;
+  gap: 75px;
 }
 .contact_title.completed_form {
     margin-bottom: 100px;
@@ -1493,28 +1499,28 @@ textarea.c_form_input {
         display: block;
         width: 100px;
         position: absolute;
-        top: 16%;
+        top: 13.5%;
         left: 60%;
     }
     .kira_orn_solid_sp {
         display: block;
         width: 50px;
         position: absolute;
-        top: 17.5%;
+        top: 14.5%;
         left: 70%;
     }
     .kira_orn_sp {
         display: block;
         width: 90px;
         position: absolute;
-        top: 19%;
+        top: 16%;
         left: 8%;
     }
     .kira_wh_solid_sp {
         display: block;
         width: 45px;
         position: absolute;
-        top: 20.5%;
+        top: 17%;
         left: 18%;
     }
 
@@ -1541,9 +1547,16 @@ textarea.c_form_input {
         transform: translate(-50%, -50%)
         } 
     .sub_good {
+        display: none;
+    }
+    .sub_good_sp {
+        display: block;
         -webkit-text-stroke: 1px #ff7041;
         text-shadow: 5px 5px 0 #ff7041;
         padding-top: 0;
+        font-size: 65px;
+        color: #f4f2ef;
+        padding-top: 100px;
     }
     .sub_about {
         color: #ff7041;
@@ -1580,7 +1593,14 @@ textarea.c_form_input {
         display: inline-block;
     }
     .naminami {
+        display: none;
+    }
+    .naminami_sp {
+        display: block;
         width: 400px;
+        animation: naminami 10s infinite linear;
+        transform-origin: center center; 
+        margin: 0 auto;
     }
     .desing {
         width: 200px;
@@ -1593,19 +1613,19 @@ textarea.c_form_input {
     }
 
     .works_contens {
-        transform: translate(-50%, -120%);
+        transform: translate(-50%, -210%);
     }
     .moku_top {
         display: none;
     }
     .moku_top_sp {
         display: block;
+        padding-top: 100px;
+        width: calc(100% + 120px);
+        margin-left: -60px;
+        margin-right: -60px;
     }
 
-    .contact_bg {
-        width: 55%;
-
-    }
     .kira_wh_solid_con {
         left: 55px;
         bottom: 270px;
@@ -1622,4 +1642,45 @@ textarea.c_form_input {
         right: 44px;
         bottom: 108px;
     }
+    .contact_top_text {
+        font-size: 20px;
+    }
+
+
+
+    .works_box {
+        display: block;
+    }
+
+    .works_detail {
+    width: 80%;
+    padding-bottom: 70px;
+    } 
+
+    .sub_good_con {
+        font-size: 65px;
+        color: #f4f2ef;
+        -webkit-text-stroke: 1px #344699;
+        text-shadow: 5px 5px 0 #344699;
+        padding-top: 100px;
+    }
+    .c_form_item {
+        display: block;
+    }
+    .c_form_submit {
+        margin: 80px;
+    }
+    .kira_orn_solid_thx {
+        left: 45px;
+    }
+    .kira_orn_thx {
+        left: 120px;
+    }
+    .kira_orn_thx_r {
+        right: 85px;
+    }
+    .kira_orn_solid_thx_r {
+        right: 40px;
+    }
+
 }
