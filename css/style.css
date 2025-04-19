@@ -133,10 +133,10 @@ h1 {
 
 
 .kira_orn_solid {
-    width: 110px;
+    width: 118px;
     position: absolute;
-    top: 180px;
-    right: 133px;
+    top: 160px;
+    right: 110px;
     animation: anime1 1s ease 0s infinite alternate;
     transform-origin:center;
   }
@@ -149,11 +149,11 @@ h1 {
         }
 }
 .kira_orn {
-    width: 65px;
+    width: 68px;
     position: absolute;
     top: 248px;
-    right: 200px;    
-    animation: anime2 2s ease 0s infinite alternate;
+    right: 189px;    
+    animation: anime2 1.5s ease 0s infinite alternate;
     transform-origin:center;
 }
 @keyframes anime2 {
@@ -168,8 +168,8 @@ h1 {
 .kira_orn_2 {
     width: 60px;
     position: absolute;
-    top: 588px;
-    left: 250px;   
+    top: 605px;
+    left: 218px;   
     animation: anime2 1s ease 0s infinite alternate;
     transform-origin:center;
 }
@@ -188,24 +188,24 @@ h1 {
     position: absolute;
     top: 220px;
     right: 255px;
-    animation: anime2 1s ease 0s infinite alternate;
+    animation: anime2 0.7s ease 0s infinite alternate;
     transform-origin:center;
 }
 @keyframes anime2 {
     from {
-          transform: scale(0,0);
+          transform: scale(1,1);
         }
     to {
-          transform: scale(1,1);
+          transform: scale(0,0);
         }
 }
 
 .kira_wh_solid {
-    width: 130px;
+    width: 143px;
     position: absolute;
-    top: 512px;
-    left: 166px;
-    animation: anime2 2s ease 0s infinite alternate;
+    top: 500px;
+    left: 115px;
+    animation: anime2 1.2s ease 0s infinite alternate;
     transform-origin:center;
 }
 @keyframes anime2 {
@@ -260,7 +260,8 @@ h2 {
 
 }
 
-.sub_good {
+.sub_good,
+.sub_good_con {
     font-size: 65px;
     color: #f4f2ef;
     -webkit-text-stroke: 1px #344699;
@@ -358,7 +359,8 @@ h2 {
     left: 50%;
     transform: translate(-114%,-200%);
 }
-.about_top_photo_sp {
+.about_top_photo_sp,
+.scroll {
     display: none;
 }
 
@@ -645,31 +647,71 @@ h2 {
 
 
 .kira_wh_solid_con {
-    width: 80px;
+    width: 85px;
     position: absolute;
     left: 360px;
-    bottom: 300px;
+    bottom: 230px;
+    animation: anime2 0.9s ease 0s infinite alternate;
+    transform-origin:center;
+}
+@keyframes anime2 {
+    from {
+          transform: scale(1,1);
+        }
+    to {
+          transform: scale(0,0);
+        }
 }
 
 .kira_orn_con {
     width: 48px;
     position: absolute;
     left: 420px;
-    bottom: 275px;
+    bottom: 210px;
+    animation: anime2 1.2s ease 0s infinite alternate;
+    transform-origin:center;
+}
+@keyframes anime2 {
+    from {
+          transform: scale(1,1);
+        }
+    to {
+          transform: scale(0,0);
+        }
 }
 
 .kira_wh_con {
     width: 43px;
     position: absolute;
-    right: 420px;
-    bottom: 200px;
+    right: 430px;
+    bottom: 165px;
+    animation: anime2 1s ease 0s infinite alternate;
+    transform-origin:center;
+}
+@keyframes anime2 {
+    from {
+          transform: scale(1,1);
+        }
+    to {
+          transform: scale(0,0);
+        }
 }
 
 .kira_orn_solid_con {
-    width: 72px;
+    width: 85px;
     position: absolute;
-    right: 360px;
-    bottom: 150px;
+    right: 355px;
+    bottom: 115px;
+    animation: anime2 1.4s ease 0s infinite alternate;
+    transform-origin:center;
+}
+@keyframes anime2 {
+    from {
+          transform: scale(1,1);
+        }
+    to {
+          transform: scale(0,0);
+        }
 }
 
 /* フッター */
@@ -1160,7 +1202,7 @@ form {
     color: #344699;
     font-size: 20px;
     line-height: 1.35;
-    padding: 50px 0 70px 0;
+    padding-top: 100px;
 }
 span.label_name,
 .label_co,
@@ -1240,7 +1282,7 @@ textarea.c_form_input {
 }
 .c_form_submit {
 	text-align: center;
-    margin-top: 50px;
+    margin: 80px;
 }
 .c_form_submit button {
     font-family: "dela-gothic-one", sans-serif;
@@ -1269,6 +1311,10 @@ textarea.c_form_input {
     border-right: 2px solid #344699;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg) translateY(-50%);
+}
+
+form.c_form.confirm_form {
+    padding-top: 100px;
 }
 
 .footer_menu_3 {
@@ -1337,24 +1383,65 @@ textarea.c_form_input {
     position: absolute;
     top: 60px;
     left: 380px;
+    animation: anime2 1.2s ease 0s infinite alternate;
+    transform-origin:center;
 }
+@keyframes anime2 {
+    from {
+          transform: scale(1,1);
+        }
+    to {
+          transform: scale(0,0);
+        }
+}
+
 .kira_orn_thx {
     width: 65px;
     position: absolute;
     top: 142px;
     left: 450px;
+    animation: anime2 1s ease 0s infinite alternate;
+    transform-origin:center;
+}
+@keyframes anime2 {
+    from {
+          transform: scale(1,1);
+        }
+    to {
+          transform: scale(0,0);
+        }
 }
 .kira_orn_solid_thx_r {
     width: 55px;
     position: absolute;
     top: 260px;
     right: 395px;
+    animation: anime2 0.8s ease 0s infinite alternate;
+    transform-origin:center;
+}
+@keyframes anime2 {
+    from {
+          transform: scale(1,1);
+        }
+    to {
+          transform: scale(0,0);
+        }
 }
 .kira_orn_thx_r {
     width: 95px;
     position: absolute;
     top: 275px;
     right: 440px;
+    animation: anime2 1.2s ease 0s infinite alternate;
+    transform-origin:center;
+}
+@keyframes anime2 {
+    from {
+          transform: scale(1,1);
+        }
+    to {
+          transform: scale(0,0);
+        }
 }
 .c_form_item_conf {
 	display: flex;
@@ -1523,6 +1610,43 @@ textarea.c_form_input {
         top: 17%;
         left: 18%;
     }
+    .scroll {
+        font-family: "futura-pt-bold", "sans-serif";
+        font-style: normal;
+        font-weight: 700;
+        width: 140px;
+        margin: 100px auto;
+        font-size: 19px;
+        line-height: 1.35;
+        position: relative;
+      }
+    .scroll svg {
+        overflow: visible;
+        animation: naminami 10s infinite linear;
+        transform-origin: center center;
+      }
+    .scroll path {
+        fill: none;
+      }
+    .scroll text {
+        fill: #f4f2ef;
+      }
+      .dli-caret-down {
+        display: inline-block;
+        vertical-align: middle;
+        color: #f4f2ef;
+        line-height: 1;
+        width: 0;
+        border-style: solid;
+        border-color: transparent;
+        border-width: 1em 0.6em;
+        border-top-color: currentColor;
+        border-bottom: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
 
     .about_top {
         width: 100%;
@@ -1666,9 +1790,6 @@ textarea.c_form_input {
     }
     .c_form_item {
         display: block;
-    }
-    .c_form_submit {
-        margin: 80px;
     }
     .kira_orn_solid_thx {
         left: 45px;
