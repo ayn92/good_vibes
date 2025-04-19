@@ -885,8 +885,8 @@ h2 {
 .me_dog {
     overflow: hidden;
     cursor: pointer;
-    width: 283px;
-    height: 257px;
+    width: 332px;
+    height: 442px;
     position: relative;
 }
 .me_dog > img {
@@ -897,18 +897,20 @@ h2 {
     transform: translate(-50%,-50%);
     transition: all 0.2s ease;
     transition: .4s ease-in-out;
-    clip-path: ellipse(290px 133px at center);
 }
 .over-layer {
     position: absolute;
     top: 0;
     left: 0;
 }
+.dog_ellipse {
+clip-path: ellipse(140px 60px at 46% 14%);
+}
 .dog_ellipse02 {
-    clip-path: ellipse(290px 133px at 50% 27%);
+    clip-path: ellipse(140px 60px at 46% 27%);
 }
 .dog_ellipse03 {
-    clip-path: ellipse(290px 133px at 50% 74%);
+    clip-path: ellipse(140px 60px at 46% 42%);
 }
 .caption {
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
@@ -919,10 +921,10 @@ h2 {
     text-align: center;
     color: #f4f2ef;
 }
-.me_dog img:nth-of-type(2) {
+.me_dog img:nth-of-type(4) {
 	top: -100%;
 }
-.me_dog:hover img:nth-of-type(2) {
+.me_dog:hover img:nth-of-type(4) {
     top: 50%;
 }
 
@@ -1545,8 +1547,11 @@ form.c_form.confirm_form {
 .contact_title.completed_form {
     margin-bottom: 100px;
 }
-.c_form_submit button:hover {
-        transform: translateY(4px);
+.c_form_submit button:hover,
+.corr_btn:hover,
+.send_btn:hover,
+.c_form_submit_2 button:hover {
+        transform: translateY(2px);
         box-shadow: none;
 }
 
