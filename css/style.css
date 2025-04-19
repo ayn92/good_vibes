@@ -1685,6 +1685,7 @@ form.c_form.confirm_form {
         left: 18%;
     }
     .scroll {
+        display: block;
         font-family: "futura-pt-bold", "sans-serif";
         font-style: normal;
         font-weight: 700;
@@ -1720,6 +1721,7 @@ form.c_form.confirm_form {
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
+        border-radius: 8%;
       }
 
     .about_top {
