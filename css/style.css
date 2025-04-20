@@ -140,8 +140,8 @@ h1 {
 .kira_orn_solid {
     width: 118px;
     position: absolute;
-    top: 160px;
-    right: 110px;
+    top: 3.5%;
+    right: 12%;
     animation: anime1 1s ease 0s infinite alternate;
     transform-origin:center;
   }
@@ -156,8 +156,8 @@ h1 {
 .kira_orn {
     width: 68px;
     position: absolute;
-    top: 248px;
-    right: 189px;    
+    top: 6%;
+    right: 18%;  
     animation: anime2 1.5s ease 0s infinite alternate;
     transform-origin:center;
 }
@@ -173,8 +173,8 @@ h1 {
 .kira_orn_2 {
     width: 60px;
     position: absolute;
-    top: 605px;
-    left: 218px;   
+    top: 15%;
+    left: 18%;   
     animation: anime2 1s ease 0s infinite alternate;
     transform-origin:center;
 }
@@ -191,8 +191,8 @@ h1 {
 .kira_wh {
     width: 45px;
     position: absolute;
-    top: 220px;
-    right: 255px;
+    top: 5%;
+    right: 23%;
     animation: anime2 0.7s ease 0s infinite alternate;
     transform-origin:center;
 }
@@ -208,8 +208,8 @@ h1 {
 .kira_wh_solid {
     width: 143px;
     position: absolute;
-    top: 500px;
-    left: 115px;
+    top: 12%;
+    left: 9%;
     animation: anime2 1.2s ease 0s infinite alternate;
     transform-origin:center;
 }
@@ -1555,36 +1555,44 @@ form.c_form.confirm_form {
         box-shadow: none;
 }
 
+
+
+@media screen and (max-width: 1110px) {
+    .title_desing,
+    .title_feeling,
+    .title_idea,
+    .title_thinking {
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width: 945px) {
+    .title_desing,
+    .title_feeling,
+    .title_idea,
+    .title_thinking {
+        font-size: 60px;
+    }
+}
+
 @media screen and (max-width: 892px) {
     .main_title {
         width: 80%;
         height: 300px;
     }
-    .sp_br {
-        display: block; /*767px未満で改行タグを有効に。*/
-      }
-    .title {
-        display: inline-block;
-        text-align: center;
+    .kira_wh_solid {
+        top: 15%;
     }
-    .main_title {
-        width: 80%;
-        height: 300px;
-        margin-bottom: 30px;
+    .kira_orn_2 {
+        top: 18%;
+        left: 20%;
     }
-    .title_desing{
-        padding: 24px 160px 30px 0;
-    }
-    .title_feeling {
-        padding: 0 0 30px 240px;
-    }
-    .title_idea {
-        width: 50%;
-        padding: 0;
-    }
+    /*.title_desing,
+    .title_feeling,
+    .title_idea,
     .title_thinking {
-        padding-left: 255px;
-    }
+        font-size: 60px;
+    }*/
 }
 
 @media screen and (max-width: 767px) {
@@ -1623,15 +1631,15 @@ form.c_form.confirm_form {
         width: 100%;
         height: 100vh;
     }
-    /*.sp_br {
-        display: block; /*767px未満で改行タグを有効に。
+    .sp_br {
+        display: block; /*767px未満で改行タグを有効に。*/
       }
     .title {
         display: inline-block;
         text-align: center;
     }
     .main_title {
-        width: 80%;
+        width: 100%;
         height: 300px;
         margin-bottom: 30px;
     }
@@ -1647,42 +1655,96 @@ form.c_form.confirm_form {
     }
     .title_thinking {
         padding-left: 255px;
-    } */
+    }
+    .kira_orn_solid {
+        top: 1.5%;
+        right: 12%;
+    }
+    .kira_wh {
+        top: 2.5%;
+        right: 29%;
+    }
+    .kira_orn {
+        top: 3%;
+        right: 21%;
+    }
     .kira_wh_solid {
-        top: 370px;
-        left: 55px;
+        top: 3.5%;
+        left: 5%;
     }
     .kira_orn_2 {
-        top: 460px;
-        left: 140px;
+        top: 5%;
+        left: 20%;
     }
     .kira_wh_sp {
         display: block;
         width: 100px;
         position: absolute;
-        top: 13.5%;
+        top: 11%;
         left: 60%;
+        animation: anime1 1s ease 0s infinite alternate;
+        transform-origin:center;
+      }
+      @keyframes anime1 {
+        from {
+              transform: scale(0,0);
+            }
+        to {
+              transform: scale(1,1);
+            }
     }
+
     .kira_orn_solid_sp {
         display: block;
         width: 50px;
         position: absolute;
-        top: 14.5%;
+        top: 12%;
         left: 70%;
+        animation: anime2 0.8s ease 0s infinite alternate;
+        transform-origin: center;
     }
+    @keyframes anime1 {
+        from {
+              transform: scale(0,0);
+            }
+        to {
+              transform: scale(1,1);
+            }
+    }
+
     .kira_orn_sp {
         display: block;
         width: 90px;
         position: absolute;
-        top: 16%;
+        top: 13%;
         left: 8%;
+        animation: anime1 1.2s ease 0s infinite alternate;
+        transform-origin:center;
+      }
+      @keyframes anime1 {
+        from {
+              transform: scale(0,0);
+            }
+        to {
+              transform: scale(1,1);
+            }
     }
     .kira_wh_solid_sp {
         display: block;
         width: 45px;
         position: absolute;
-        top: 17%;
+        top: 14%;
         left: 18%;
+        animation: anime2 0.6s ease 0s infinite alternate;
+        transform-origin: center;
+    }
+    @keyframes anime1 {
+        from {
+              transform: scale(0,0);
+            }
+        to {
+              transform: scale(1,1);
+            }
     }
     .scroll {
         display: block;
@@ -1879,5 +1941,4 @@ form.c_form.confirm_form {
     .kira_orn_solid_thx_r {
         right: 40px;
     }
-
 }
