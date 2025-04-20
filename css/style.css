@@ -654,8 +654,8 @@ h2 {
 .kira_wh_solid_con {
     width: 85px;
     position: absolute;
-    left: 360px;
-    bottom: 230px;
+    left: 25%;
+    bottom: 6%;
     animation: anime2 0.9s ease 0s infinite alternate;
     transform-origin:center;
 }
@@ -671,8 +671,8 @@ h2 {
 .kira_orn_con {
     width: 48px;
     position: absolute;
-    left: 420px;
-    bottom: 210px;
+    left: 30%;
+    bottom: 5.5%;
     animation: anime2 1.2s ease 0s infinite alternate;
     transform-origin:center;
 }
@@ -688,8 +688,8 @@ h2 {
 .kira_wh_con {
     width: 43px;
     position: absolute;
-    right: 430px;
-    bottom: 165px;
+    right: 32%;
+    bottom: 3.5%;
     animation: anime2 1s ease 0s infinite alternate;
     transform-origin:center;
 }
@@ -705,8 +705,8 @@ h2 {
 .kira_orn_solid_con {
     width: 85px;
     position: absolute;
-    right: 355px;
-    bottom: 115px;
+    right: 26%;
+    bottom: 2.5%;
     animation: anime2 1.4s ease 0s infinite alternate;
     transform-origin:center;
 }
@@ -1564,6 +1564,16 @@ form.c_form.confirm_form {
     .title_thinking {
         font-size: 70px;
     }
+
+}
+
+@media screen and (max-width: 1160px) {
+    .kira_wh_solid_con {
+        left: 17%;
+    }
+    .kira_orn_con {
+        left: 23%;
+    }
 }
 
 @media screen and (max-width: 945px) {
@@ -1587,6 +1597,22 @@ form.c_form.confirm_form {
         top: 18%;
         left: 20%;
     }
+    .kira_wh_solid_con {
+        left: 9%;
+        bottom: 7%;
+    }
+    .kira_orn_con {
+        left: 17%;
+        bottom: 6%;
+    }
+    .kira_wh_con {
+        right: 20%;
+        bottom: 4.3%;
+    }
+    .kira_orn_solid_con {
+        right: 11%;
+        bottom: 3%;
+    }
     /*.title_desing,
     .title_feeling,
     .title_idea,
@@ -1596,6 +1622,9 @@ form.c_form.confirm_form {
 }
 
 @media screen and (max-width: 767px) {
+    .home {
+        text-align: center;
+    }
     .pc_nav,
     .header_menu {
         display: none;
@@ -1795,7 +1824,7 @@ form.c_form.confirm_form {
 
     .toge_top_sp {
         display: block;
-        padding-top: 600px;
+        padding-top: 300px;
         width: calc(100% + 120px);
         margin-left: -60px;
         margin-right: -60px;
@@ -1818,26 +1847,23 @@ form.c_form.confirm_form {
         padding-top: 0;
         font-size: 65px;
         color: #f4f2ef;
-        padding-top: 100px;
     }
     .sub_about {
         color: #ff7041;
+        padding-bottom: 115px;
     }
     .about_top_photo {
         display: none;
     }
     .about_top_photo_sp {
         display: block;
-        width: 67%;
-        transform: translate(25%, 40%);
+        width: 77%;
+        transform: translate(15%, -22%);
     }
     .name {
         position: absolute;
-        top: 67%;
+        top: 59%;
         left: 18%;
-    }
-    .about_top_text {
-        padding-top: 200px;
     }
     .about_btn {
         display: flex;
@@ -1889,20 +1915,20 @@ form.c_form.confirm_form {
     }
 
     .kira_wh_solid_con {
-        left: 55px;
-        bottom: 270px;
+        left: 7%;
+        bottom: 4%;
     }
     .kira_orn_con {
-        left: 125px;
-        bottom: 249px;
+        left: 16%;
+        bottom: 3.5%;
     }
     .kira_wh_con {
-        right: 114px;
-        bottom: 156px;
+        right: 16%;
+        bottom: 2.3%;
     }
     .kira_orn_solid_con {
-        right: 44px;
-        bottom: 108px;
+        right: 7%;
+        bottom: 1.5%;
     }
     .contact_top_text {
         font-size: 20px;
