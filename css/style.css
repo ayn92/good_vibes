@@ -486,13 +486,13 @@ h2 {
 .works_top {
     position: relative;
     text-align: center;
+    background-image: url(../image/SVG/moku.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 100px 0;
 }
 
 .works_contens {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-250%);
     text-align: center;
 }
 
@@ -513,24 +513,25 @@ h2 {
     padding-bottom: 50px;
 }
 
-.works_img {
-    width: 463px;
-    display: flex;
-    position: absolute;
-    padding-top: 100px;
-    gap: 100px;
-    justify-content: center;
+.slick-list {
+    width: 100%;
+    box-sizing: border-box;
 }
-
-.works_img > img{
+.slick-slide {
+    margin: 0 7vw;
+}
+.slick-slide img {
     width: 100%;
     border-radius: 70px;
+} 
 
+.slick-dotted.slick-slider {
+    margin-bottom: 135px;
 }
 
 .works_btn {
     position: absolute;
-    top: 85%;
+    top: 84%;
     right: 20%;
 }
 .viewmore {
@@ -897,6 +898,7 @@ h2 {
     transform: translate(-50%,-50%);
     transition: all 0.2s ease;
     transition: .4s ease-in-out;
+    clip-path: url(#mask);
 }
 .over-layer {
     position: absolute;
@@ -1709,7 +1711,7 @@ form.c_form.confirm_form {
         display: block;
         width: 100px;
         position: absolute;
-        top: 11%;
+        top: 12%;
         left: 60%;
         animation: anime1 1s ease 0s infinite alternate;
         transform-origin:center;
@@ -1727,7 +1729,7 @@ form.c_form.confirm_form {
         display: block;
         width: 50px;
         position: absolute;
-        top: 12%;
+        top: 13%;
         left: 70%;
         animation: anime2 0.8s ease 0s infinite alternate;
         transform-origin: center;
@@ -1745,7 +1747,7 @@ form.c_form.confirm_form {
         display: block;
         width: 90px;
         position: absolute;
-        top: 13%;
+        top: 14%;
         left: 8%;
         animation: anime1 1.2s ease 0s infinite alternate;
         transform-origin:center;
@@ -1762,7 +1764,7 @@ form.c_form.confirm_form {
         display: block;
         width: 45px;
         position: absolute;
-        top: 14%;
+        top: 15%;
         left: 18%;
         animation: anime2 0.6s ease 0s infinite alternate;
         transform-origin: center;
@@ -1900,8 +1902,9 @@ form.c_form.confirm_form {
         width: 170px;
     }
 
-    .works_contens {
-        transform: translate(-50%, -210%);
+
+    .works_top {
+        background-image: url(../image/SVG/sp_moku.svg);
     }
     .moku_top {
         display: none;
