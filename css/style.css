@@ -424,7 +424,7 @@ h2 {
 }
 
 .desing{
-    width: 45%;
+    width: 153px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -433,7 +433,7 @@ h2 {
 }
 
 .coding {
-    width: 45%;
+    width: 153px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -442,7 +442,7 @@ h2 {
 }
 
 .movie {
-    width: 36%;
+    width: 117px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -465,13 +465,17 @@ h2 {
     color: #f4f2ef;
     font-size: 17px;
     text-align: left;
-    width: 337px;
+    width: 80%;
     line-height: 1.35;
 }
 
-.skill_content {
+.skill_contens {
     display: flex;
     justify-content: space-between;
+    padding: 40px;
+}
+.skill_contens > div {
+    width: 100%;
 }
 
 
@@ -926,7 +930,8 @@ h2 {
 }
 
 
-.me_dog {
+.me_dog,
+.dog_hover {
     overflow: hidden;
     cursor: pointer;
     width: 332px;
@@ -934,8 +939,9 @@ h2 {
     position: relative;
     clip-path: url("#mask");
 }
+
 .me_dog img,
-.me-dog > div {
+.me_dog > div {
     width: 100%;
     position: absolute;
     top: 50%;
@@ -1950,7 +1956,7 @@ form.c_form.confirm_form {
     }
 
 
-    .skill_content {
+    .skill_contens {
         display: flex;
         flex-direction: column;
         gap: 100px;
