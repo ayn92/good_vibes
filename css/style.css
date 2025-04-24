@@ -932,14 +932,15 @@ h2 {
     position: relative;
     clip-path: url("#mask");
 }
-.me_dog > img {
+.me_dog img,
+.me-dog > div {
     width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     transition: all 0.2s ease;
-    transition: .4s ease-in-out;
+    transition: 0.4s ease-in-out;
 }
 
 .over-layer {
@@ -956,12 +957,23 @@ h2 {
     margin: 0 auto;
     text-align: center;
     color: #f4f2ef;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-54%,-300%);
+    width: 100%;
+    opacity: 0;
+    transition: 0.2s;
+    transition-delay: 0.4s;
 }
-.me_dog img:nth-of-type(2) {
+.me_dog > div {
 	top: -100%;
 }
-.me_dog:hover img:nth-of-type(2) {
+.me_dog:hover > div {
     top: 50%;
+}
+.me_dog:hover .caption {
+    opacity: 1;
 }
 
 
