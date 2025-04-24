@@ -643,10 +643,6 @@ h2 {
     position: relative;
 }
 
-.contact_bg:hover {
-    background-color: #f4f2ef;
-}
-
 .contact_top {
     text-align: center;
 }
@@ -688,9 +684,15 @@ h2 {
     position: relative;
     padding-bottom: 7px;
 }
-.good_conect:hover {
-    transform: translateY(4px);
-    box-shadow: none;
+.cls-1:hover {
+        fill: #f4f2ef;
+        filter: url(#drop-shadow-1);
+        stroke: #f4f2ef;
+        stroke-miterlimit: 10;
+        stroke-width: 5px;
+}
+.contact_contens:hover {
+    color: #ff7041;
 }
 
 
