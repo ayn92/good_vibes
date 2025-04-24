@@ -45,11 +45,11 @@
             <span class="sp_menu"><a href="#">MENU</a></span>
         </div>
         <nav class="sp_nav">
-            <ul class="header_menu">
-                <li class="header_item"><a href="index.html">HOME</a></li>
-                <li class="header_item"><a href="about.html">ABOUT</a></li>
-                <li class="header_item"><a href="works.html">WORKS</a></li>
-                <li class="conect"><a href="contact.html">CONTACT</a></li>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="works.html">WORKS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
     </header>
@@ -90,7 +90,7 @@
     </div>
 
     <!-- ABOUT -->
-    <section class="about">
+    <section class="about" id="about">
         <div class="about_top">
             <img src="./image/SVG/toge_wh.svg" alt="トップのトゲトゲ" class="toge_top">
             <img src="./image/SVG/sp_togewh_2.svg" alt="SP版のトップのトゲトゲ" class="toge_top_sp">
@@ -221,7 +221,33 @@
         </div>
 
         <div class="contact_btn">
-            <a href="contact.html"><img src="./image/SVG/conect_btn.svg" alt="トップコンタクトボタン" class="contact_bg">
+            <a href="contact.html">
+                <svg class="contact_bg" id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 447.67 179.21">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: #ec6e3f;
+                                filter: url(#drop-shadow-1);
+                                stroke: #f2f0ed;
+                                stroke-miterlimit: 10;
+                                stroke-width: 5px;
+                            }
+                        </style>
+                        <filter id="drop-shadow-1" x="0" y="0" width="447.67" height="179.21"
+                            filterUnits="userSpaceOnUse">
+                            <feOffset dx="7" dy="7" />
+                            <feGaussianBlur result="blur" stdDeviation="0" />
+                            <feFlood flood-color="#f3f1ee" flood-opacity="1" />
+                            <feComposite in2="blur" operator="in" />
+                            <feComposite in="SourceGraphic" />
+                        </filter>
+                    </defs>
+                    <g id="_固定" data-name="固定">
+                        <ellipse class="cls-1" cx="220.34" cy="86.1" rx="217.84" ry="83.6" />
+                    </g>
+                </svg>
+                <!--<img src="./image/SVG/conect_btn.svg" alt="トップコンタクトボタン" class="contact_bg">-->
                 <div class="contact_contens">
                     <h2 class="contact_good">GOOD</h2>
                     <h2 class="contact">CONECT</h2>
@@ -245,16 +271,35 @@
 
     <script>
         $(function () {
-            $('.works_img').slick({
-                autoplay: true,
-                autoplaySpeed: 2000,
-                dots: true,
-                slidesToShow: 1,
-                centerMode: true,
-                centerPadding: "20%",
-                arrows: false,
-            });
-        })
+            $('html, body').animate({
+                scrollTop: 0
+            })
+            $('body').addClass('loaded')
+            $('.main_title').on('click', function () {
+                $('body').removeClass('loaded')
+                $('html, body').animate({
+                    scrollTop: $('#about').offset().top
+                }, 1000)
+            })
+            $('.sp_btn').on('click', function () {
+                $('.sp_nav').fadeToggle()
+                $('.sp_menu').text('CLOSE')
+                $('.sp_btn').css('color', '#ff7041')
+                $('.sp_btn').css('background-color', '#4f2ef')
+            })
+        });
+
+        $('.works_img').slick({
+            autoplay: true,
+            autoplaySpeed: 2000,
+            dots: true,
+            slidesToShow: 1,
+            centerMode: true,
+            centerPadding: "20%",
+            arrows: false,
+            dotsClass: 'dots-wrap',
+        });
+
     </script>
 
 

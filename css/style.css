@@ -4,10 +4,15 @@ body {
     background-color: #344699;
     position: relative;
     margin: 0 auto;
+    
+}
+body.loaded {
+    overflow-y: hidden;
 }
 
-/* ヘッダー */
 
+
+/******** header ********/
 .header_menu {
     font-family: "futura-pt-bold", "sans-serif";
     font-style: normal;
@@ -54,8 +59,8 @@ a:hover {
 }
 
 
-/****** メインビジュアル ******/
 
+/******** MV ********/
 h1 {
     font-family: 'bovine-mvb', sans-serif;
     font-style: normal;
@@ -231,18 +236,18 @@ h1 {
 }
 
 
-/* top-about */
 
+/******** TOP-ABOUT ********/
 .about_top {
     position: relative;
     width: 63%;
-    padding-left: 500px;
+    padding-left: 450px;
 }
 
 .toge_top {
     width: 100%;
     position: relative;
-    padding-top: 170px;
+    padding-top: 45px;
 }
 .toge_top_sp {
     display: none;
@@ -252,7 +257,7 @@ h1 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-5%,-45%);
+    transform: translate(-12%,-56%);
     text-align: center;
 }
 
@@ -362,15 +367,16 @@ h2 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-114%,-200%);
+    transform: translate(-125%,-225%);
 }
 .about_top_photo_sp,
 .scroll {
     display: none;
 }
 
-/* top-SKILL */
 
+
+/******** TOP-SKILL ********/
 .skill {
     max-width: 1200px;
     padding-top: 95px;
@@ -481,8 +487,9 @@ h2 {
     padding-top: 80px;
 }
 
-/* top-WORKS */
 
+
+/******** TOP-WORKS ********/
 .works_top {
     position: relative;
     text-align: center;
@@ -528,6 +535,39 @@ h2 {
 .slick-dotted.slick-slider {
     margin-bottom: 135px;
 }
+
+.dots-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.dots-wrap li {
+    width: 10px;
+    height: 10px;
+    margin: 0 10px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dots-wrap li:hover,
+.dots-wrap li.slick-active {
+    background: #334699;
+}
+.dots-wrap li button {
+    display: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+
+
 
 .works_btn {
     position: absolute;
@@ -580,7 +620,7 @@ h2 {
 
 
 
-/* top-CONTACT */
+/******** TOP-CONTACT ********/
 .contact_top_text {
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
     font-style: normal;
@@ -601,6 +641,10 @@ h2 {
     width: 410px;
     padding: 40px;
     position: relative;
+}
+
+.contact_bg:hover {
+    background-color: #f4f2ef;
 }
 
 .contact_top {
@@ -720,8 +764,9 @@ h2 {
         }
 }
 
-/* フッター */
 
+
+/******** footer ********/
 .footer_menu {
     background-color: #f4f2ef;
     width: 100%;
@@ -741,9 +786,6 @@ h2 {
     font-size: 17px;
 }
 
-
-
-
 .header_menu_sub {
     font-family: "futura-pt-bold", "sans-serif";
     font-style: normal;
@@ -760,8 +802,7 @@ h2 {
 
 
 
-/******* about ******/
-
+/******** ABOUT ********/
 .about_title {
     width: 100%;
     height: 845px;
@@ -889,6 +930,7 @@ h2 {
     width: 332px;
     height: 442px;
     position: relative;
+    clip-path: url("#mask");
 }
 .me_dog > img {
     width: 100%;
@@ -898,22 +940,14 @@ h2 {
     transform: translate(-50%,-50%);
     transition: all 0.2s ease;
     transition: .4s ease-in-out;
-    clip-path: url(#mask);
 }
+
 .over-layer {
     position: absolute;
     top: 0;
     left: 0;
 }
-.dog_ellipse {
-clip-path: ellipse(140px 60px at 46% 14%);
-}
-.dog_ellipse02 {
-    clip-path: ellipse(140px 60px at 46% 27%);
-}
-.dog_ellipse03 {
-    clip-path: ellipse(140px 60px at 46% 42%);
-}
+
 .caption {
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
     font-style: normal;
@@ -923,10 +957,10 @@ clip-path: ellipse(140px 60px at 46% 14%);
     text-align: center;
     color: #f4f2ef;
 }
-.me_dog img:nth-of-type(4) {
+.me_dog img:nth-of-type(2) {
 	top: -100%;
 }
-.me_dog:hover img:nth-of-type(4) {
+.me_dog:hover img:nth-of-type(2) {
     top: 50%;
 }
 
@@ -976,7 +1010,7 @@ clip-path: ellipse(140px 60px at 46% 14%);
 
 
 
-/****** WORKS ******/
+/******** WORKS ********/
 .works {
     width: 100%;
     background-color: #f4f2ef;
@@ -1034,13 +1068,9 @@ a {
     opacity: 1;
     transition-delay: 0.3s;
 }
-
-
-
 .works_detail {
     width: 30%;
 }
-
 .works_sub {
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
     font-style: normal;
@@ -1076,7 +1106,7 @@ a {
 }
 
 
-/**** works詳細 ****/
+/******** WORKS詳細 ********/
 .works_detail_contens {
     text-align: center;
 }
@@ -1184,7 +1214,8 @@ p.detail_box_contens {
 }
 
 
-/******* contact *******/
+
+/******** CONTACT ********/
 form {
     max-width: 670px;
     margin: 0 auto;
@@ -1559,6 +1590,7 @@ form.c_form.confirm_form {
 
 
 
+/******** レスポンシブ ********/
 @media screen and (max-width: 1110px) {
     .title_desing,
     .title_feeling,
@@ -1631,7 +1663,8 @@ form.c_form.confirm_form {
     .header_menu {
         display: none;
     }
-    .sp_menu {
+
+    .sp_btn {
         font-family: "futura-pt-bold", "sans-serif";
         font-style: normal;
         font-weight: 700;
@@ -1647,11 +1680,11 @@ form.c_form.confirm_form {
         display: flex;
         align-items: center;
         justify-content: center;
+        position: absolute;
+        z-index: 1000;
+        right: 30px;
     }
-    .sp_btn {
-        display: block;
-    }
-    .sp_manu:hover a {
+    .sp_btn:hover{
         background-color: #f4f2ef;
         color: #ff7041;
     }
@@ -1661,6 +1694,20 @@ form.c_form.confirm_form {
         left: 0;
         width: 100%;
         height: 100vh;
+        background-color: #ff7041;
+        z-index: 100;
+    }
+    .sp_nav > ul {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        font-size: 35px;
+        font-family: "futura-pt-bold", "sans-serif";
+        font-style: normal;
+        font-weight: 700;
     }
     .sp_br {
         display: block; /*767px未満で改行タグを有効に。*/
@@ -1817,6 +1864,10 @@ form.c_form.confirm_form {
         border-radius: 8%;
       }
 
+
+    .about {
+        padding-top: 300px;
+    }
     .about_top {
         width: 100%;
         padding: 0;
@@ -1826,7 +1877,6 @@ form.c_form.confirm_form {
 
     .toge_top_sp {
         display: block;
-        padding-top: 300px;
         width: calc(100% + 120px);
         margin-left: -60px;
         margin-right: -60px;
@@ -1849,10 +1899,18 @@ form.c_form.confirm_form {
         padding-top: 0;
         font-size: 65px;
         color: #f4f2ef;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 143%;
     }
     .sub_about {
         color: #ff7041;
         padding-bottom: 115px;
+        position: absolute;
+        left: 50%;
+        bottom: 110%;
+        transform: translateX(-50%);
     }
     .about_top_photo {
         display: none;
@@ -1860,12 +1918,16 @@ form.c_form.confirm_form {
     .about_top_photo_sp {
         display: block;
         width: 77%;
-        transform: translate(15%, -22%);
+        transform: translateX(15%);
+        margin-top: -169px;
     }
     .name {
         position: absolute;
-        top: 59%;
+        top: 45%;
         left: 18%;
+    }
+    .about_top_text {
+        margin-top: 20px;
     }
     .about_btn {
         display: flex;
@@ -1915,6 +1977,9 @@ form.c_form.confirm_form {
         width: calc(100% + 120px);
         margin-left: -60px;
         margin-right: -60px;
+    }
+    .slick-slide {
+        margin: 0 4vw;
     }
 
     .kira_wh_solid_con {
