@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/vqq5gsx.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         (function (d) {
             var config = {
@@ -25,16 +26,27 @@
     <div></div>
     <!-- ヘッダー -->
     <header>
-        <nav>
-            <ul class="header_menu_sub">
+        <nav class="pc_nav">
+            <ul class="header_menu">
                 <li class="header_item"><a href="index.html">HOME</a></li>
                 <li class="header_item"><a href="about.html">ABOUT</a></li>
                 <li class="header_item"><a href="works.html">WORKS</a></li>
-                <button class="conect">
-                    <li><a href="contact.html">CONTACT</a></li>
-                </button>
+                <li class="conect"><a href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
+        <div class="sp_header">
+            <div class="sp_btn">
+                <span class="sp_menu"><a href="#">MENU</a></span>
+            </div>
+            <nav class="sp_nav">
+                <ul>
+                    <li class="sp_item"><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="works.html">WORKS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <section>
@@ -46,6 +58,7 @@
         <div class="about_box">
             <div>
                 <img src="./image/SVG/toge_blue.svg" alt="青のトゲトゲ" class="blue_toge">
+                <img src="./image/SVG/sp_togewh_2.svg" alt="白のトゲトゲ" class="wh_toge">
             </div>
 
             <h3 class="concept">GOOD<br>VIBES</h3>
@@ -75,6 +88,7 @@
         <div class="prf_text">
             <p class="name_ja">相馬 朱菜</p>
             <p class="name_en">AYANA SOMA</p>
+            <img src="./image/SVG/myphoto@3x.png" alt="プロフィール写真" class="sp_about_myphoto">
             <p class="prf_contens">1992年生まれ、神奈川県在住の1児の母。<br>
                 看護助手として医療機関で働いています。<br>
                 性格は、自他ともに認める 「ポジティブで好奇心旺盛」。<br>
@@ -83,46 +97,101 @@
     </section>
 
     <section class="prf_me">
-        <h2>THIS<br>IS<br>ME<br></h2>
+        <h2>THIS<br> IS <br>ME<br></h2>
 
-        <div>
-            <div class="prf_me_contens">
-                <svg>
-                    <clipPath id="mask">
-                        <path class="cls-1"
-                            d="M291.45,134.24c0-12.18-7.09-23.6-19.47-33.43,12.38-9.84,19.47-21.25,19.47-33.43C291.45,30.44,226.32.5,145.98.5S.5,30.44.5,67.37c0,12.18,7.09,23.6,19.47,33.43C7.59,110.64.5,122.06.5,134.24s7.09,23.6,19.47,33.43C7.59,177.51.5,188.92.5,201.1c0,36.93,65.13,66.87,145.48,66.87s145.48-29.94,145.48-66.87c0-12.18-7.09-23.6-19.47-33.43,12.38-9.84,19.47-21.25,19.47-33.43Z" />
-                    </clipPath>
-                </svg>
-                <div class="me_dog">
-                    <img class="dog_ellipse" src="./image/SVG/2x/dog@2x.png" alt="犬">
-                </div>
+        <div class="prf_me_contens">
+            <svg>
+                <clipPath id="mask">
+                    <path class="cls-1"
+                        d="M291.45,134.24c0-12.18-7.09-23.6-19.47-33.43,12.38-9.84,19.47-21.25,19.47-33.43C291.45,30.44,226.32.5,145.98.5S.5,30.44.5,67.37c0,12.18,7.09,23.6,19.47,33.43C7.59,110.64.5,122.06.5,134.24s7.09,23.6,19.47,33.43C7.59,177.51.5,188.92.5,201.1c0,36.93,65.13,66.87,145.48,66.87s145.48-29.94,145.48-66.87c0-12.18-7.09-23.6-19.47-33.43,12.38-9.84,19.47-21.25,19.47-33.43Z" />
+                </clipPath>
+            </svg>
+
+            <div class="me_dog">
+                <img src="./image/SVG/2x/dog@2x.png" alt="犬">
                 <div>
-                    <img class="dog_hover" src="./image/SVG/2x/dog_hover@2x@2x.jpg" alt="ホバー時の犬">
-                    <div class="caption">
+                    <img class="dog_hover" src="./image/2x/dog_hover@2x.png" alt="ホバー時の犬">
+                    <div class="caption_dog">
                         <p>我が家の豆柴くん。<br>
                             家族全員溺愛してます！</p>
                     </div>
                 </div>
             </div>
-        </div>
-        <img src="./image/SVG/2x/me_plant@2x.png" alt="植物" class="me_plant">
+            <div class="caption_dog_sp">
+                <p>我が家の豆柴くん。<br>
+                    家族全員溺愛してます！</p>
+            </div>
+
+
+            <div class="me_plant">
+                <img src="./image/2x/plant@2x.png" alt="観葉植物">
+                <div>
+                    <img class="plant_hover" src="./image/2x/plant_hover@2x.png" alt="ホバー時の観葉植物">
+                    <div class="caption_plant">
+                        <p>観葉植物が好きです。<br>
+                            現在はパキラを種からの<br>
+                            育成中に挑戦中です！</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="prf_me_contens_2">
-            <img src="./image/SVG/2x/me_emb@2x.png" alt="刺繍" class="me_emb">
-            <img src="./image/SVG/2x/me_music@2x.png" alt="音楽" class="me_music">
-        </div>
-        </div>
+        <div>
+            <div class="me_emb">
+                <img src="./image/2x/emb@2x.png" alt="刺繍">
+                <div>
+                    <img class="emb_hover" src="./image/2x/emb_hover_1@2x.png" alt="ホバー時の刺繍">
+                    <div class="caption_emb">
+                        <p>ものづくりが大好きです！<br>
+                            こちらは息子のリクエストで<br>
+                            刺繍キーホルダーを作りました！<br>
+                            他にもお菓子作りや編み物など<br>
+                            夢中になると時間を忘れて没頭します。</p>
+                    </div>
+                </div>
+            </div>
 
+            <div>
+                <div class="me_music">
+                    <img src="./image/2x/music@2x.png" alt="音楽">
+                    <div>
+                        <img class="music_hover" src="./image/2x/music_hover_1@2x.png" alt="ホバー時の音楽">
+                        <div class="caption_music">
+                            <p>音楽が大好きです！<br>
+                                子供が生まれる前はよくフェスに<br>
+                                行っていました！<br>
+                                次行くときは<br>
+                                子供も連れていきたいです。<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </section>
 
     <!-- フッター -->
     <footer>
         <div class="contact_btn">
-            <a href="contact.html"><img src="./image/SVG/conect_btn.svg" alt="トップコンタクトボタン" class="contact_bg">
+            <a href="contact.html">
+                <svg class="contact_bg" id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 357.56 140.31">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: #ff7041;
+                                stroke: #f4f2ef;
+                                stroke-miterlimit: 10;
+                                stroke-width: 5px;
+                            }
+                        </style>
+                    </defs>
+                    <g id="_固定" data-name="固定">
+                        <ellipse class="cls-1" cx="178.78" cy="70.16" rx="176.28" ry="67.66" />
+                    </g>
+                </svg>
                 <div class="contact_contens">
-                    <h2 class="contact_good">GOOD</h2>
-                    <h2 class="contact">CONECT</h2>
+                    <p class="contact_good">GOOD</p>
+                    <p class="contact">CONECT</p>
                 </div>
             </a>
         </div>
@@ -135,7 +204,20 @@
         </nav>
     </footer>
 
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_nav').fadeToggle()
+                if (!$('.sp_btn').hasClass('open')) {
+                    $('.sp_menu').text('CLOSE')
+                } else {
+                    $('.sp_menu').text('MENU')
+                }
+                $('.sp_btn').toggleClass('open')
+            })
 
+        })
+    </script>
 </body>
 
 </html>

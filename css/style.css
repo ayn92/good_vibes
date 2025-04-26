@@ -10,8 +10,6 @@ body.loaded {
     overflow-y: hidden;
 }
 
-
-
 /******** header ********/
 .header_menu {
     font-family: "futura-pt-bold", "sans-serif";
@@ -43,7 +41,7 @@ a:hover {
     width: 172px;
     height: 47px;
     border-radius: 23.5px;
-    margin: 20px 20px 0 0;
+    margin: 20px 20px 20px 0;
     border: none;
 	cursor: pointer;
     display: flex;
@@ -138,7 +136,7 @@ h1 {
     color: #344699;
     font-size: 90px;
     -webkit-text-stroke: 0.5px #f4f2ef;
-    padding-left: 365px;
+    padding: 0 0 45px 365px;
 }
 
 
@@ -247,7 +245,7 @@ h1 {
 .toge_top {
     width: 100%;
     position: relative;
-    padding-top: 45px;
+    /*padding-top: 45px;*/
 }
 .toge_top_sp {
     display: none;
@@ -257,7 +255,7 @@ h1 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-12%,-56%);
+    transform: translate(-12%,-59%);
     text-align: center;
 }
 
@@ -367,7 +365,7 @@ h2 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-125%,-225%);
+    transform: translate(-127%, -230%);
 }
 .about_top_photo_sp,
 .scroll {
@@ -466,13 +464,15 @@ h2 {
     font-size: 17px;
     text-align: left;
     width: 80%;
-    line-height: 1.35;
+    margin: 0 auto;
+    line-height: 1.4;
 }
 
 .skill_contens {
     display: flex;
     justify-content: space-between;
     padding: 40px;
+    gap: 35px;
 }
 .skill_contens > div {
     width: 100%;
@@ -643,7 +643,6 @@ h2 {
 
 .contact_bg {
     width: 410px;
-    padding: 40px;
     position: relative;
 }
 
@@ -651,11 +650,16 @@ h2 {
     text-align: center;
 }
 
+.contact_btn a {
+    display: inline-block;
+    margin: 40px;
+}
+
 .contact_contens {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-57%);
+    transform: translate(-50%,-55%);
 }
 
 .contact_good {
@@ -688,14 +692,13 @@ h2 {
     position: relative;
     padding-bottom: 7px;
 }
-.cls-1:hover {
+.contact_btn a:hover .cls-1 {
         fill: #f4f2ef;
-        filter: url(#drop-shadow-1);
         stroke: #f4f2ef;
         stroke-miterlimit: 10;
         stroke-width: 5px;
 }
-.contact_contens:hover {
+.contact_btn a:hover .contact_contens p {
     color: #ff7041;
 }
 
@@ -803,7 +806,6 @@ h2 {
     align-items: baseline;
     position: sticky;
     top: 0;
-    padding-bottom: 18px;
 }
 
 
@@ -816,7 +818,6 @@ h2 {
     position: relative;
     text-align: center;
 }
-
 .sub_good_2 {
     font-size: 65px;
     color: #f4f2ef;
@@ -824,7 +825,6 @@ h2 {
     text-shadow: 5px 5px 0 #344699;
     padding-top: 44px;
 }
-
 .sub_about_2 {
     font-family: 'bovine-mvb', sans-serif;
     font-style: normal;
@@ -833,7 +833,6 @@ h2 {
     font-size: 88px;
     padding-bottom: 74px;
 }
-
 .concept {
     font-family: 'bovine-mvb', sans-serif;
     font-style: normal;
@@ -847,7 +846,6 @@ h2 {
     left: 50%;
     text-align: center;
 }
-
 .blue_toge {
     width: 39%;
     position: absolute;
@@ -856,7 +854,6 @@ h2 {
     transform: translate(-108%,-205%);
     z-index: 1000;
 }
-
 .about_text p {
     width: 550px;
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
@@ -869,27 +866,22 @@ h2 {
     top: 13%;
     left: 50%;
 }
-
 .about_text_2 {
     padding-top: 370px;
 }
-
 .about_text_3 {
     padding-top: 420px;
 }
-
 .about_myphoto {
     width: 27%;
     height: 498px;
     padding: 75px 0 75px 0;
 }
-
 .about_prf {
     display: flex;
     justify-content: center;
     gap: 110px;
 }
-
 .name_ja {
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
     font-style: normal;
@@ -897,7 +889,6 @@ h2 {
     font-size: 29px;
     padding-top: 190px;
 }
-
 .name_en {
     font-family: "futura-pt-bold", "sans-serif";
     font-style: normal;
@@ -905,7 +896,6 @@ h2 {
     font-size: 60px;
     padding: 10px 0 38px 0;
 }
-
 .prf_contens {
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
     font-style: normal;
@@ -913,7 +903,6 @@ h2 {
     font-size: 20px;
     line-height: 1.35;
 }
-
 .prf_me {
     font-family: 'bovine-mvb', sans-serif;
     font-style: normal;
@@ -926,9 +915,8 @@ h2 {
     text-align: center;
     display: flex;
     align-items: center;
-    gap: 140px;
+    gap: 50px;
 }
-
 
 .me_dog,
 .dog_hover {
@@ -939,7 +927,6 @@ h2 {
     position: relative;
     clip-path: url("#mask");
 }
-
 .me_dog img,
 .me_dog > div {
     width: 100%;
@@ -950,14 +937,12 @@ h2 {
     transition: all 0.2s ease;
     transition: 0.4s ease-in-out;
 }
-
 .over-layer {
     position: absolute;
     top: 0;
     left: 0;
 }
-
-.caption {
+.caption_dog {
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -980,33 +965,170 @@ h2 {
 .me_dog:hover > div {
     top: 50%;
 }
-.me_dog:hover .caption {
+.me_dog:hover .caption_dog {
+    opacity: 1;
+}
+.caption_dog_sp {
+    display: none;
+}
+
+
+
+.me_plant,
+.plant_hover {
+    overflow: hidden;
+    cursor: pointer;
+    width: 332px;
+    height: 442px;
+    position: relative;
+    clip-path: url("#mask");
+}
+.me_plant img,
+.me_plant > div {
+    width: 100%;
+    position: absolute;
+    top: 39%;
+    left: 44%;
+    transform: translate(-50%,-50%);
+    transition: all 0.2s ease;
+    transition: 0.4s ease-in-out;
+}
+.over-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.caption_plant {
+    font-family: "hiragino-kaku-gothic-pron", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15%;
+    margin: 0 auto;
+    text-align: center;
+    color: #f4f2ef;
+    position: absolute;
+    top: 39;
+    left: 44%;
+    transform: translate(-54%, -225%);
+    width: 100%;
+    opacity: 0;
+    transition: 0.2s;
+    transition-delay: 0.4s;
+}
+.me_plant > div {
+	top: -100%;
+}
+.me_plant:hover > div {
+    top: 50%;
+    left: 56%;
+}
+.me_plant:hover .caption_plant {
     opacity: 1;
 }
 
 
 
-.me_plant {
-    width: 283px;
-    height: 257px;
-    padding-top: 50px;
+.me_emb,
+.emb_hover {
+    overflow: hidden;
+    cursor: pointer;
+    width: 332px;
+    height: 442px;
+    position: relative;
+    clip-path: url("#mask");
+}
+.me_emb img,
+.me_emb > div {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-53%, -76%);
+    transition: all 0.2s ease;
+    transition: 0.4s ease-in-out;
+}
+.over-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.caption_emb {
+    font-family: "hiragino-kaku-gothic-pron", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12%;
+    margin: 0 auto;
+    text-align: center;
+    color: #f4f2ef;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-52%, -171%);
+    width: 100%;
+    opacity: 0;
+    transition: 0.2s;
+    transition-delay: 0.4s;
+}
+.me_emb > div {
+	top: -100%;
+}
+.me_emb:hover > div {
+    top: 50%;
+}
+.me_emb:hover .caption_emb {
+    opacity: 1;
 }
 
-.prf_me_contens_2 {
-    display: flex;
-    gap: 60px;
-}
 
-.me_emb {
-    width: 275px;
-    height: 285px;
-    padding-bottom: 50px;
+.me_music,
+.music_hover {
+    overflow: hidden;
+    cursor: pointer;
+    width: 332px;
+    height: 442px;
+    position: relative;
+    clip-path: url("#mask");
 }
-
-.me_music {
-    width: 271px;
-    height: 248px;
-    padding-top: 50px;
+.me_music img,
+.me_music > div {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -66%);
+    transition: all 0.2s ease;
+    transition: 0.4s ease-in-out;
+}
+.over-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.caption_music {
+    font-family: "hiragino-kaku-gothic-pron", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14%;
+    margin: 0 auto;
+    text-align: center;
+    color: #f4f2ef;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-156%);
+    width: 100%;
+    opacity: 0;
+    transition: 0.2s;
+    transition-delay: 0.4s;
+}
+.me_music > div {
+	top: -100%;
+}
+.me_music:hover > div {
+    top: 50%;
+}
+.me_music:hover .caption_music {
+    opacity: 1;
 }
 
 
@@ -1027,6 +1149,10 @@ h2 {
     color: #f4f2ef;
     font-size: 17px;
 }
+.sp_about_myphoto,
+.wh_toge {
+    display: none;
+}
 
 
 
@@ -1038,16 +1164,16 @@ h2 {
 
 .works_main {
     text-align: center;
-    padding: 58px;
+    padding-top: 58px;
 }
 
 .works_box {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 70px;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px 20px 60px 20px;
 }
 
 .works_thumbnail > img {
@@ -1158,6 +1284,18 @@ a {
     font-size: 18px;
     padding-bottom: 80px;
     line-height: 1.65;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
+.works_detail_text_3 {
+    font-family: "hiragino-kaku-gothic-pron", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: #344699;
+    font-size: 18px;
+    padding-bottom: 50px;
+    line-height: 1.65;
 }
 .works_detail_sub {
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
@@ -1230,7 +1368,11 @@ p.detail_box_contens {
 	padding: 20px 30px;
 	transition: 0.4s;
 	cursor: pointer;
-    box-shadow: 3px 3px #344699;
+    box-shadow: 4px 4px #344699;
+}
+.back_btn a:hover {
+    transform: translateY(3px);
+    box-shadow: none;
 }
 .point {
     font-family: "futura-pt-bold", "sans-serif";
@@ -1737,9 +1879,17 @@ form.c_form.confirm_form {
     .home {
         text-align: center;
     }
+
+/******** header ********/
     .pc_nav,
     .header_menu {
         display: none;
+    }
+
+    .sp_header {
+        background-color: #334699;
+        width: 100%;
+        height: 87px;
     }
 
     .sp_btn {
@@ -1761,6 +1911,10 @@ form.c_form.confirm_form {
         position: absolute;
         z-index: 1000;
         right: 30px;
+    }
+    .sp_btn.open {
+        color: #ff7041;
+        background-color: #f4f2ef;
     }
     .sp_btn:hover{
         background-color: #f4f2ef;
@@ -1787,9 +1941,18 @@ form.c_form.confirm_form {
         font-style: normal;
         font-weight: 700;
     }
+    .sp_item {
+        transition-duration: .4s;
+    }
+    .sp_item:hover {
+        transform: scale(1.1);
+    }
     .sp_br {
         display: block; /*767px未満で改行タグを有効に。*/
       }
+
+
+/******** MV ********/
     .title {
         display: inline-block;
         text-align: center;
@@ -1942,7 +2105,7 @@ form.c_form.confirm_form {
         border-radius: 8%;
       }
 
-
+/******** TOP-ABOUT ********/
     .about {
         padding-top: 300px;
     }
@@ -2013,7 +2176,7 @@ form.c_form.confirm_form {
         padding-top: 50px;
     }
 
-
+/******** SKILL ********/
     .skill_contens {
         display: flex;
         flex-direction: column;
@@ -2042,7 +2205,7 @@ form.c_form.confirm_form {
         width: 170px;
     }
 
-
+/******** TOP-WORKS ********/
     .works_top {
         background-image: url(../image/SVG/sp_moku.svg);
     }
@@ -2079,19 +2242,18 @@ form.c_form.confirm_form {
     .contact_top_text {
         font-size: 20px;
     }
-
-
-
     .works_box {
         display: block;
         width: 100%;
+        padding: 20px;
     }
-
     .works_detail {
     width: 80%;
     padding-bottom: 70px;
+    margin: 0 auto;
     } 
 
+/******** CONTACT ********/
     .sub_good_con {
         font-size: 65px;
         color: #f4f2ef;
@@ -2116,7 +2278,7 @@ form.c_form.confirm_form {
     }
 
 
-
+/******** WORKS詳細 ********/
     .works_detail_sub {
         padding-left: 100px;
     }
@@ -2165,5 +2327,90 @@ form.c_form.confirm_form {
         font-size: 14px;
         gap: 50px;
         max-width: 380px;
+    }
+
+
+/******** ABOUT ********/
+    .about_title {
+        background-color: #334699;
+    }
+    .sub_good_2 {
+        -webkit-text-stroke: 1px #ff7041;
+        text-shadow: 5px 5px 0 #ff7041;
+        padding-top: 80px;
+    }
+    .sub_about_2 {
+        color: #ff7041;
+        padding: 0;
+    }
+    .blue_toge,
+    .about_myphoto {
+        display: none;
+    }
+    .wh_toge {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -150%);
+        z-index: 1000;
+    }
+    .concept {
+        color: #334699;
+        transform: translate(-50%, -688%);
+        font-size: 68px;
+    }
+    .about_text p {
+        font-size: 15px;
+        top: 23%;
+        left: 11%;
+        z-index: 3000;
+        text-align: center;
+        line-height: 1.5;
+    }
+    .about_text_2 {
+        padding-top: 240px;
+    }
+    .about_text_3 {
+        padding-top: 280px;
+    }
+    .name_ja {
+        font-size: 20px;
+        text-align: center;
+    }
+    .name_en {
+        font-size: 45px;
+        text-align: center;
+        padding: 0;
+    }
+    .sp_about_myphoto {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+    }
+    .prf_contens {
+        font-size: 15px;
+        text-align: center;
+        padding: 10px 0 30px 0;
+    }
+    .prf_me h2 br {
+        display: none;
+    }
+    .prf_me {
+        font-size: 65px;
+        display: block;
+        padding-top: 50px;
+    }
+    .dog_hover,
+    .caption_dog {
+        display: none;
+    }
+    .caption_dog_sp p {
+        display: block;
+        font-size: 15px;
+        color: #334699;
+        text-align: center;
+        line-height: 1.3;
     }
 }

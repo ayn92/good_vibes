@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/vqq5gsx.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         (function (d) {
             var config = {
@@ -25,16 +26,27 @@
     <div></div>
     <!-- ヘッダー -->
     <header>
-        <nav>
-            <ul class="header_menu_sub">
+        <nav class="pc_nav">
+            <ul class="header_menu">
                 <li class="header_item"><a href="index.html">HOME</a></li>
                 <li class="header_item"><a href="about.html">ABOUT</a></li>
                 <li class="header_item"><a href="works.html">WORKS</a></li>
-                <button class="conect">
-                    <li><a href="contact.html">CONTACT</a></li>
-                </button>
+                <li class="conect"><a href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
+        <div class="sp_header">
+            <div class="sp_btn">
+                <span class="sp_menu"><a href="#">MENU</a></span>
+            </div>
+            <nav class="sp_nav">
+                <ul>
+                    <li class="sp_item"><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="works.html">WORKS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <section class="works">
@@ -55,10 +67,12 @@
                 ABテストにより「高級感ver」と「POP ver」の2種を作成し、<br>どちらの反応が良いかを検証。<br>
                 InstagramとXに対応するため、正方形と長方形の2サイズを展開。</p>
 
+            <div class="point">POINT</div>
+
             <p class="works_detail_text_2">
                 ⚪︎赤は女性らしさを表現し、視認性にも優れているため採用しました。<br>トーンを抑えることで落ち着いた印象を演出し、<br>黒やゴールドを組み合わせることで、高級感と華やかさをプラスしています。<br>
                 ⚪︎柔らかさや安心感を伝えるため、円や曲線を多く取り入れ、<br>ペルソナに合わせて和風テイストに仕上げました。<br>
-                ⚪︎フォントには明朝体を使用し、<br>背景はシンメトリー構成とすることで、全体により一層の高級感を持たせています。</p>
+                ⚪︎フォントには明朝体を使用し、背景はシンメトリー構成とすることで、<br>全体により一層の高級感を持たせています。</p>
 
             <div class="detail_works">
                 <p class="detail_box">担当範囲</p>
@@ -86,10 +100,26 @@
     <!-- フッター -->
     <footer>
         <div class="contact_btn">
-            <a href="contact.html"><img src="./image/SVG/conect_btn.svg" alt="トップコンタクトボタン" class="contact_bg">
+            <a href="contact.html">
+                <svg class="contact_bg" id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 357.56 140.31">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: #ff7041;
+                                stroke: #f4f2ef;
+                                stroke-miterlimit: 10;
+                                stroke-width: 5px;
+                            }
+                        </style>
+                    </defs>
+                    <g id="_固定" data-name="固定">
+                        <ellipse class="cls-1" cx="178.78" cy="70.16" rx="176.28" ry="67.66" />
+                    </g>
+                </svg>
                 <div class="contact_contens">
-                    <h2 class="contact_good">GOOD</h2>
-                    <h2 class="contact">CONECT</h2>
+                    <p class="contact_good">GOOD</p>
+                    <p class="contact">CONECT</p>
                 </div>
             </a>
         </div>
@@ -102,6 +132,19 @@
         </nav>
     </footer>
 
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_nav').fadeToggle()
+                if (!$('.sp_btn').hasClass('open')) {
+                    $('.sp_menu').text('CLOSE')
+                } else {
+                    $('.sp_menu').text('MENU')
+                }
+                $('.sp_btn').toggleClass('open')
+            })
+        })
+    </script>
 
 </body>
 

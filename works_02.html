@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/vqq5gsx.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         (function (d) {
             var config = {
@@ -25,16 +26,27 @@
     <div></div>
     <!-- ヘッダー -->
     <header>
-        <nav>
-            <ul class="header_menu_sub">
+        <nav class="pc_nav">
+            <ul class="header_menu">
                 <li class="header_item"><a href="index.html">HOME</a></li>
                 <li class="header_item"><a href="about.html">ABOUT</a></li>
                 <li class="header_item"><a href="works.html">WORKS</a></li>
-                <button class="conect">
-                    <li><a href="contact.html">CONTACT</a></li>
-                </button>
+                <li class="conect"><a href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
+        <div class="sp_header">
+            <div class="sp_btn">
+                <span class="sp_menu"><a href="#">MENU</a></span>
+            </div>
+            <nav class="sp_nav">
+                <ul>
+                    <li class="sp_item"><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="works.html">WORKS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <section class="works">
@@ -56,7 +68,7 @@
 
                 サイト全体は余白を多めに取り、やさしい印象を与える線画のイラストを使用することで、<br>ナチュラルかつ上品な雰囲気を表現しました。<br>
 
-            <p class="works_detail_text_2">
+            <p class="works_detail_text_3">
                 また、「お店の雰囲気や人が感じられるサイトにしたい」という要望を受け、<br>スタイル写真や店内の様子が伝わるビジュアル構成にしています。<br>
 
                 さらに、予約数の向上という目的に沿って、<br>RESERVEセクションはあえて暗めのトーンを使い、視線を引くように工夫しました。</p>
@@ -91,10 +103,26 @@
     <!-- フッター -->
     <footer>
         <div class="contact_btn">
-            <a href="contact.html"><img src="./image/SVG/conect_btn.svg" alt="トップコンタクトボタン" class="contact_bg">
+            <a href="contact.html">
+                <svg class="contact_bg" id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 357.56 140.31">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: #ff7041;
+                                stroke: #f4f2ef;
+                                stroke-miterlimit: 10;
+                                stroke-width: 5px;
+                            }
+                        </style>
+                    </defs>
+                    <g id="_固定" data-name="固定">
+                        <ellipse class="cls-1" cx="178.78" cy="70.16" rx="176.28" ry="67.66" />
+                    </g>
+                </svg>
                 <div class="contact_contens">
-                    <h2 class="contact_good">GOOD</h2>
-                    <h2 class="contact">CONECT</h2>
+                    <p class="contact_good">GOOD</p>
+                    <p class="contact">CONECT</p>
                 </div>
             </a>
         </div>
@@ -107,6 +135,19 @@
         </nav>
     </footer>
 
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_nav').fadeToggle()
+                if (!$('.sp_btn').hasClass('open')) {
+                    $('.sp_menu').text('CLOSE')
+                } else {
+                    $('.sp_menu').text('MENU')
+                }
+                $('.sp_btn').toggleClass('open')
+            })
+        })
+    </script>
 
 </body>
 

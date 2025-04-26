@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 271.63 281.84">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <path class="cls-1" d="M271.63,134.23c0-13.22-8.79-25.49-23.8-35.62,15.01-10.13,23.8-22.4,23.8-35.62C271.63,28.2,210.83,0,135.82,0S0,28.2,0,62.99c0,13.22,8.79,25.49,23.8,35.62C8.79,108.74,0,121.01,0,134.23c0,16.29,13.33,31.13,35.2,42.31C13.33,187.72,0,202.56,0,218.85c0,34.79,60.81,62.99,135.82,62.99s135.82-28.2,135.82-62.99c0-16.29-13.33-31.13-35.2-42.31,21.87-11.18,35.2-26.02,35.2-42.31Z"/>
+    </clipPath>
+  </defs>
+  <g id="_固定" data-name="固定">
+    <g class="cls-2">
+      <image width="4284" height="5712" transform="translate(-33.38 -129.11) scale(.08)" xlink:href="../PF_ME_ホバー_刺繍.jpg"/>
+    </g>
+  </g>
+</svg>

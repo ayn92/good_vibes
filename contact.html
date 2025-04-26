@@ -26,16 +26,27 @@
     <div></div>
     <!-- ヘッダー -->
     <header>
-        <nav>
-            <ul class="header_menu_sub">
+        <nav class="pc_nav">
+            <ul class="header_menu">
                 <li class="header_item"><a href="index.html">HOME</a></li>
                 <li class="header_item"><a href="about.html">ABOUT</a></li>
                 <li class="header_item"><a href="works.html">WORKS</a></li>
-                <button class="conect">
-                    <li><a href="contact.html">CONTACT</a></li>
-                </button>
+                <li class="conect"><a href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
+        <div class="sp_header">
+            <div class="sp_btn">
+                <span class="sp_menu"><a href="#">MENU</a></span>
+            </div>
+            <nav class="sp_nav">
+                <ul>
+                    <li class="sp_item"><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="works.html">WORKS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <div class="contact_title">
@@ -182,6 +193,16 @@
 
         <script>
             $(function () {
+                $('.sp_btn').on('click', function () {
+                    $('.sp_nav').fadeToggle()
+                    if (!$('.sp_btn').hasClass('open')) {
+                        $('.sp_menu').text('CLOSE')
+                    } else {
+                        $('.sp_menu').text('MENU')
+                    }
+                    $('.sp_btn').toggleClass('open')
+                })
+
                 $('.input_form').on('submit', function (event) {
                     event.preventDefault()
 
