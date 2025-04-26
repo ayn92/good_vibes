@@ -245,8 +245,16 @@ h1 {
 .toge_top {
     width: 100%;
     position: relative;
-    /*padding-top: 45px;*/
+    transform-origin:50% 50%;
+    animation: toge 5s linear alternate infinite;
 }
+@keyframes toge {
+    to {
+          transform:translateX(100%) rotate(1turn);
+        }
+
+    }
+
 .toge_top_sp {
     display: none;
 }
@@ -1396,50 +1404,10 @@ p.detail_box_contens {
 .point:after {
     margin-left: 1em; /* 文字の左隣 */
 }
-
-#openModal {
-    font-family: "futura-pt-bold", "sans-serif";
-    font-style: normal;
-    font-weight: 700;
-    border: #334699 1px solid;
-    border-radius: 15px;
-    color: #344699;
-    width: 100px;
-    height: 30px;
-    box-shadow: #334699 3px 3px;
+.model_pc,
+.model_sp {
+    display: none;
 }
-#closeModal {
-    font-family: "futura-pt-bold", "sans-serif";
-    font-style: normal;
-    font-weight: 700;
-    color: #344699;
-    font-size: 15px;
-    border: none;
-}
-.modal_img {
-    width: 70%;
-}
-#modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(244, 242, 239, 0.8);
-    padding: 20px;
-    border-radius: 5px;
-    z-index: 1000; /* モーダルを他の要素の上に表示 */
-  }
-  
-  #modal::backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明の背景 */
-    z-index: 999;
-    display: none; /* 初期状態は非表示 */
-  }
 
 
 
@@ -2007,7 +1975,7 @@ form.c_form.confirm_form {
         display: block;
         width: 100px;
         position: absolute;
-        top: 12%;
+        top: 11%;
         left: 60%;
         animation: anime1 1s ease 0s infinite alternate;
         transform-origin:center;
@@ -2025,7 +1993,7 @@ form.c_form.confirm_form {
         display: block;
         width: 50px;
         position: absolute;
-        top: 13%;
+        top: 12%;
         left: 70%;
         animation: anime2 0.8s ease 0s infinite alternate;
         transform-origin: center;
@@ -2168,7 +2136,7 @@ form.c_form.confirm_form {
         display: block;
         width: 77%;
         transform: translateX(15%);
-        margin-top: -169px;
+        margin-top: -176px;
     }
     .name {
         position: absolute;
@@ -2341,6 +2309,62 @@ form.c_form.confirm_form {
         max-width: 380px;
     }
 
+    .model_btn {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin: 20px;
+    }
+    .model_pc,
+    .model_sp {
+        display: block;
+    }
+    #openModal {
+        font-family: "futura-pt-bold", "sans-serif";
+        font-style: normal;
+        font-weight: 700;
+        border: #334699 1px solid;
+        border-radius: 15px;
+        color: #344699;
+        width: 100px;
+        height: 30px;
+        box-shadow: #334699 3px 3px;
+        cursor: pointer;
+    }
+    #closeModal {
+        font-family: "futura-pt-bold", "sans-serif";
+        font-style: normal;
+        font-weight: 700;
+        color: #344699;
+        font-size: 15px;
+        border: none;
+    }
+    .modal_img {
+        width: 70%;
+    }
+    #modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(244, 242, 239, 0.8);
+        padding: 20px;
+        border-radius: 5px;
+        z-index: 1000; /* モーダルを他の要素の上に表示 */
+      }
+      
+      #modal::backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* 半透明の背景 */
+        z-index: 999;
+        display: none; /* 初期状態は非表示 */
+      }
+    
+
 
 /******** ABOUT ********/
     .about_title {
@@ -2365,18 +2389,18 @@ form.c_form.confirm_form {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -150%);
+        transform: translate(-50%, -130%);
         z-index: 1000;
     }
     .concept {
         color: #334699;
-        transform: translate(-50%, -688%);
-        font-size: 68px;
+        transform: translate(-50%, -650%);
+        font-size: 70px;
     }
     .about_text p {
         font-size: 15px;
-        top: 23%;
-        left: 11%;
+        top: 25%;
+        left: 16%;
         z-index: 3000;
         text-align: center;
         line-height: 1.5;
