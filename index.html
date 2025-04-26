@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/style.css">
 
     <link rel="stylesheet" href="https://use.typekit.net/vqq5gsx.css">
+
     <script>
         (function (d) {
             var config = {
@@ -257,8 +258,14 @@
                 <li class="footer_item"><a href="works.html">WORKS</a></li>
             </ul>
         </nav>
-
     </footer>
+
+
+    <div class="pagetop_btn">
+        <a href="#" class="page_top">
+            <span class="arrow_pagetop">page<br>top</span>
+        </a>
+    </div>
 
     <script>
         $(function () {
@@ -293,6 +300,33 @@
             arrows: false,
             dotsClass: 'dots-wrap',
         });
+
+        $(function () {
+            var topBtn = $('.page_top');
+            topBtn.hide();
+
+            //ボタンの表示設定
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 80) {
+                    // 画面を80pxスクロールしたら、ボタンを表示する
+                    topBtn.fadeIn();
+                } else {
+                    // 画面が80pxより上なら、ボタンを表示しない
+                    topBtn.fadeOut();
+                }
+            });
+
+            // ボタンをクリックしたら、スクロールして上に戻る
+            topBtn.click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 500);
+                return false;
+            });
+
+        });
+
+
 
     </script>
 
