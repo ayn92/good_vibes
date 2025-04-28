@@ -252,16 +252,15 @@ h1 {
     position: relative;
     top: 50%;
     left: 50%;
-}
-   /* transform-origin:50% 50%;
-    animation: toge 5s linear alternate infinite;
+   transform-origin:50% 50%;
+    animation: toge 5s linear;
 }
 @keyframes toge {
     to {
           transform:translateX(100%) rotate(1turn);
         }
 
-    }*/
+    }
 
 .toge_top_sp {
     display: none;
@@ -1804,6 +1803,8 @@ form.c_form.confirm_form {
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
+    z-index: 9999;
 }
 .page_top {
     font-family: "futura-pt", sans-serif;
@@ -2396,6 +2397,34 @@ form.c_form.confirm_form {
     .model_sp {
         display: block;
     }
+    #openModal > span {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(calc(-50% - 1.5px));
+    }
+    .dli-plus {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+        width: 8px;
+        height: 2px;
+        background: #344699;
+        border-radius: 0.1em;
+        position: relative;
+      }
+      
+      .dli-plus::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        border-radius: inherit;
+        transform: rotate(90deg);
+      }
     #openModal {
         font-family: "futura-pt-bold", "sans-serif";
         font-style: normal;
@@ -2407,6 +2436,7 @@ form.c_form.confirm_form {
         height: 30px;
         box-shadow: #334699 3px 3px;
         cursor: pointer;
+        position: relative;
     }
     #closeModal {
         font-family: "futura-pt-bold", "sans-serif";
@@ -2421,13 +2451,15 @@ form.c_form.confirm_form {
     }
     #modal {
         position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        top: 0;
         background-color: rgba(244, 242, 239, 0.8);
         padding: 20px;
         border-radius: 5px;
         z-index: 1000; /* モーダルを他の要素の上に表示 */
+        width: 90%;
+        border: solid #344699;
+        height: 90vh;
+        overflow-y: scroll;
       }
       
       #modal::backdrop {
