@@ -269,16 +269,29 @@
 
     <script>
         $(function () {
-            $('html, body').animate({
-                scrollTop: 0
+            function mvScroll() {
+                if (window.innerWidth >= 767) {
+                    $('html, body').animate({
+                        scrollTop: 0
+                    })
+                    $('body').addClass('loaded')
+                    $('.main_title').on('click', function () {
+                        $('body').removeClass('loaded')
+                        $('html, body').animate({
+                            scrollTop: $('#about').offset().top
+                        }, 1000)
+                    })
+                } else {
+                    $('body').removeClass('loaded')
+                }
+            }
+            mvScroll()
+
+            $(window).on('resize', function () {
+                mvScroll()
             })
-            $('body').addClass('loaded')
-            $('.main_title').on('click', function () {
-                $('body').removeClass('loaded')
-                $('html, body').animate({
-                    scrollTop: $('#about').offset().top
-                }, 1000)
-            })
+
+
             $('.sp_btn').on('click', function () {
                 $('.sp_nav').fadeToggle()
                 if (!$('.sp_btn').hasClass('open')) {

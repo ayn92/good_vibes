@@ -242,17 +242,17 @@ h1 {
 
 
 /******** TOP-ABOUT ********/
+.about {
+    position: relative;
+}
 .about_top {
     position: relative;
     width: 63%;
+    margin-left: auto;
 }
 
 .toge_top {
     width: 100%;
-    position: relative;
-    top: 50%;
-    left: 50%;
-   transform-origin:50% 50%;
     animation: toge 5s linear;
 }
 @keyframes toge {
@@ -270,7 +270,7 @@ h1 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(30%,-59%);
+    transform: translate(-50%,-50%);
     text-align: center;
 }
 
@@ -377,9 +377,8 @@ h2 {
 .about_top_photo {
     width: 30%;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-127%, -230%);
+    top: 38%;
+    left: 14%;
 }
 .about_top_photo_sp,
 .scroll {
@@ -825,11 +824,17 @@ h2 {
 
 
 /******** ABOUT ********/
-.about_title {
+.about_box_sp {
+    display: none;
+}
+
+.about_detail {
+    position: relative;
     width: 100%;
     height: 845px;
     background-color: #f4f2ef;
-    position: relative;
+}
+.about_title {
     text-align: center;
 }
 .sub_good_2 {
@@ -855,17 +860,17 @@ h2 {
     font-size: 110px;
     z-index: 2000;
     position: absolute;
-    transform: translate(-147%,-428%);
-    top: 50%;
-    left: 50%;
+    top: 57%;
+    left: 25%;
+    transform: translate(-50%,-50%);
     text-align: center;
 }
 .blue_toge {
-    width: 39%;
+    width: 45%;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-108%,-222%);
+    top: 57%;
+    left: 25%;
+    transform: translate(-50%,-50%);
     z-index: 1000;
 }
 .about_text p {
@@ -876,16 +881,8 @@ h2 {
     color: #344699;
     font-size: 20px;
     line-height: 1.75;
-    position: absolute;
-    top: 13%;
-    left: 50%;
 }
-.about_text_2 {
-    padding-top: 370px;
-}
-.about_text_3 {
-    padding-top: 420px;
-}
+
 .about_myphoto {
     width: 27%;
     height: 498px;
@@ -2529,6 +2526,9 @@ form.c_form.confirm_form {
 
 
 /******** ABOUT ********/
+    .about_box_sp {
+    display: block;
+    }
     .about_title {
         background-color: #334699;
     }
