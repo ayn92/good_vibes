@@ -41,9 +41,9 @@
             <nav class="sp_nav">
                 <ul>
                     <li class="sp_item"><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="works.html">WORKS</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
+                    <li class="sp_item"><a href="about.html">ABOUT</a></li>
+                    <li class="sp_item"><a href="works.html">WORKS</a></li>
+                    <li class="sp_item"><a href="contact.html">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
@@ -124,9 +124,9 @@
 
 
             <div class="me_plant">
-                <img src="./image/2x/plant08@2x.png" alt="観葉植物">
+                <img src="./image/2x/plant@2x.png" alt="観葉植物">
                 <div>
-                    <img class="plant_hover" src="./image/2x/plant06@2x.png" alt="ホバー時の観葉植物">
+                    <img class="plant_hover" src="./image/2x/plant_hover.png" alt="ホバー時の観葉植物">
                     <div class="caption_plant">
                         <p>観葉植物が好きです。<br>
                             現在はパキラを種からの<br>
@@ -138,24 +138,24 @@
 
         <div>
             <div class="me_emb">
-                <img src="./image/2x/emb15.png" alt="刺繍">
+                <img src="./image/2x/emb@2x.png" alt="刺繍">
                 <div>
-                    <img class="emb_hover" src="./image/2x/emb_hover_1@2x.png" alt="ホバー時の刺繍">
+                    <img class="emb_hover" src="./image/2x/emb_hover.png" alt="ホバー時の刺繍">
                     <div class="caption_emb">
                         <p>ものづくりが大好きです！<br>
                             こちらは息子のリクエストで<br>
-                            刺繍キーホルダーを作りました！<br>
+                            制作した刺繍キーホルダーです！<br>
                             他にもお菓子作りや編み物など<br>
-                            夢中になると時間を忘れて没頭します。</p>
+                            夢中になると時間を忘れて<br>没頭します。</p>
                     </div>
                 </div>
             </div>
 
             <div>
                 <div class="me_music">
-                    <img src="./image/2x/music@2x.png" alt="音楽">
+                    <img src="./image/2x/music.png" alt="音楽">
                     <div>
-                        <img class="music_hover" src="./image/2x/music_hover_1@2x.png" alt="ホバー時の音楽">
+                        <img class="music_hover" src="./image/2x/music_hover.png" alt="ホバー時の音楽">
                         <div class="caption_music">
                             <p>音楽が大好きです！<br>
                                 子供が生まれる前はよくフェスに<br>
@@ -215,6 +215,25 @@
                 }
                 $('.sp_btn').toggleClass('open')
             })
+
+            $(function () {
+                // ハンバーガーメニューボタンがクリックされたときのイベントハンドラを設定
+                $(".sp_btn").click(function () {
+
+                    // 現在のbodyタグのoverflowスタイルを確認
+                    if ($("body").css("overflow") === "hidden") {
+
+                        // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+                        $("body").css({ height: "", overflow: "" });
+
+                    } else {
+
+                        // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
+                        $("body").css({ height: "100%", overflow: "hidden" });
+
+                    }
+                });
+            });
 
         })
     </script>

@@ -280,7 +280,6 @@ h2 {
     font-weight: 400;
     color: #344699;
     z-index: 1000;
-
 }
 
 .sub_good,
@@ -856,7 +855,7 @@ h2 {
     font-size: 110px;
     z-index: 2000;
     position: absolute;
-    transform: translate(-147%,-389%);
+    transform: translate(-147%,-428%);
     top: 50%;
     left: 50%;
     text-align: center;
@@ -866,7 +865,7 @@ h2 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-108%,-205%);
+    transform: translate(-108%,-222%);
     z-index: 1000;
 }
 .about_text p {
@@ -926,11 +925,14 @@ h2 {
     font-size: 115px;
     background-color: #f4f2ef;
     width: 100%;
-    height: 787px;
     text-align: center;
     display: flex;
     align-items: center;
     gap: 50px;
+}
+
+.prf_me > h2 {
+    padding: 80px;
 }
 
 .me_dog,
@@ -961,14 +963,14 @@ h2 {
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 15%;
+    font-size: 20px;
     margin: 0 auto;
     text-align: center;
     color: #f4f2ef;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-54%,-300%);
+    transform: translate(-55%, -267%);
     width: 100%;
     opacity: 0;
     transition: 0.2s;
@@ -1017,14 +1019,14 @@ h2 {
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 15%;
+    font-size: 20px;
     margin: 0 auto;
     text-align: center;
     color: #f4f2ef;
     position: absolute;
     top: 39;
     left: 44%;
-    transform: translate(-54%, -225%);
+    transform: translate(-55%, -195%);
     width: 100%;
     opacity: 0;
     transition: 0.2s;
@@ -1071,14 +1073,14 @@ h2 {
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 12%;
+    font-size: 17px;
     margin: 0 auto;
     text-align: center;
     color: #f4f2ef;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-52%, -171%);
+    transform: translate(-55%, -130%);
     width: 100%;
     opacity: 0;
     transition: 0.2s;
@@ -1123,14 +1125,14 @@ h2 {
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 14%;
+    font-size: 17px;
     margin: 0 auto;
     text-align: center;
     color: #f4f2ef;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-156%);
+    transform: translate(-55%, -150%);
     width: 100%;
     opacity: 0;
     transition: 0.2s;
@@ -1995,6 +1997,9 @@ form.c_form.confirm_form {
         font-style: normal;
         font-weight: 700;
     }
+    .sp_nav a:hover {
+        color: inherit;
+    }
     .sp_item {
         transition-duration: .4s;
     }
@@ -2400,7 +2405,7 @@ form.c_form.confirm_form {
     #openModal > span {
         position: absolute;
         top: 50%;
-        right: 20px;
+        right: 11px;
         transform: translateY(calc(-50% - 1.5px));
     }
     .dli-plus {
@@ -2410,11 +2415,32 @@ form.c_form.confirm_form {
         width: 8px;
         height: 2px;
         background: #344699;
-        border-radius: 0.1em;
         position: relative;
       }
       
       .dli-plus::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        border-radius: inherit;
+        transform: rotate(90deg);
+      }
+
+    .dli-plus_sp {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+        width: 8px;
+        height: 2px;
+        background: #344699;
+        position: relative;
+      }
+      
+      .dli-plus_sp::before {
         content: '';
         position: absolute;
         top: 0;
@@ -2445,6 +2471,8 @@ form.c_form.confirm_form {
         color: #344699;
         font-size: 15px;
         border: none;
+        display: flex;
+        align-items: center;
     }
     .modal_img {
         width: 70%;
@@ -2471,6 +2499,31 @@ form.c_form.confirm_form {
         background-color: rgba(0, 0, 0, 0.5); /* 半透明の背景 */
         z-index: 999;
         display: none; /* 初期状態は非表示 */
+      }
+
+      .close_batsu {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 30px;
+      }
+       
+      .close_batsu::before, .close_batsu::after { /* 共通設定 */
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 4px; /* 棒の幅（太さ） */
+        height: 15px; /* 棒の高さ */
+        background: #344699;
+      }
+       
+      .close_batsu::before {
+        transform: translate(-50%,-50%) rotate(45deg);
+      }
+       
+      .close_batsu::after {
+        transform: translate(-50%,-50%) rotate(-45deg);
       }
     
 
