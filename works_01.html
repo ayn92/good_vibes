@@ -76,10 +76,10 @@
                     <img class="modal_img" src="./image/png/portfolio_whole_pc.png" alt="ポートフォリオ_PC">
                 </div>
 
-                <button class="model_sp" id="openModal">
+                <button class="model_sp" id="openModalSp">
                     mobile<span><span class="dli-plus_sp"></span></span></button>
-                <div id="modal" style="display: none;">
-                    <button id="closeModal">CLOSE</button>
+                <div id="modalSp" style="display: none;">
+                    <button id="closeModalSp"><span class="close_batsu"></span>CLOSE</button>
                     <img src="./image/png/portfolio_whole_sp.png" alt="ポートフォリオ_SP">
                 </div>
             </div>
@@ -179,14 +179,29 @@
                 document.getElementById("modal::backdrop").style.display = "block";
             });
 
+            document.getElementById("openModalSp").addEventListener("click", function () {
+                document.getElementById("modalSp").style.display = "block";
+                document.getElementById("modalSp::backdrop").style.display = "block";
+            });
+
             document.getElementById("closeModal").addEventListener("click", function () {
                 document.getElementById("modal").style.display = "none";
                 document.getElementById("modal::backdrop").style.display = "none";
             });
 
+            document.getElementById("closeModalSp").addEventListener("click", function () {
+                document.getElementById("modalSp").style.display = "none";
+                document.getElementById("modalSp::backdrop").style.display = "none";
+            });
+
             document.getElementById("modal::backdrop").addEventListener("click", function () {
                 document.getElementById("modal").style.display = "none";
                 document.getElementById("modal::backdrop").style.display = "none";
+            });
+
+            document.getElementById("modalSp::backdrop").addEventListener("click", function () {
+                document.getElementById("modalSp").style.display = "none";
+                document.getElementById("modalSp::backdrop").style.display = "none";
             });
 
 
