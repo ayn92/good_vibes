@@ -253,11 +253,28 @@ h1 {
 
 .toge_top {
     width: 100%;
-    animation: toge 5s linear;
+    animation: toge 7s linear forwards;
 }
-@keyframes toge {
-    to {
-          transform:translateX(100%) rotate(1turn);
+
+    @keyframes toge{
+        to {
+            transform:translateX(100%) rotate(1turn);
+        }
+        0% {
+            transform:rotateZ(0);
+             left:-200px;
+        }
+        80% {
+            transform:rotateZ(370deg);
+            left:220px;
+        }
+        90% {
+            transform:rotateZ(380deg);
+            left:240px;
+        }
+        100% {
+            transform:rotateZ(360deg);
+            left:200px;
         }
 
     }
@@ -268,7 +285,7 @@ h1 {
 
 .about_contents {
     position: absolute;
-    top: 50%;
+    top: 42%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
@@ -377,7 +394,7 @@ h2 {
 .about_top_photo {
     width: 30%;
     position: absolute;
-    top: 38%;
+    top: 33%;
     left: 14%;
 }
 .about_top_photo_sp,
@@ -834,6 +851,12 @@ h2 {
     height: 845px;
     background-color: #f4f2ef;
 }
+.about_box {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 0 auto;
+}
 .about_title {
     text-align: center;
 }
@@ -860,17 +883,17 @@ h2 {
     font-size: 110px;
     z-index: 2000;
     position: absolute;
-    top: 57%;
-    left: 25%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
 }
+.about_box_title {
+    position: relative;
+}
+
 .blue_toge {
-    width: 45%;
-    position: absolute;
-    top: 57%;
-    left: 25%;
-    transform: translate(-50%,-50%);
+    width: 558px;
     z-index: 1000;
 }
 .about_text p {
@@ -881,6 +904,10 @@ h2 {
     color: #344699;
     font-size: 20px;
     line-height: 1.75;
+}
+p.about_text_2,
+p.about_text_3 {
+    padding-top: 30px;
 }
 
 .about_myphoto {
@@ -2536,6 +2563,9 @@ form.c_form.confirm_form {
 
 
 /******** ABOUT ********/
+    .about_box {
+       display: none;
+    }
     .about_box_sp {
     display: block;
     }
