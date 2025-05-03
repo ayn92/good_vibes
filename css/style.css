@@ -3,14 +3,28 @@
     position: absolute;
     top: 0;
     left: 0;
-    animation: blink_anime 1.2s infinite;
-    opacity: 0;
 }
 .open_eye {
     width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#eye2 {
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: blink_anime 1.2s infinite;
+    opacity: 0;
 }
 .close_eye {
-    width: 210px;
+    width: 301px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: blink_anime 1.2s infinite;
+    opacity: 0;
 }
 @keyframes blink_anime {
     0% {
