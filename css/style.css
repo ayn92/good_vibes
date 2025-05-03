@@ -335,9 +335,6 @@ h1 {
 }
 
     @keyframes toge{
-        /*to {
-            transform:translateX(100%) rotate(1turn);
-        }*/
         0% {
             transform:rotateZ(0);
              right: -100%;
@@ -476,7 +473,7 @@ h2 {
     left: 14%;
     opacity: 0;
     transform: translateX(40px);
-    transition: 5s;
+    transition: 4s;
 }
 .about_top_photo.show {
     opacity: 1;

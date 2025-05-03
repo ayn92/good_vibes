@@ -14,6 +14,9 @@
 
     <link rel="stylesheet" href="https://use.typekit.net/vqq5gsx.css">
 
+    <link rel="icon" href="/favicon.ico" id="favicon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+
     <script>
         (function (d) {
             var config = {
@@ -283,7 +286,7 @@
                         $('html, body').animate({
                             scrollTop: $('#about').offset().top
                         }, 1000)
-                        SetScrollTiming('.about_top')
+                        $('.about_top').addClass('move');
                         $('.about_top_photo').addClass("show");
                     })
                 } else {
@@ -405,21 +408,21 @@
         // });
 
         // スクロールのタイミングでアニメーションさせる
-        function SetScrollTiming(target) {
-            var box = $(target);
-            var animated = 'animated';
+        // function SetScrollTiming(target) {
+        //     var box = $(target);
+        //     var animated = 'animated';
 
-            box.each(function () {
-                var boxOffset = $(this).offset().top;
-                var scrollPos = $(window).scrollTop();
-                var wh = $(window).height();
+        //     box.each(function () {
+        //         var boxOffset = $(this).offset().top;
+        //         var scrollPos = $(window).scrollTop();
+        //         var wh = $(window).height();
 
-                //画面内のどの位置で処理を実行するかで「100」の値を変更
-                if (scrollPos > boxOffset - wh + 100) {
-                    $(this).addClass('move');
-                }
-            });
-        }
+        //         //画面内のどの位置で処理を実行するかで「100」の値を変更
+        //         if (scrollPos > boxOffset - wh + 100) {
+        //             $(this).addClass('move');
+        //         }
+        //     });
+        // }
 
         // var scroll;
         // var winH = $(window).height();
