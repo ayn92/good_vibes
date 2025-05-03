@@ -102,8 +102,9 @@
                 <h2 class="sub_good_sp">GOOD</h2>
                 <h2 class="sub_about">ABOUT</h2>
 
-                <img src="./image/2x/about_top@2x.png" alt="aboutの写真" class="about_top_photo_sp">
-
+                <div class="anime_wrap pattern1">
+                    <img src="./image/2x/about_top@2x.png" alt="aboutの写真" class="about_top_photo_sp">
+                </div>
                 <h3 class="name">AYANA SOMA</h3>
 
                 <div class="about_top_text">
@@ -268,6 +269,8 @@
     </div>
 
     <script>
+
+        //MVのボタン 
         $(function () {
             function mvScroll() {
                 if (window.innerWidth >= 767) {
@@ -303,6 +306,8 @@
             })
         })
 
+
+        // WORKSのスライダー
         $('.works_img').slick({
             autoplay: true,
             autoplaySpeed: 2000,
@@ -314,6 +319,8 @@
             dotsClass: 'dots-wrap',
         });
 
+
+        // ナビゲーションボタン
         $(function () {
             // ハンバーガーメニューボタンがクリックされたときのイベントハンドラを設定
             $(".sp_btn").click(function () {
@@ -333,6 +340,8 @@
             });
         });
 
+
+        // MVのアニメーション
         // 動きのきっかけの起点となるアニメーションの名前を定義
         function moveAnimation() {
 
@@ -358,6 +367,8 @@
             }
         }
 
+
+        // ページトップボタン
         $(function () {
             var topBtn = $('.pagetop_btn');
             topBtn.hide();
@@ -384,6 +395,7 @@
         });
 
 
+        //トゲトゲのアニメーション 
         $(document).ready(function () {
             // スクロールで反応するアニメーション
             $(window).on('load scroll', function () {
@@ -409,6 +421,23 @@
         }
 
 
+        // TOP-ABOUTの画像
+        window.onload = function () {
+            const fade = document.getElementsByClassName('.about_top_photo');
+            fade[0].classList.add('show');
+
+            $(window).scroll(function () {
+                $(".anime_wrap").each(function () {
+                    var offset = $(this).offset().top;
+                    var scroll = $(window).scrollTop();
+                    var wHeight = $(window).height();
+
+                    if (scroll > offset - wHeight + wHeight / 2) {
+                        $(this).addClass("show");
+                    }
+                });
+            });
+        }
 
     </script>
 

@@ -455,11 +455,26 @@ h2 {
     position: absolute;
     top: 33%;
     left: 14%;
+    opacity: 0;
+    transform: translateX(40px);
+    transition: .5s;
 }
+.about_top_photo.show img{
+    opacity: 1;
+    transform: translateX(0);
+}
+
 .about_top_photo_sp,
 .scroll {
     display: none;
 }
+
+
+.anime_wrap{
+    position: relative;
+    overflow: hidden;
+}
+
 
 
 
@@ -1251,7 +1266,8 @@ p.about_text_3 {
     font-size: 17px;
 }
 .sp_about_myphoto,
-.wh_toge {
+.wh_toge,
+.dog_sp {
     display: none;
 }
 
@@ -2738,10 +2754,13 @@ form.c_form.confirm_form {
     .me_music {
         cursor: auto;
     }
-    .caption_dog_sp {
+
+    svg,
+    .me_dog {
+        display: none;
+    }
+    .dog_sp {
         display: block;
-        font-size: 15px;
-        line-height: 1.3;
     }
 }
 
