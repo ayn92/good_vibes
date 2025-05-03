@@ -367,7 +367,6 @@
             }
         }
 
-
         // ページトップボタン
         $(function () {
             var topBtn = $('.pagetop_btn');
@@ -419,6 +418,22 @@
                 }
             });
         }
+
+        var scroll;
+        var winH = $(window).height();
+        var objTop = $('.obj').offset().top;
+        $(window).on('scroll', function () {
+            scroll = $(window).scrollTop();
+            if (scroll >= objTop - winH) {
+                // ここに処理を記載 (TRUE)
+                // showクラスを追加
+                $('.about_top').addClass('show');
+            } else {
+                // ここに処理を記載 (FALES)
+                // showクラスを削除
+                $('.about_top').removeClass('show');
+            }
+        });
 
 
         // TOP-ABOUTの画像

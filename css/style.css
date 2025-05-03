@@ -312,7 +312,8 @@ h1 {
 
 .toge_top {
     width: 100%;
-    animation: toge 7s linear forwards;
+    position: relative;
+    animation: toge 4s linear forwards;
 }
 
     @keyframes toge{
@@ -321,19 +322,19 @@ h1 {
         }*/
         0% {
             transform:rotateZ(0);
-             right:-200px;
+             right: -100%;
         }
         80% {
             transform:rotateZ(370deg);
-            right:220px;
+            right: 20px;
         }
         90% {
             transform:rotateZ(380deg);
-            right:240px;
+            right: 40px;
         }
         100% {
             transform:rotateZ(360deg);
-            right:200px;
+            right: 0;
         }
 
     }
@@ -1031,7 +1032,7 @@ p.about_text_3 {
 }
 
 .prf_me > h2 {
-    padding: 80px;
+    padding: 50px;
 }
 
 .me_dog,
@@ -1084,7 +1085,7 @@ p.about_text_3 {
 .me_dog:hover .caption_dog {
     opacity: 1;
 }
-.caption_dog_sp {
+.caption_sp {
     display: none;
 }
 
@@ -1267,7 +1268,9 @@ p.about_text_3 {
 }
 .sp_about_myphoto,
 .wh_toge,
-.dog_sp {
+.dog_sp,
+.me_img_sp,
+.caption_sp {
     display: none;
 }
 
@@ -1972,11 +1975,11 @@ form.c_form.confirm_form {
         height: 300px;
     }
     .kira_wh_solid {
-        top: 15%;
+        top: 65%;
     }
     .kira_orn_2 {
-        top: 18%;
-        left: 20%;
+        top: 79%;
+        left: 14%;
     }
     .kira_wh_solid_con {
         left: 9%;
@@ -2135,30 +2138,30 @@ form.c_form.confirm_form {
         padding-left: 255px;
     }
     .kira_orn_solid {
-        top: 1.5%;
-        right: 12%;
+        top: 8.5%;
+        right: 8%;
     }
     .kira_wh {
-        top: 2.5%;
-        right: 29%;
+        top: 11.5%;
+        right: 28%;
     }
     .kira_orn {
-        top: 3%;
+        top: 16%;
         right: 21%;
     }
     .kira_wh_solid {
-        top: 3.5%;
+        top: 25.5%;
         left: 5%;
     }
     .kira_orn_2 {
-        top: 5%;
-        left: 20%;
+        top: 24%;
+        left: 19%;
     }
     .kira_wh_sp {
         display: block;
         width: 100px;
         position: absolute;
-        top: 11%;
+        top: 69%;
         left: 60%;
         animation: anime1 1s ease 0s infinite alternate;
         transform-origin:center;
@@ -2176,7 +2179,7 @@ form.c_form.confirm_form {
         display: block;
         width: 50px;
         position: absolute;
-        top: 12%;
+        top: 76%;
         left: 70%;
         animation: anime2 0.8s ease 0s infinite alternate;
         transform-origin: center;
@@ -2194,8 +2197,8 @@ form.c_form.confirm_form {
         display: block;
         width: 90px;
         position: absolute;
-        top: 14%;
-        left: 8%;
+        top: 84%;
+        left: 11%;
         animation: anime1 1.2s ease 0s infinite alternate;
         transform-origin:center;
       }
@@ -2211,8 +2214,8 @@ form.c_form.confirm_form {
         display: block;
         width: 45px;
         position: absolute;
-        top: 15%;
-        left: 18%;
+        top: 91%;
+        left: 21%;
         animation: anime2 0.6s ease 0s infinite alternate;
         transform-origin: center;
     }
@@ -2706,7 +2709,7 @@ form.c_form.confirm_form {
         text-align: center;
         padding: 0;
         position: absolute;
-        top: 27%;
+        top: 33.3%;
         left: 44%;
     }
     .name_en {
@@ -2715,7 +2718,7 @@ form.c_form.confirm_form {
         padding: 0;
         position: absolute;
         left: 30%;
-        top: 27.5%;
+        top: 34%;
         z-index: 1000;
     }
 
@@ -2736,7 +2739,6 @@ form.c_form.confirm_form {
     .prf_me {
         font-size: 65px;
         display: block;
-        padding-top: 50px;
     }
     .dog_hover,
     .caption_dog,
@@ -2755,12 +2757,23 @@ form.c_form.confirm_form {
         cursor: auto;
     }
 
-    svg,
-    .me_dog {
+    .prf_me_contens > svg,
+    .me_dog,
+    .me_plant,
+    .me_emb,
+    .me_music {
         display: none;
     }
-    .dog_sp {
+    .me_img_sp {
         display: block;
+        width: 42%;
+        margin: 0 auto;
+    }
+    .caption_sp {
+        display: block;
+        color: #344699;
+        font-size: 17px;
+        padding: 15px 0 50px 0;
     }
 }
 
@@ -2808,25 +2821,25 @@ form.c_form.confirm_form {
     }
     .kira_wh_sp {
         width: 80px;
-        top: 9%;
+        top: 65%;
     }
     .kira_orn_solid_sp {
         width: 40px;
-        top: 10%;
-        left: 80%;
+        top: 73%;
+        left: 75%;
     }
     .kira_orn_sp {
         width: 80px;
-        top: 12%;
+        top: 82%;
     }
     .kira_wh_solid_sp {
         width: 35px;
-        top: 13%;
-        left: 28%;
+        top: 90%;
+        left: 25%;
     }
     .scroll {
         width: 95px;
-        margin: 0 auto;
+        margin: 50px auto;
     }
     .sub_good_sp {
         font-size: 48px;
@@ -3028,9 +3041,6 @@ form.c_form.confirm_form {
         font-size: 15px;
         padding-top: 50px;
     }
-    
-
-
 
     .footer_menu_3 {
         height: 62px;
@@ -3038,16 +3048,51 @@ form.c_form.confirm_form {
         padding-left: 30px;
     }
 
+/******** ABOUT ********/
     .wh_toge {
         width: calc(100% + 270px);
         margin-left: -130px;
         margin-right: -130px;
     }
     .concept {
-        top: 49%;
+        top: 45%;
+        font-size: 68px;
+    }
+    .sub_good_2 {
+        font-size: 48px;
+        text-shadow: 3px 3px 0 #ff7041;
+    }
+    .sub_about_2 {
+        font-size: 55px;
     }
     .about_text {
-        top: 60%;
-        left: 4%;
+        top: 57%;
+        left: 6%;
     }
+    .about_text p {
+        font-size: 14px;
+    }
+    .about_prf {
+        margin-top: 200px;
+    }
+    .name_ja {
+        font-size: 18px;
+        top: 40.6%;
+        left: 41%;
+    }
+    .name_en {
+        font-size: 35px;
+        left: 20%;
+        top: 41.5%;
+    }
+    .prf_contens {
+        font-size: 14px;
+    }
+    .prf_me > h2 {
+        font-size: 50px;
+    }
+    .caption_sp {
+        font-size: 14px;
+    }
+
 }
