@@ -283,6 +283,8 @@
                         $('html, body').animate({
                             scrollTop: $('#about').offset().top
                         }, 1000)
+                        SetScrollTiming('.about_top')
+                        $('.about_top_photo').addClass("show");
                     })
                 } else {
                     $('body').removeClass('loaded')
@@ -395,12 +397,12 @@
 
 
         //トゲトゲのアニメーション 
-        $(document).ready(function () {
-            // スクロールで反応するアニメーション
-            $(window).on('load scroll', function () {
-                SetScrollTiming('.about_top');
-            });
-        });
+        // $(document).ready(function () {
+        //     // スクロールで反応するアニメーション
+        //     $(window).on('load scroll', function () {
+        //         SetScrollTiming('.about_top');
+        //     });
+        // });
 
         // スクロールのタイミングでアニメーションさせる
         function SetScrollTiming(target) {
@@ -419,40 +421,40 @@
             });
         }
 
-        var scroll;
-        var winH = $(window).height();
-        var objTop = $('.obj').offset().top;
-        $(window).on('scroll', function () {
-            scroll = $(window).scrollTop();
-            if (scroll >= objTop - winH) {
-                // ここに処理を記載 (TRUE)
-                // showクラスを追加
-                $('.about_top').addClass('show');
-            } else {
-                // ここに処理を記載 (FALES)
-                // showクラスを削除
-                $('.about_top').removeClass('show');
-            }
-        });
+        // var scroll;
+        // var winH = $(window).height();
+        // var objTop = $('.obj').offset().top;
+        // $(window).on('scroll', function () {
+        //     scroll = $(window).scrollTop();
+        //     if (scroll >= objTop - winH) {
+        //         // ここに処理を記載 (TRUE)
+        //         // showクラスを追加
+        //         $('.about_top').addClass('show');
+        //     } else {
+        //         // ここに処理を記載 (FALES)
+        //         // showクラスを削除
+        //         $('.about_top').removeClass('show');
+        //     }
+        // });
 
 
         // TOP-ABOUTの画像
-        window.onload = function () {
-            const fade = document.getElementsByClassName('.about_top_photo');
-            fade[0].classList.add('show');
+        // window.onload = function () {
+        //     const fade = document.getElementsByClassName('.about_top_photo');
+        //     fade[0].classList.add('show');
 
-            $(window).scroll(function () {
-                $(".anime_wrap").each(function () {
-                    var offset = $(this).offset().top;
-                    var scroll = $(window).scrollTop();
-                    var wHeight = $(window).height();
+        //     $(window).scroll(function () {
+        //         $(".anime_wrap").each(function () {
+        //             var offset = $(this).offset().top;
+        //             var scroll = $(window).scrollTop();
+        //             var wHeight = $(window).height();
 
-                    if (scroll > offset - wHeight + wHeight / 2) {
-                        $(this).addClass("show");
-                    }
-                });
-            });
-        }
+        //             if (scroll > offset - wHeight + wHeight / 2) {
+                        
+        //             }
+        //         });
+        //     });
+        // }
 
     </script>
 

@@ -327,7 +327,11 @@ h1 {
 .toge_top {
     width: 100%;
     position: relative;
+    right: -100%;
+}
+.about_top.move .toge_top {
     animation: toge 4s linear forwards;
+
 }
 
     @keyframes toge{
@@ -472,9 +476,9 @@ h2 {
     left: 14%;
     opacity: 0;
     transform: translateX(40px);
-    transition: .5s;
+    transition: 5s;
 }
-.about_top_photo.show img{
+.about_top_photo.show {
     opacity: 1;
     transform: translateX(0);
 }
@@ -2452,6 +2456,10 @@ form.c_form.confirm_form {
     .kira_orn_solid_thx_r {
         right: 40px;
     }
+    .confirm_form .button_wrap {
+        margin: 100px 0;
+       justify-content: center;
+      }
 
 
 /******** WORKS詳細 ********/
@@ -2661,6 +2669,7 @@ form.c_form.confirm_form {
     }
     .about_detail {
         background-color: #344699;
+        z-index: 10;
     }
     .about_box_sp {
     display: block;
@@ -3004,6 +3013,10 @@ form.c_form.confirm_form {
     .c_form_submit button {
         font-size: 15px;
         padding: 7px 25px;
+    }
+    .confirm_form .button_wrap {
+        gap: normal;
+        justify-content: space-between;
     }
     .c_form_submit {
         margin: 45px;
