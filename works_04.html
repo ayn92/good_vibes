@@ -62,6 +62,22 @@
                 <img src="./image/png/workers.png" alt="ワーキングスペースのサイト">
             </div>
 
+            <div class="model_btn">
+                <button class="model_pc" id="openModal">
+                    PC<span><span class="dli-plus"></span></span></button>
+                <div id="modal" style="display: none;">
+                    <button id="closeModal"><span class="close_batsu"></span>CLOSE</button>
+                    <img class="modal_img" src="./image/png/work_pc.jpg" alt="ワーキングスペースサイトの全体">
+                </div>
+
+                <button class="model_sp" id="openModalSp">
+                    mobile<span><span class="dli-plus_sp"></span></span></button>
+                <div id="modalSp" style="display: none;">
+                    <button id="closeModalSp"><span class="close_batsu"></span>CLOSE</button>
+                    <img src="./image/png/work_sp.jpg" alt="ワーキングスペースサイトの全体,sp版">
+                </div>
+            </div>
+
             <p class="works_detail_text">
                 架空の会員制コワーキングスペース「WORKERS」の公式サイトを<br>トレースデザインしました。<br>
                 情報設計・配色・イラストのバランスが良く、<br>信頼感と親しみやすさを伝えられるデザインです。</p>
@@ -140,6 +156,35 @@
                 }
                 $('.sp_btn').toggleClass('open')
             })
+            document.getElementById("openModal").addEventListener("click", function () {
+                document.getElementById("modal").style.display = "block";
+                document.getElementById("modal::backdrop").style.display = "block";
+            });
+
+            document.getElementById("openModalSp").addEventListener("click", function () {
+                document.getElementById("modalSp").style.display = "block";
+                document.getElementById("modalSp::backdrop").style.display = "block";
+            });
+
+            document.getElementById("closeModal").addEventListener("click", function () {
+                document.getElementById("modal").style.display = "none";
+                document.getElementById("modal::backdrop").style.display = "none";
+            });
+
+            document.getElementById("closeModalSp").addEventListener("click", function () {
+                document.getElementById("modalSp").style.display = "none";
+                document.getElementById("modalSp::backdrop").style.display = "none";
+            });
+
+            document.getElementById("modal::backdrop").addEventListener("click", function () {
+                document.getElementById("modal").style.display = "none";
+                document.getElementById("modal::backdrop").style.display = "none";
+            });
+
+            document.getElementById("modalSp::backdrop").addEventListener("click", function () {
+                document.getElementById("modalSp").style.display = "none";
+                document.getElementById("modalSp::backdrop").style.display = "none";
+            });
         })
     </script>
 

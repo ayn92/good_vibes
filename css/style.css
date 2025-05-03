@@ -1,4 +1,35 @@
 @charset "utf-8";
+.eye {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: blink_anime 1.2s infinite;
+    opacity: 0;
+}
+.open_eye {
+    width: 300px;
+}
+.close_eye {
+    width: 210px;
+}
+@keyframes blink_anime {
+    0% {
+        opacity: 1;
+    }
+    34% {
+        opacity: 1;
+    }
+    35% {
+        opacity: 0;
+    }
+}
+
+#eye2 {
+    animation-delay: 0.4s;
+}
+#eye3 {
+    animation-delay: 0.8s;
+}
 
 body {
     background-color: #344699;
@@ -75,6 +106,21 @@ h1 {
     max-width: 1110px;
     padding-top: 60px;
     margin: 0 auto;
+    animation-name:zoomInAnime;
+	animation-duration:0.5s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes zoomInAnime{
+  from {
+    opacity: 0;
+	transform: scale(0.6);
+  }
+
+  to {
+    opacity: 1;
+      transform: scale(1);
+  }
 }
 
 .title_desing{
@@ -110,6 +156,19 @@ h1 {
     align-items: center;
     background-position: center;
     margin: 0 auto;
+    animation-name:zoomInAnime;
+	animation-duration:0.5s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes zoomInAnime{
+  from {
+	transform: scale(0.6);
+  }
+
+  to {
+      transform: scale(1);
+  }
 }
 .main_title:hover {
     transform: translateY(4px);
@@ -149,8 +208,8 @@ h1 {
 .kira_orn_solid {
     width: 118px;
     position: absolute;
-    top: 3.5%;
-    right: 12%;
+    top: 9.5%;
+    right: 2%;
     animation: anime1 1s ease 0s infinite alternate;
     transform-origin:center;
   }
@@ -165,8 +224,8 @@ h1 {
 .kira_orn {
     width: 68px;
     position: absolute;
-    top: 6%;
-    right: 18%;  
+    top: 26%;
+    right: 7%;  
     animation: anime2 1.5s ease 0s infinite alternate;
     transform-origin:center;
 }
@@ -182,8 +241,8 @@ h1 {
 .kira_orn_2 {
     width: 60px;
     position: absolute;
-    top: 15%;
-    left: 18%;   
+    top: 80%;
+    left: 11%;  
     animation: anime2 1s ease 0s infinite alternate;
     transform-origin:center;
 }
@@ -200,8 +259,8 @@ h1 {
 .kira_wh {
     width: 45px;
     position: absolute;
-    top: 5%;
-    right: 23%;
+    top: 20%;
+    right: 13%;
     animation: anime2 0.7s ease 0s infinite alternate;
     transform-origin:center;
 }
@@ -217,8 +276,8 @@ h1 {
 .kira_wh_solid {
     width: 143px;
     position: absolute;
-    top: 12%;
-    left: 9%;
+    top: 65%;
+    left: 1%;
     animation: anime2 1.2s ease 0s infinite alternate;
     transform-origin:center;
 }
@@ -257,24 +316,24 @@ h1 {
 }
 
     @keyframes toge{
-        to {
+        /*to {
             transform:translateX(100%) rotate(1turn);
-        }
+        }*/
         0% {
             transform:rotateZ(0);
-             left:-200px;
+             right:-200px;
         }
         80% {
             transform:rotateZ(370deg);
-            left:220px;
+            right:220px;
         }
         90% {
             transform:rotateZ(380deg);
-            left:240px;
+            right:240px;
         }
         100% {
             transform:rotateZ(360deg);
-            left:200px;
+            right:200px;
         }
 
     }
@@ -909,10 +968,11 @@ p.about_text_2,
 p.about_text_3 {
     padding-top: 30px;
 }
-
+.sp_about_myphoto {
+    display: none;
+}
 .about_myphoto {
-    width: 27%;
-    height: 498px;
+    width: 390px;
     padding: 75px 0 75px 0;
 }
 .about_prf {
@@ -2566,8 +2626,12 @@ form.c_form.confirm_form {
     .about_box {
        display: none;
     }
+    .about_detail {
+        background-color: #344699;
+    }
     .about_box_sp {
     display: block;
+    padding-top: 35px;
     }
     .about_title {
         background-color: #334699;
@@ -2575,7 +2639,7 @@ form.c_form.confirm_form {
     .sub_good_2 {
         -webkit-text-stroke: 1px #ff7041;
         text-shadow: 5px 5px 0 #ff7041;
-        padding-top: 80px;
+        padding-top: 50px;
     }
     .sub_about_2 {
         color: #ff7041;
@@ -2588,24 +2652,32 @@ form.c_form.confirm_form {
     .wh_toge {
         display: block;
         width: 100%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -130%);
         z-index: 1000;
+        position: relative;
     }
     .concept {
         color: #334699;
-        transform: translate(-50%, -650%);
         font-size: 70px;
+        top: 51%;
+    }
+    .about_prf {
+        display: block;
+        margin-top: 300px;
+    }
+    .about_text {
+        position: absolute;
+        top: 63%;
+        left: 22%;
+        z-index: 2000;
     }
     .about_text p {
-        font-size: 15px;
+        font-size: 18px;
         top: 25%;
         left: 16%;
         z-index: 3000;
         text-align: center;
         line-height: 1.5;
+        width: 100%;
     }
     .about_text_2 {
         padding-top: 240px;
@@ -2616,16 +2688,26 @@ form.c_form.confirm_form {
     .name_ja {
         font-size: 20px;
         text-align: center;
+        padding: 0;
+        position: absolute;
+        top: 27%;
+        left: 44%;
     }
     .name_en {
         font-size: 45px;
         text-align: center;
         padding: 0;
+        position: absolute;
+        left: 30%;
+        top: 27.5%;
+        z-index: 1000;
     }
+
     .sp_about_myphoto {
         display: block;
         width: 50%;
         margin: 0 auto;
+        position: relative;
     }
     .prf_contens {
         font-size: 15px;
@@ -2641,14 +2723,24 @@ form.c_form.confirm_form {
         padding-top: 50px;
     }
     .dog_hover,
-    .caption_dog {
+    .caption_dog,
+    .plant_hover,
+    .caption_plant,
+    .emb_hover,
+    .caption_emb,
+    .music_hover,
+    .caption_music {
         display: none;
     }
-    .caption_dog_sp p {
+    .me_dog,
+    .me_plant,
+    .me_emb,
+    .me_music {
+        cursor: auto;
+    }
+    .caption_dog_sp {
         display: block;
         font-size: 15px;
-        color: #334699;
-        text-align: center;
         line-height: 1.3;
     }
 }
@@ -2925,5 +3017,18 @@ form.c_form.confirm_form {
         height: 62px;
         gap: 30px;
         padding-left: 30px;
+    }
+
+    .wh_toge {
+        width: calc(100% + 270px);
+        margin-left: -130px;
+        margin-right: -130px;
+    }
+    .concept {
+        top: 49%;
+    }
+    .about_text {
+        top: 60%;
+        left: 4%;
     }
 }

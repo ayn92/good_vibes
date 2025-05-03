@@ -62,6 +62,22 @@
                 <img src="./image/png/cafe_pc.png" alt="カフェサイト">
             </div>
 
+            <div class="model_btn">
+                <button class="model_pc" id="openModal">
+                    PC<span><span class="dli-plus"></span></span></button>
+                <div id="modal" style="display: none;">
+                    <button id="closeModal"><span class="close_batsu"></span>CLOSE</button>
+                    <img class="modal_img" src="./image/png/cafe_pc.jpg" alt="カフェサイトの全体">
+                </div>
+
+                <button class="model_sp" id="openModalSp">
+                    mobile<span><span class="dli-plus_sp"></span></span></button>
+                <div id="modalSp" style="display: none;">
+                    <button id="closeModalSp"><span class="close_batsu"></span>CLOSE</button>
+                    <img src="./image/png/cafe_sp.jpg" alt="カフェサイトのsp">
+                </div>
+            </div>
+
             <p class="works_detail_text">
                 架空のカフェ「DESIGN CAFE」の公式サイトとしてデザインされたものを元に、<br>PC・スマホ対応のレスポンシブサイトとしてコーディングしました。<br>
                 HTML／CSSを使用し、ユーザーがストレスなく閲覧できるよう<br class="sp_br">シンプルかつ読みやすい構造を意識しています。</p>
@@ -140,6 +156,35 @@
                 }
                 $('.sp_btn').toggleClass('open')
             })
+            document.getElementById("openModal").addEventListener("click", function () {
+                document.getElementById("modal").style.display = "block";
+                document.getElementById("modal::backdrop").style.display = "block";
+            });
+
+            document.getElementById("openModalSp").addEventListener("click", function () {
+                document.getElementById("modalSp").style.display = "block";
+                document.getElementById("modalSp::backdrop").style.display = "block";
+            });
+
+            document.getElementById("closeModal").addEventListener("click", function () {
+                document.getElementById("modal").style.display = "none";
+                document.getElementById("modal::backdrop").style.display = "none";
+            });
+
+            document.getElementById("closeModalSp").addEventListener("click", function () {
+                document.getElementById("modalSp").style.display = "none";
+                document.getElementById("modalSp::backdrop").style.display = "none";
+            });
+
+            document.getElementById("modal::backdrop").addEventListener("click", function () {
+                document.getElementById("modal").style.display = "none";
+                document.getElementById("modal::backdrop").style.display = "none";
+            });
+
+            document.getElementById("modalSp::backdrop").addEventListener("click", function () {
+                document.getElementById("modalSp").style.display = "none";
+                document.getElementById("modalSp::backdrop").style.display = "none";
+            });
         })
     </script>
 
