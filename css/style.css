@@ -1,17 +1,128 @@
 @charset "utf-8";
+
+body {
+    background-color: #344699;
+    position: relative;
+    margin: 0 auto;
+    
+}
+body.loaded {
+    overflow-y: hidden;
+}
+
+body{ 
+    background:#f4f2ef;/*遷移アニメーションと同じ色を指定*/
+}
+
+body.appear{
+    background:#344699;/*画面を開いた後の背景色を指定*/
+}
+
+/*画面遷移アニメーション*/
+.splashbg1,
+.splashbg2{
+    display: none;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg1,
+body.appear .splashbg2{
+    display:block;
+}
+
+/*上に消えるエリア*/
+body.appear .splashbg1{
+    animation-name:PageAnime;
+    animation-duration:1.4s;
+    animation-timing-function:ease-in-out;
+    animation-fill-mode:forwards;
+    content: "";
+    position:fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    bottom:50%;
+    left:0;
+    transform: scaleY(1);
+    background-color: #f4f2ef;/*伸びる背景色の設定*/
+}
+
+@keyframes PageAnime{
+    0% {
+        transform-origin:top;
+        transform:scaleY(1);
+    }
+
+    100% {
+        transform-origin:top;
+        transform:scaleY(0);
+    }
+}
+
+/*下に消えるエリア*/
+body.appear .splashbg2{
+    animation-name:PageAnime2;
+    animation-duration:1.4s;
+    animation-timing-function:ease-in-out;
+    animation-fill-mode:forwards;
+    content: "";
+    position:fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    top: 50%;
+    left:0;
+    transform: scaleY(1);
+    background-color: #f4f2ef;/*伸びる背景色の設定*/
+}
+
+@keyframes PageAnime2{
+    0% {
+        transform-origin:bottom;
+        transform:scaleY(1);
+    }
+    100% {
+        transform-origin:bottom;
+        transform:scaleY(0);
+    }
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+#container{
+    opacity: 0;/*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container{
+    animation-name:PageAnimeAppear;
+    animation-duration:1s;
+    animation-delay:0.2s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+    0% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+}
+
+}
 .eye {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 22%;
+    left: 17%;
 }
 .open_eye {
-    width: 300px;
+    width: 200px;
     position: absolute;
     top: 0;
     left: 0;
 }
 #eye2 {
-    width: 300px;
+    width: 200px;
     position: absolute;
     top: 0;
     left: 0;
@@ -19,7 +130,7 @@
     opacity: 0;
 }
 .close_eye {
-    width: 301px;
+    width: 200px;
     position: absolute;
     top: 0;
     left: 0;
@@ -45,15 +156,29 @@
     animation-delay: 0.8s;
 }
 
-body {
-    background-color: #344699;
+.loading {
+    display: block;
+    font-family: "futura-pt-bold", "sans-serif";
+    font-style: normal;
+    font-weight: 700;
+    width: 300px;
+    margin: 300px auto;
+    font-size: 22px;
+    line-height: 1.6;
     position: relative;
-    margin: 0 auto;
-    
 }
-body.loaded {
-    overflow-y: hidden;
-}
+.loading svg {
+    overflow: visible;
+    animation: naminami 10s infinite linear;
+    transform-origin: center center;
+  }
+.loading path {
+    fill: none;
+  }
+.loading text {
+    fill: #ff7041;
+  } 
+
 
 /******** header ********/
 .header_menu {
@@ -104,6 +229,7 @@ a:hover {
 
 
 /******** MV ********/
+
 h1 {
     font-family: 'bovine-mvb', sans-serif;
     font-style: normal;
@@ -120,9 +246,6 @@ h1 {
     max-width: 1110px;
     padding-top: 60px;
     margin: 0 auto;
-    animation-name:zoomInAnime;
-	animation-duration:0.5s;
-	animation-fill-mode:forwards;
 }
 
 @keyframes zoomInAnime{
@@ -137,6 +260,12 @@ h1 {
   }
 }
 
+.home p, .home h1 {
+    animation-name:zoomInAnime;
+	animation-duration:0.5s;
+	animation-fill-mode:forwards;
+}
+
 .title_desing{
     padding-left: 30px;
     font-family: 'bovine-mvb', sans-serif;
@@ -145,6 +274,8 @@ h1 {
     color: #344699;
     font-size: 90px;
     -webkit-text-stroke: 0.5px #f4f2ef;
+    animation-delay: 0.2s;
+    opacity: 0;
 }
 
 .title_feeling {
@@ -155,6 +286,8 @@ h1 {
     font-size: 90px;
     -webkit-text-stroke: 0.5px #f4f2ef;
     padding-left: 100px;
+    animation-delay: 0.4s;
+    opacity: 0;
 }
 
 .main_title {
@@ -170,20 +303,10 @@ h1 {
     align-items: center;
     background-position: center;
     margin: 0 auto;
-    animation-name:zoomInAnime;
-	animation-duration:0.5s;
-	animation-fill-mode:forwards;
+    animation-delay: 0.9s;
+    opacity: 0;
 }
 
-@keyframes zoomInAnime{
-  from {
-	transform: scale(0.6);
-  }
-
-  to {
-      transform: scale(1);
-  }
-}
 .main_title:hover {
     transform: translateY(4px);
     box-shadow: none;
@@ -206,6 +329,8 @@ h1 {
     font-size: 90px;
     -webkit-text-stroke: 0.5px #f4f2ef;
     padding: 15px 0 0 265px;
+    animation-delay: 0.5s;
+    opacity: 0;
 }
 
 .title_thinking {
@@ -216,14 +341,16 @@ h1 {
     font-size: 90px;
     -webkit-text-stroke: 0.5px #f4f2ef;
     padding: 0 0 45px 365px;
+    animation-delay: 0.3s;
+    opacity: 0;
 }
 
 
 .kira_orn_solid {
     width: 118px;
     position: absolute;
-    top: 9.5%;
-    right: 2%;
+    top: 4%;
+    right: 8%;
     animation: anime1 1s ease 0s infinite alternate;
     transform-origin:center;
   }
@@ -238,8 +365,8 @@ h1 {
 .kira_orn {
     width: 68px;
     position: absolute;
-    top: 26%;
-    right: 7%;  
+    top: 6.5%;
+    right: 13%;
     animation: anime2 1.5s ease 0s infinite alternate;
     transform-origin:center;
 }
@@ -255,8 +382,8 @@ h1 {
 .kira_orn_2 {
     width: 60px;
     position: absolute;
-    top: 80%;
-    left: 11%;  
+    top: 14%;
+    left: 17%;
     animation: anime2 1s ease 0s infinite alternate;
     transform-origin:center;
 }
@@ -273,8 +400,8 @@ h1 {
 .kira_wh {
     width: 45px;
     position: absolute;
-    top: 20%;
-    right: 13%;
+    top: 5.5%;
+    right: 17%;
     animation: anime2 0.7s ease 0s infinite alternate;
     transform-origin:center;
 }
@@ -290,8 +417,8 @@ h1 {
 .kira_wh_solid {
     width: 143px;
     position: absolute;
-    top: 65%;
-    left: 1%;
+    top: 12%;
+    left: 9%;
     animation: anime2 1.2s ease 0s infinite alternate;
     transform-origin:center;
 }
@@ -605,11 +732,25 @@ h2 {
     display: flex;
     justify-content: center;
 }
-
-.kira_switching {
-    width: 38px;
+.kira_switching_wh {
+    width: 100px;
     padding-top: 80px;
+
 }
+.kira_switching_orn_solid {
+    width: 50px;
+    animation: anime2 1.5s ease 0s infinite alternate;
+    transform-origin:center;
+}
+@keyframes anime2 {
+    from {
+          transform: scale(0,0);
+        }
+    to {
+          transform: scale(1,1);
+        }
+}
+
 
 
 
@@ -2797,6 +2938,62 @@ form.c_form.confirm_form {
     }
 }
 
+@media screen and (max-width: 500px){
+    .title_desing {
+        font-size: 45px;
+        padding: 24px 300px 30px 15px;
+    }
+    .title_feeling {
+        font-size: 45px;
+        padding: 0 0 30px 0;
+    }
+    .main_title {
+        width: 57%;
+        height: 200px;
+        font-size: 80px;
+    }
+    .title_idea {
+        font-size: 45px;
+        padding-bottom: 30px;
+    }
+    .title_thinking {
+        font-size: 45px;
+        padding-left: 40px;
+    }
+    img.kira_orn_solid {
+        width: 70px;
+    }
+    .kira_wh {
+        width: 26px;
+    }
+    .kira_orn {
+        width: 30px;
+    }
+    .kira_wh_solid {
+        width: 88px;
+    }
+    .kira_orn_2 {
+        width: 43px;
+    }
+    .kira_wh_sp {
+        width: 80px;
+        top: 65%;
+    }
+    .kira_orn_solid_sp {
+        width: 40px;
+        top: 73%;
+        left: 75%;
+    }
+    .kira_orn_sp {
+        width: 80px;
+        top: 82%;
+    }
+    .kira_wh_solid_sp {
+        width: 35px;
+        top: 90%;
+        left: 25%;
+    }
+}
 
 @media screen and (max-width: 390px) {
     .sp_btn {
@@ -3118,5 +3315,24 @@ form.c_form.confirm_form {
     .caption_sp {
         font-size: 14px;
     }
+}
 
+
+@media screen and (max-width: 320px) {
+    title_feeling {
+        padding: 0 50px 30px 0;
+    }
+    /******** ローディング ********/
+    .open_eye {
+        width: 150px;
+    }
+    #eye2 {
+        width: 150px;
+    }
+    .close_eye {
+        width: 150px;
+    }
+    .loading {
+        width: 235px;
+    }
 }

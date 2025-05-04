@@ -31,10 +31,20 @@
 
 <body>
     <!-- ローディング画面 -->
-    <div class="eye">
-        <img src="./image/SVG/open_eye.svg" alt="開いてる目" id="eye1" class="open_eye">
-        <img src="./image/SVG/open_eye.svg" alt="開いてる目" id="eye2" class="open_eye">
-        <img src="./image/SVG/close_eye.svg" alt="閉じてる目" id="eye3" class="close_eye">
+    <div class="loading">
+        <svg viewBox="0 0 100 100">
+            <path d="M 0,50 a 50,50 0 1,1 0,1 z" id="circle" />
+            <text>
+                <textPath xlink:href="#circle">
+                    Loading...Loading...Loading...
+                </textPath>
+            </text>
+        </svg>
+        <div class="eye">
+            <img src="./image/SVG/open_eye_02.svg" alt="開いてる目" id="eye1" class="open_eye">
+            <img src="./image/SVG/open_eye_02.svg" alt="開いてる目" id="eye2" class="open_eye">
+            <img src="./image/SVG/close_eye_02.svg" alt="閉じてる目" id="eye3" class="close_eye">
+        </div>
     </div>
 
 </body>
