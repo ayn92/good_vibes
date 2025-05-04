@@ -10,7 +10,7 @@ body.loaded {
     overflow-y: hidden;
 }
 
-body{ 
+body > #splash { 
     background:#f4f2ef;/*遷移アニメーションと同じ色を指定*/
 }
 
@@ -1683,6 +1683,7 @@ p.detail_box_contens {
 form {
     max-width: 670px;
     margin: 0 auto;
+    padding: 10px;
 }
 .contact_title {
     background-color: #f4f2ef;
@@ -3199,7 +3200,7 @@ form.c_form.confirm_form {
     }
     .contact_text {
         font-size: 14px;
-        padding: 0 0 35px 0;
+        padding: 0 10px 35px 10px;
     }
     form.input_form {
         padding: 20px;
@@ -3230,7 +3231,10 @@ form.c_form.confirm_form {
     .send_btn {
         padding: 10px 23px;
     }
-    span.label_name {
+    span.label_name,
+    .label_co,
+    .label_mail,
+    .label_message  {
         font-size: 14px;
     }
     .thanks_text {
@@ -3259,7 +3263,7 @@ form.c_form.confirm_form {
         top: 240px;
     }
     .contact_text_completed {
-        font-size: 15px;
+        font-size: 14px;
         padding-top: 50px;
     }
 
@@ -3319,7 +3323,7 @@ form.c_form.confirm_form {
 
 
 @media screen and (max-width: 320px) {
-    title_feeling {
+    .title_feeling {
         padding: 0 50px 30px 0;
     }
     /******** ローディング ********/
@@ -3334,5 +3338,90 @@ form.c_form.confirm_form {
     }
     .loading {
         width: 235px;
+    }
+
+    .circle {
+        width: 290px;
+    }
+
+    .works_box {
+        width: 86%;
+    }
+    .works_mask {
+        font-size: 30px;
+    }
+    .works_sub {
+        font-size: 14px;
+    }
+    .works_sub_2 {
+        font-size: 14px;
+    }
+    .works_title {
+        font-size: 22px;
+    }
+    .works_detail_sub {
+        padding-left: 50px;
+    }
+    h3.works_contens_title {
+        font-size: 40px;
+        padding-left: 50px;
+    }
+    .works_contens_thumbnail > img {
+        border-radius: 47px;
+    }
+    .point {
+        padding: 10px;
+    }
+    .works_detail_text_2 {
+        padding: 0 10px 50px 10px;
+    }
+    .detail_works {
+        gap: 35px;
+        padding: 20px 10px 20px 10px;
+        margin: 10px;
+    }
+    .concept {
+        top: 39%;
+        font-size: 63px;
+    }
+    .about_text {
+        top: 48%;
+        left: 8%;
+    }
+    p.about_text_2, p.about_text_3 { 
+        padding: 0;
+    }
+    .about_prf {
+        margin-top: 60px;
+    }
+    .name_ja {
+        top: 35%;
+        left: 38%;
+    }
+    .name_en {
+        left: 13%;
+        top: 35.8%;
+    }
+
+    .sub_works {
+        padding-bottom: 12px;
+    }
+    .slick-slide img {
+        border-radius: 34px;
+    }
+    .works_btn {
+        top: 77%;
+        right: 22%;
+    }
+    .works_top {
+        padding: 60px 0;
+    }
+    .pagetop_btn {
+        width: 65px;
+        height: 65px;
+        right: 18px;
+    }
+    .contact_btn a {
+        margin: 20px;
     }
 }
