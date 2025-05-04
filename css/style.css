@@ -12,10 +12,24 @@ body.loaded {
 
 body > #splash { 
     background:#f4f2ef;/*遷移アニメーションと同じ色を指定*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    width: 100%;
 }
 
+body {
+    background: #f4f2ef;
+}
 body.appear{
     background:#344699;/*画面を開いた後の背景色を指定*/
+}
+header, .home div:nth-of-type(2) {
+    opacity: 0;
+}
+body.appear header, body.appear .home div:nth-of-type(2) {
+    opacity: 1;
 }
 
 /*画面遷移アニメーション*/
@@ -260,7 +274,7 @@ h1 {
   }
 }
 
-.home p, .home h1 {
+body.appear .home p, body.appear .home h1 {
     animation-name:zoomInAnime;
 	animation-duration:0.5s;
 	animation-fill-mode:forwards;
