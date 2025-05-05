@@ -2668,7 +2668,7 @@ form.c_form.confirm_form {
         padding: 45px 0 0 0;
     }
     .works_detail_text_2 {
-        padding-bottom: 50px;
+        padding: 0 10px 50px 10px;
     }
     .works_detail_text_3 {
         padding: 20px 0 50px 0;
@@ -3044,7 +3044,25 @@ form.c_form.confirm_form {
     }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 400px) {
+    /******** ローディング ********/
+    .open_eye {
+        width: 100px;
+    }
+    #eye2 {
+        width: 100px;
+    }
+    .close_eye {
+        width: 100px;
+    }
+    .loading {
+        width: 200px;
+        margin: 265px auto;
+    }
+    .eye {
+        top: 27%;
+        left: 25%;
+    }
     .sp_btn {
          margin: 20px 0 0 0;
     }
@@ -3087,34 +3105,40 @@ form.c_form.confirm_form {
     }
     .kira_wh_sp {
         width: 80px;
-        top: 65%;
+        top: 11%;
     }
     .kira_orn_solid_sp {
         width: 40px;
-        top: 73%;
-        left: 75%;
+        top: 12.5%;
+        left: 81%;
     }
     .kira_orn_sp {
         width: 80px;
-        top: 82%;
+        top: 14%;
     }
     .kira_wh_solid_sp {
         width: 35px;
-        top: 90%;
-        left: 25%;
+        top: 13.7%;
+        left: 28%;
     }
     .scroll {
         width: 95px;
         margin: 50px auto;
     }
+    .about_contents {
+        top: 45%;
+    }
+    .slick-slide img {
+    border-radius: 40px;
+    }  
     .sub_good_sp {
         font-size: 48px;
-        bottom: 160%;
+        bottom: 155%;
         text-shadow: 3px 3px 0 #ff7041;
     }
     .sub_about {
         font-size: 55px;
-        bottom: 120%;
+        bottom: 119%;
     }
     .about_top_photo_sp {
         width: 55%;
@@ -3122,7 +3146,7 @@ form.c_form.confirm_form {
     }
     .name {
         font-size: 40px;
-        top: 36%;
+        top: 33%;
         left: 26%;
     }
     .about_top_text {
@@ -3165,7 +3189,7 @@ form.c_form.confirm_form {
     }
     .sub_works {
         font-size: 55px;
-        padding-bottom: 30px;
+        padding-bottom: 45px;
     }
     .slick-dotted.slick-slider {
         margin-bottom: 75px;
@@ -3225,7 +3249,8 @@ form.c_form.confirm_form {
     .pagetop_btn {
         width: 70px;
         height: 70px;
-        right: 110px;
+        right: 15px;
+        bottom: 10px;
     }
     .page_top {
         font-size: 18px;
@@ -3328,7 +3353,7 @@ form.c_form.confirm_form {
         margin-right: -130px;
     }
     .concept {
-        top: 45%;
+        top: 42%;
         font-size: 68px;
     }
     .sub_good_2 {
@@ -3339,27 +3364,28 @@ form.c_form.confirm_form {
         font-size: 55px;
     }
     .about_text {
-        top: 57%;
-        left: 6%;
+        top: 53%;
+        left: 17%;
     }
     .about_text p {
         font-size: 14px;
     }
     .about_prf {
-        margin-top: 200px;
+        margin-top: 163px;
     }
     .name_ja {
         font-size: 18px;
-        top: 40.6%;
+        top: 35.7%;
         left: 41%;
     }
     .name_en {
         font-size: 35px;
         left: 20%;
-        top: 41.5%;
+        top: 36.4%;
     }
     .prf_contens {
         font-size: 14px;
+        padding: 10px 0 50px 0;
     }
     .prf_me > h2 {
         font-size: 50px;
@@ -3370,6 +3396,18 @@ form.c_form.confirm_form {
     .sp_br_2 {
         display: block;
     }
+    .works_mask {
+        font-size: 35px;
+    }
+    .works_contens_thumbnail > img {
+        border-radius: 50px;
+    }
+    .works_detail_sub {
+        padding-left: 66px;
+    }
+    h3.works_contens_title {
+        padding: 5px 0 10px 66px;
+    }
 }
 
 
@@ -3377,24 +3415,7 @@ form.c_form.confirm_form {
     .title_feeling {
         padding: 0 50px 30px 0;
     }
-    /******** ローディング ********/
-    .open_eye {
-        width: 100px;
-    }
-    #eye2 {
-        width: 100px;
-    }
-    .close_eye {
-        width: 100px;
-    }
-    .loading {
-        width: 200px;
-        margin: 265px auto;
-    }
-    .eye {
-        top: 27%;
-        left: 25%;
-    }
+    
 
     .circle {
         width: 290px;
@@ -3420,7 +3441,7 @@ form.c_form.confirm_form {
     }
     h3.works_contens_title {
         font-size: 40px;
-        padding-left: 50px;
+        padding: 5px 0 10px 50px;
     }
     .works_contens_thumbnail > img {
         border-radius: 47px;
@@ -3460,7 +3481,7 @@ form.c_form.confirm_form {
     }
 
     .sub_works {
-        padding-bottom: 12px;
+        padding-bottom: 40px;
     }
     .slick-slide img {
         border-radius: 34px;
