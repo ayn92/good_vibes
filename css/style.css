@@ -1143,6 +1143,32 @@ h2 {
     font-size: 88px;
     padding-bottom: 74px;
 }
+/*bound text animetions*/
+@keyframes showTextFromBottom{
+    0%{
+      transform: translateY( 100% );
+    }
+    50%{
+      transform: translateY( -20% );
+    }
+    100%{
+      transform: translateY( 0px );
+    }
+  }
+  .sub_good_2.displayed span,
+  .sub_about_2.displayed span{
+    animation: showText 1s backwards;
+    display: inline-block;
+  }
+  .sub_good_2.displayed > span,
+  .sub_about_2.displayed > span{
+    overflow: hidden;
+  }
+  .sub_good_2.displayed > span > span,
+  .sub_about_2.displayed > span > span{
+    animation: showTextFromBottom 0.5s backwards;
+  }
+
 .concept {
     font-family: 'bovine-mvb', sans-serif;
     font-style: normal;
@@ -1158,6 +1184,19 @@ h2 {
 }
 .about_box_title {
     position: relative;
+    animation-name:zoomInAnime;
+	animation-duration:0.5s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes zoomInAnime{
+  from {
+	transform: scale(0.6);
+  }
+
+  to {
+      transform: scale(1);
+  }
 }
 
 .blue_toge {
@@ -1225,7 +1264,7 @@ p.about_text_3 {
 }
 
 .prf_me > h2 {
-    padding: 50px;
+    padding: 100px;
 }
 
 .me_dog,
