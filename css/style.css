@@ -2172,33 +2172,63 @@ form.c_form.confirm_form {
         width: 80%;
         height: 300px;
     }
+    .kira_orn_solid {
+        top: 2%;
+    }
+    .kira_wh {
+        top: 3.6%;
+        right: 21%;
+    }
+    .kira_orn {
+        top: 4.5%;
+        right: 15%;
+    }
     .kira_wh_solid {
-        top: 65%;
+        top: 12%;
     }
     .kira_orn_2 {
-        top: 79%;
-        left: 14%;
+        top: 14%;
+        left: 20%;
     }
     .kira_wh_solid_con {
         left: 9%;
-        bottom: 7%;
+        bottom: 6%;
     }
     .kira_orn_con {
         left: 17%;
-        bottom: 6%;
+        bottom: 5%;
     }
     .kira_wh_con {
-        right: 20%;
-        bottom: 4.3%;
+        right: 17%;
+        bottom: 3%;
     }
     .kira_orn_solid_con {
-        right: 11%;
-        bottom: 3%;
+        right: 7%;
+        bottom: 2.1%;
     }
 
 /******** TOP-ABOUT ********/
+    .about_top {
+        width: 79%;
+    } 
+    .about_contents {
+        top: 42%;
+        left: 50%;
+    }
+    .about_top_text p {
+        font-size: 17px;
+    }
     .about_top_photo {
+        top: 41%;
+        left: 5%;
         transform: translate(-140%, -490%);
+    }
+    .works_btn {
+    top: 77%;
+    right: 14%;
+    }
+    .contact_top_text {
+        padding: 0;
     }
 
 
@@ -2229,6 +2259,19 @@ form.c_form.confirm_form {
     }
     .movie {
         width: 170px;
+    }
+
+    .works_detail_sub {
+        padding-left: 280px;
+    }
+    h3.works_contens_title {
+        padding: 13px 0 20px 280px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .circle {
+        width: 500px;
     }
 }
 
@@ -2513,6 +2556,31 @@ form.c_form.confirm_form {
         bottom: 110%;
         transform: translateX(-50%);
     }
+    /*bound text animetions*/
+@keyframes showTextFromBottom{
+    0%{
+      transform: translateY( 100% );
+    }
+    50%{
+      transform: translateY( -20% );
+    }
+    100%{
+      transform: translateY( 0px );
+    }
+  }
+  .sub_good_sp.displayed span,
+  .sub_about.displayed span{
+    animation: showText 1s backwards;
+    display: inline-block;
+  }
+  .sub_good_sp.displayed > span,
+  .sub_about.displayed > span{
+    overflow: hidden;
+  }
+  .sub_good_sp.displayed > span > span,
+  .sub_about.displayed > span > span{
+    animation: showTextFromBottom 0.5s backwards;
+  }
     .about_top_photo {
         display: none;
     }
@@ -2535,34 +2603,9 @@ form.c_form.confirm_form {
         justify-content: center;
         padding-top: 50px;
     }
-
-/******** SKILL ********/
-    /*.skill_contens {
-        display: flex;
-        flex-direction: column;
-        gap: 100px;
-    }
-    .skill_text {
-        display: inline-block;
-    }
-    .naminami {
-        display: none;
-    }
-    .naminami_sp {
-        display: block;
-        width: 400px;
-        animation: naminami 10s infinite linear;
-        transform-origin: center center; 
-        margin: 0 auto;
-    }
-    .desing {
-        width: 200px;
-    }
-    .coding {
-        width: 200px;
-    }
-    .movie {
-        width: 170px;
+    .works_btn {
+        top: 81%;
+        right: 38%;
     }
 
 /******** TOP-WORKS ********/
@@ -2601,7 +2644,9 @@ form.c_form.confirm_form {
     }
     .contact_top_text {
         font-size: 20px;
+        padding-top: 50px;
     }
+
     .works_box {
         display: block;
         width: 90%;
@@ -2691,7 +2736,6 @@ form.c_form.confirm_form {
     }
     .detail_works {
         border-bottom: solid 0.5px #344699;
-        margin: 10px;
     }
     .detail_box {
         width: 110px;
@@ -2896,7 +2940,7 @@ form.c_form.confirm_form {
     .about_text {
         position: absolute;
         top: 60%;
-        left: 27%;
+        left: 29%;
         z-index: 2000;
     }
     .about_text p {
@@ -2987,6 +3031,12 @@ form.c_form.confirm_form {
     }
 }
 
+@media screen and (max-width: 555px){
+.detail_works {
+    margin: 10px;
+}
+}
+
 @media screen and (max-width: 500px){
     .title_desing {
         font-size: 45px;
@@ -3026,22 +3076,131 @@ form.c_form.confirm_form {
     }
     .kira_wh_sp {
         width: 80px;
-        top: 65%;
+        top: 10%;
     }
     .kira_orn_solid_sp {
         width: 40px;
-        top: 73%;
-        left: 75%;
+        top: 11.5%;
+        left: 78%;
     }
     .kira_orn_sp {
         width: 80px;
-        top: 82%;
+        top: 13%;
+        left: 6%;
     }
     .kira_wh_solid_sp {
         width: 35px;
-        top: 90%;
-        left: 25%;
+        top: 12.5%;
+        left: 18%;
     }
+    .about_contents {
+        top: 38%;
+    }
+    .sub_works {
+        padding-bottom: 33px;
+    }   
+    .slick-slide img {
+        border-radius: 45px;
+    }
+    .works_btn {
+        top: 78%;
+        right: 32%;
+    }
+    .contact_top_text {
+        padding: 0;
+    }
+    .kira_wh_solid_con {
+        width: 60px;
+        left: 3%;
+        bottom: 5.5%;
+    }
+    .kira_orn_con {
+        width: 33px;
+        left: 12%;
+        bottom: 5%;
+    }
+    .kira_wh_con {
+        width: 30px;
+        right: 12%;
+    }
+    .kira_orn_solid_con {
+        width: 60px;
+        right: 1%;
+        bottom: 1.8%;
+    }
+/******** ABOUT ********/
+    .wh_toge {
+        width: calc(100% + 270px);
+        margin-left: -130px;
+        margin-right: -130px;
+    }
+    .about_prf {
+        margin-top: 350px;
+    }
+    .about_text {
+        top: 60%;
+        left: 18%;
+    }
+    .name_en {
+        left: 18%;
+        top: 34.1%;
+    }
+    .name_ja {
+        top: 33.4%;
+        left: 41%;
+    }
+    .prf_contens {
+        padding: 11px 0 70px 0;
+    }
+    .prf_me {
+        font-size: 53px;
+    }
+    .works_detail_sub {
+        padding-left: 88px;
+    }
+    h3.works_contens_title {
+        padding: 5px 0 10px 88px;
+    }
+    .works_contens_thumbnail > img {
+    border-radius: 66px;
+    }
+
+.thanks_text {
+    font-size: 50px;
+}
+.circle {
+    width: 355px;
+}
+.kira_orn_solid_thx {
+    width: 60px;
+    left: 14px;
+}
+.kira_orn_thx {
+    width: 30px;
+    left: 55px;
+    top: 113px;
+}
+.kira_orn_thx_r {
+    width: 68px;
+    right: 34px;
+    top: 193px;
+}
+.kira_orn_solid_thx_r {
+    width: 30px;
+    right: 28px;
+    top: 240px;
+}
+.contact_text_completed {
+    font-size: 14px;
+    padding-top: 50px;
+}
+
+.footer_menu_3 {
+    height: 62px;
+    gap: 30px;
+    padding-left: 30px;
+}
+
 }
 
 @media screen and (max-width: 400px) {
@@ -3310,34 +3469,9 @@ form.c_form.confirm_form {
     .label_message  {
         font-size: 14px;
     }
-    .thanks_text {
-        font-size: 50px;
-    }
+
     .circle {
-        width: 355px;
-    }
-    .kira_orn_solid_thx {
-        width: 60px;
-        left: 14px;
-    }
-    .kira_orn_thx {
-        width: 30px;
-        left: 55px;
-        top: 113px;
-    }
-    .kira_orn_thx_r {
-        width: 68px;
-        right: 34px;
-        top: 193px;
-    }
-    .kira_orn_solid_thx_r {
-        width: 30px;
-        right: 28px;
-        top: 240px;
-    }
-    .contact_text_completed {
-        font-size: 14px;
-        padding-top: 50px;
+        width: 290px;
     }
 
     .footer_menu_3 {
@@ -3416,9 +3550,31 @@ form.c_form.confirm_form {
         padding: 0 50px 30px 0;
     }
     
+    .about_top_photo_sp {
+        width: 45%;
+        transform: translateX(62%);
+    }
+    .sub_about {
+        bottom: 114%;
+    }
+    .name {
+        top: 22%;
+    }
 
-    .circle {
-        width: 290px;
+    .naminami_sp {
+        width: 240px;
+    }
+    .desing {
+        width: 120px;
+    }
+    .coding {
+        width: 120px;
+    }
+    .movie {
+        width: 100px;
+    }
+    .skill_text {
+        font-size: 14px;
     }
 
     .works_box {

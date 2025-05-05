@@ -436,7 +436,7 @@
         // 文字のアニメーション
         //スクロールしたらクラス名を付与
         document.addEventListener("DOMContentLoaded", () => {
-            const objects = document.querySelectorAll('.sub_good_skill,.sub_skill');
+            const objects = document.querySelectorAll('.sub_good_skill,.sub_skill,.sub_good_sp,.sub_about');
 
             const cb = function (entries, observer) {
                 entries.forEach(entry => {
@@ -461,7 +461,7 @@
         });
 
         //一文字ずつspanで囲む
-        const animationTargetElements = document.querySelectorAll(".sub_good_skill,.sub_skill");
+        const animationTargetElements = document.querySelectorAll(".sub_good_skill,.sub_skill,.sub_good_sp,.sub_about");
         for (let i = 0; i < animationTargetElements.length; i++) {
             const targetElement = animationTargetElements[i]
             texts = targetElement.textContent;
