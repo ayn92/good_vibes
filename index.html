@@ -7,7 +7,7 @@
     <title>GOOD VIBES</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-    <link rel="icon" type="/image/favicon.icon" href="/image/favicon.ico">
+    <link rel="icon" type="/image/favicon.icon" href="./image/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -413,33 +413,6 @@
             });
         });
 
-
-        // // MVのアニメーション
-        // // 動きのきっかけの起点となるアニメーションの名前を定義
-        // function moveAnimation() {
-
-        //     //読み込まれたらすぐにランダムに出現	
-        //     var randomElm = $(".home");//親要素取得
-        //     var randomElmChild = $(randomElm).children();//親の子要素を取得
-        //     if (!$(randomElm).hasClass("play")) {	//親要素にクラス名playが付いてなければ処理をおこなう
-        //         randomAnime();
-        //     }
-
-        //     function randomAnime() {
-        //         $(randomElm).addClass("play");//親要素にplayクラスを付与
-        //         var rnd = Math.floor(Math.random() * randomElmChild.length); //配列数からランダム数値を取得
-        //         var moveData = "zoomInAnime";//アニメーション名＝CSSのクラス名を指定
-        //         $(randomElmChild[rnd]).addClass(moveData);//アニメーションのクラスを追加
-        //         randomElmChild.splice(rnd, 1);//アニメーション追加となった要素を配列から削除
-        //         if (randomElmChild.length == 0) {//配列の残りがあるか確認
-        //             $(randomElm).removeClass("play");//なくなった場合は親要素のplayクラスを削除
-        //         } else {
-        //             setTimeout(function () { randomAnime(); }, 500);	//0.5秒間隔でアニメーションをスタートさせる。※ランダムのスピード調整はこの数字を変更させる	
-        //         }
-
-        //     }
-        // }
-
         // ページトップボタン
         $(function () {
             var topBtn = $('.pagetop_btn');
@@ -486,6 +459,51 @@
         //         })
         //     })
         // })
+
+        // 文字のアニメーション
+        //スクロールしたらクラス名を付与
+        document.addEventListener("DOMContentLoaded", () => {
+            const objects = document.querySelectorAll('.sub_good_skill,.sub_skill');
+
+            const cb = function (entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('displayed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+
+            const options = {
+                root: null,
+                rootMargin: "0px",
+                threshold: 0
+            };
+
+            const io = new IntersectionObserver(cb, options);
+
+            objects.forEach(object => {
+                io.observe(object);
+            });
+        });
+
+        //一文字ずつspanで囲む
+        const animationTargetElements = document.querySelectorAll(".sub_good_skill,.sub_skill");
+        for (let i = 0; i < animationTargetElements.length; i++) {
+            const targetElement = animationTargetElements[i]
+            texts = targetElement.textContent;
+            textsArray = [];
+
+            targetElement.textContent = "";
+
+
+            for (let j = 0; j < texts.split("").length; j++) {
+                textsArray.push('<span><span style="animation-delay: ' + ((j + 12) * 0.05) + 's" >' + texts.split("")[j] + '<span></span>')
+            }
+            for (let k = 0; k < textsArray.length; k++) {
+                targetElement.innerHTML += textsArray[k];
+            }
+        }
 
 
 

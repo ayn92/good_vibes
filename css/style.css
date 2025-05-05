@@ -1,11 +1,4 @@
 @charset "utf-8";
-
-body {
-    background-color: #344699;
-    position: relative;
-    margin: 0 auto;
-    
-}
 body.loaded {
     overflow-y: hidden;
 }
@@ -192,6 +185,14 @@ body.appear #container{
 .loading text {
     fill: #ff7041;
   } 
+
+body {
+    background-color: #344699;
+    position: relative;
+    margin: 0 auto;
+    
+}
+
 
 
 /******** header ********/
@@ -648,17 +649,39 @@ h2 {
     color: #344699;
     -webkit-text-stroke: 1px #f4f2ef;
     text-shadow: 5px 5px 0 #f4f2ef;
-
 }
-
 .sub_skill {
     font-family: 'bovine-mvb', sans-serif;
     font-style: normal;
     font-weight: 400;
     color: #f4f2ef;
     font-size: 88px;
-    padding-bottom: 65px;
 }
+/*bound text animetions*/
+@keyframes showTextFromBottom{
+    0%{
+      transform: translateY( 100% );
+    }
+    50%{
+      transform: translateY( -20% );
+    }
+    100%{
+      transform: translateY( 0px );
+    }
+  }
+  .sub_good_skill.displayed span,
+  .sub_skill.displayed span{
+    animation: showText 1s backwards;
+    display: inline-block;
+  }
+  .sub_good_skill.displayed > span,
+  .sub_skill.displayed > span{
+    overflow: hidden;
+  }
+  .sub_good_skill.displayed > span > span,
+  .sub_skill.displayed > span > span{
+    animation: showTextFromBottom 0.5s backwards;
+  }
 
 .skill_img {
     position: relative;
@@ -1674,6 +1697,7 @@ p.detail_box_contens {
     align-items: center; /* 垂直中心 */
     justify-content: center; /* 水平中心 */
     margin: 50px 0 25px 0;
+    padding: 10px;
 }
 .point:before, .point:after {
     border-top: 1px solid;
@@ -2109,6 +2133,9 @@ form.c_form.confirm_form {
     transform: rotate(-45deg);
     right: 17px;
 }
+.sp_br_2 {
+    display: none;
+}
 
 
 /******** レスポンシブ ********/
@@ -2296,7 +2323,7 @@ form.c_form.confirm_form {
         margin-bottom: 30px;
     }
     .title_desing{
-        padding: 24px 160px 30px 0;
+        padding: 24px 260px 30px 0;
     }
     .title_feeling {
         padding: 0 0 30px 240px;
@@ -2309,31 +2336,31 @@ form.c_form.confirm_form {
         padding-left: 255px;
     }
     .kira_orn_solid {
-        top: 8.5%;
+        top: 1.5%;
         right: 8%;
     }
     .kira_wh {
-        top: 11.5%;
-        right: 28%;
+        top: 3%;
+        right: 19%;
     }
     .kira_orn {
-        top: 16%;
-        right: 21%;
+        top: 3.5%;
+        right: 7%;
     }
     .kira_wh_solid {
-        top: 25.5%;
+        top: 3.5%;
         left: 5%;
     }
     .kira_orn_2 {
-        top: 24%;
+        top: 5%;
         left: 19%;
     }
     .kira_wh_sp {
         display: block;
         width: 100px;
         position: absolute;
-        top: 69%;
-        left: 60%;
+        top: 11%;
+        left: 65%;
         animation: anime1 1s ease 0s infinite alternate;
         transform-origin:center;
       }
@@ -2350,8 +2377,8 @@ form.c_form.confirm_form {
         display: block;
         width: 50px;
         position: absolute;
-        top: 76%;
-        left: 70%;
+        top: 12%;
+        left: 76%;
         animation: anime2 0.8s ease 0s infinite alternate;
         transform-origin: center;
     }
@@ -2368,8 +2395,8 @@ form.c_form.confirm_form {
         display: block;
         width: 90px;
         position: absolute;
-        top: 84%;
-        left: 11%;
+        top: 14%;
+        left: 12%;
         animation: anime1 1.2s ease 0s infinite alternate;
         transform-origin:center;
       }
@@ -2385,7 +2412,7 @@ form.c_form.confirm_form {
         display: block;
         width: 45px;
         position: absolute;
-        top: 91%;
+        top: 13.6%;
         left: 21%;
         animation: anime2 0.6s ease 0s infinite alternate;
         transform-origin: center;
@@ -2461,7 +2488,7 @@ form.c_form.confirm_form {
     }
 
     .about_contents {
-        transform: translate(-50%, -50%)
+        top: 49%;
         } 
     .sub_good {
         display: none;
@@ -2476,7 +2503,7 @@ form.c_form.confirm_form {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        bottom: 143%;
+        bottom: 140%;
     }
     .sub_about {
         color: #ff7041;
@@ -2497,7 +2524,7 @@ form.c_form.confirm_form {
     }
     .name {
         position: absolute;
-        top: 45%;
+        top: 41%;
         left: 18%;
     }
     .about_top_text {
@@ -2577,7 +2604,7 @@ form.c_form.confirm_form {
     }
     .works_box {
         display: block;
-        width: 100%;
+        width: 90%;
         padding: 20px;
     }
     .works_detail {
@@ -2585,6 +2612,9 @@ form.c_form.confirm_form {
     padding-bottom: 70px;
     margin: 0 auto;
     } 
+    .sp_br_2 {
+        display: none;
+    }
 
 /******** CONTACT ********/
     .sub_good_con {
@@ -2661,6 +2691,7 @@ form.c_form.confirm_form {
     }
     .detail_works {
         border-bottom: solid 0.5px #344699;
+        margin: 10px;
     }
     .detail_box {
         width: 110px;
@@ -2853,16 +2884,19 @@ form.c_form.confirm_form {
     .concept {
         color: #334699;
         font-size: 70px;
-        top: 51%;
+        top: 49%;
     }
     .about_prf {
         display: block;
         margin-top: 300px;
     }
+    p.about_text_2, p.about_text_3 {
+        padding-top: 18px;
+    }
     .about_text {
         position: absolute;
-        top: 63%;
-        left: 22%;
+        top: 60%;
+        left: 27%;
         z-index: 2000;
     }
     .about_text p {
@@ -2885,7 +2919,7 @@ form.c_form.confirm_form {
         text-align: center;
         padding: 0;
         position: absolute;
-        top: 33.3%;
+        top: 28.7%;
         left: 44%;
     }
     .name_en {
@@ -2894,7 +2928,7 @@ form.c_form.confirm_form {
         padding: 0;
         position: absolute;
         left: 30%;
-        top: 34%;
+        top: 29.3%;
         z-index: 1000;
     }
 
@@ -3332,6 +3366,9 @@ form.c_form.confirm_form {
     }
     .caption_sp {
         font-size: 14px;
+    }
+    .sp_br_2 {
+        display: block;
     }
 }
 
