@@ -3379,16 +3379,21 @@ form.c_form.confirm_form {
     }
     /******** ローディング ********/
     .open_eye {
-        width: 150px;
+        width: 100px;
     }
     #eye2 {
-        width: 150px;
+        width: 100px;
     }
     .close_eye {
-        width: 150px;
+        width: 100px;
     }
     .loading {
-        width: 235px;
+        width: 200px;
+        margin: 265px auto;
+    }
+    .eye {
+        top: 27%;
+        left: 25%;
     }
 
     .circle {
