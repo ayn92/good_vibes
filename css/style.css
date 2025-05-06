@@ -682,8 +682,8 @@ h2 {
     animation: showText 1s backwards;
     display: inline-block;
   }
-  .sub_good_skill.displayed > span,
-  .sub_skill.displayed > span{
+  .sub_good_skill.displayed,
+  .sub_skill.displayed {
     overflow: hidden;
   }
   .sub_good_skill.displayed > span > span,
@@ -845,8 +845,8 @@ h2 {
     animation: showText 1s backwards;
     display: inline-block;
   }
-  .sub_good_works.displayed > span,
-  .sub_works.displayed > span{
+  .sub_good_works.displayed,
+  .sub_works.displayed {
     overflow: hidden;
   }
   .sub_good_works.displayed > span > span,
@@ -1256,8 +1256,8 @@ p.about_text_3 {
     animation: showText 1s backwards;
     display: inline-block;
   }
-  .name_en.displayed > span, 
-  .name_ja.displayed > span {
+  .name_en.displayed, 
+  .name_ja.displayed {
     overflow: hidden;
   }
   .name_en.displayed > span > span,
@@ -1657,7 +1657,7 @@ a {
 }
 
 .works_detail_text_box {
-    width: 50%;
+    width: 42%;
     margin: 0 auto;
     padding-bottom: 20px;
     box-sizing: border-box;
@@ -2439,7 +2439,7 @@ form.c_form.confirm_form {
         text-align: center;
     }
     .main_title {
-        width: 100%;
+        width: 80%;
         height: 300px;
         margin-bottom: 30px;
     }
@@ -2656,8 +2656,8 @@ form.c_form.confirm_form {
     animation: showText 1s backwards;
     display: inline-block;
   }
-  .sub_good_sp.displayed > span,
-  .sub_about.displayed > span{
+  .sub_good_sp.displayed,
+  .sub_about.displayed {
     overflow: hidden;
   }
   .sub_good_sp.displayed > span > span,
@@ -2796,7 +2796,7 @@ form.c_form.confirm_form {
         padding: 45px 0 0 0;
     }
     .works_detail_text_2 {
-        padding: 0 10px 50px 10px;
+        padding: 0 10px 0 10px;
     }
     .works_detail_text_3 {
         padding: 20px 0 50px 0;
@@ -3291,6 +3291,10 @@ form.c_form.confirm_form {
     max-width: 100%;
 }
 
+.works_detail_text_box {
+    width: 71%;
+}
+
 }
 
 @media screen and (max-width: 400px) {
@@ -3317,15 +3321,15 @@ form.c_form.confirm_form {
     }
 
     .title_desing {
-        font-size: 45px;
+        font-size: 35px;
         padding: 24px 155px 30px 15px;
     }
     .title_feeling {
-        font-size: 45px;
-        padding: 0 20px 30px 0;
+        font-size: 35px;
+        padding: 0 30px 30px 0;
     }
     .main_title {
-        width: 77%;
+        width: 80%;
         height: 200px;
         font-size: 80px;
     }
@@ -3697,7 +3701,7 @@ form.c_form.confirm_form {
         padding: 10px;
     }
     .works_detail_text_2 {
-        padding: 0 10px 50px 10px;
+        padding: 0 10px 0 10px;
     }
     .detail_works {
         gap: 35px;
@@ -3747,5 +3751,8 @@ form.c_form.confirm_form {
     }
     .contact_btn a {
         margin: 20px;
+    }
+    .works_detail_text_box {
+        width: 81%;
     }
 }

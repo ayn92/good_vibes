@@ -289,6 +289,15 @@
 
     <script>
         // ローディング
+        $(window).on("load", function () {
+            if ($("#loading").is(':visible')) {
+                $("body").addClass("remove-scrolling");
+                $("#loading").delay(4000).fadeOut("slow", function () {
+                    $("body").removeClass("remove-scrolling");
+                });
+            }
+        });
+
         $(window).on('load', function () {
             $("#splash-logo").delay(1200).fadeOut('slow');//ロゴを1.2秒でフェードアウトする記述
 
