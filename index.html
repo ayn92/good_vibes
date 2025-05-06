@@ -27,7 +27,7 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
-<body>
+<body class="top_page">
     <!-- ローディング画面 -->
     <div id="splash">
         <div id="splash-logo">
@@ -436,7 +436,7 @@
         // 文字のアニメーション
         //スクロールしたらクラス名を付与
         document.addEventListener("DOMContentLoaded", () => {
-            const objects = document.querySelectorAll('.sub_good_skill,.sub_skill,.sub_good_sp,.sub_about');
+            const objects = document.querySelectorAll('.sub_good_skill,.sub_skill,.sub_good_sp,.sub_about,.sub_good_works,.sub_works');
 
             const cb = function (entries, observer) {
                 entries.forEach(entry => {
@@ -461,7 +461,7 @@
         });
 
         //一文字ずつspanで囲む
-        const animationTargetElements = document.querySelectorAll(".sub_good_skill,.sub_skill,.sub_good_sp,.sub_about");
+        const animationTargetElements = document.querySelectorAll(".sub_good_skill,.sub_skill,.sub_good_sp,.sub_about,.sub_good_works,.sub_works");
         for (let i = 0; i < animationTargetElements.length; i++) {
             const targetElement = animationTargetElements[i]
             texts = targetElement.textContent;

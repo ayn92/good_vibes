@@ -10,6 +10,15 @@ body > #splash {
     left: 0;
     z-index: 10000;
     width: 100%;
+    height: 100vh;
+}
+div#splash-logo {
+    width: 100%;
+    height: 100%;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
 }
 
 body {
@@ -18,7 +27,7 @@ body {
 body.appear{
     background:#344699;/*画面を開いた後の背景色を指定*/
 }
-header, .home div:nth-of-type(2) {
+.top_page header, .home div:nth-of-type(2) {
     opacity: 0;
 }
 body.appear header, body.appear .home div:nth-of-type(2) {
@@ -169,7 +178,6 @@ body.appear #container{
     font-style: normal;
     font-weight: 700;
     width: 300px;
-    margin: 300px auto;
     font-size: 22px;
     line-height: 1.6;
     position: relative;
@@ -816,11 +824,35 @@ h2 {
     -webkit-text-stroke: 1px #344699;
     text-shadow: 5px 5px 0 #344699;
 }
-
 .sub_works {
     font-size: 88px;
     padding-bottom: 50px;
 }
+/*bound text animetions*/
+@keyframes showTextFromBottom{
+    0%{
+      transform: translateY( 100% );
+    }
+    50%{
+      transform: translateY( -20% );
+    }
+    100%{
+      transform: translateY( 0px );
+    }
+  }
+  .sub_good_works.displayed span,
+  .sub_works.displayed span{
+    animation: showText 1s backwards;
+    display: inline-block;
+  }
+  .sub_good_works.displayed > span,
+  .sub_works.displayed > span{
+    overflow: hidden;
+  }
+  .sub_good_works.displayed > span > span,
+  .sub_works.displayed > span > span{
+    animation: showTextFromBottom 0.5s backwards;
+  }
 
 .slick-list {
     width: 100%;
@@ -1143,31 +1175,6 @@ h2 {
     font-size: 88px;
     padding-bottom: 74px;
 }
-/*bound text animetions*/
-@keyframes showTextFromBottom{
-    0%{
-      transform: translateY( 100% );
-    }
-    50%{
-      transform: translateY( -20% );
-    }
-    100%{
-      transform: translateY( 0px );
-    }
-  }
-  .sub_good_2.displayed span,
-  .sub_about_2.displayed span{
-    animation: showText 1s backwards;
-    display: inline-block;
-  }
-  .sub_good_2.displayed > span,
-  .sub_about_2.displayed > span{
-    overflow: hidden;
-  }
-  .sub_good_2.displayed > span > span,
-  .sub_about_2.displayed > span > span{
-    animation: showTextFromBottom 0.5s backwards;
-  }
 
 .concept {
     font-family: 'bovine-mvb', sans-serif;
@@ -1185,18 +1192,8 @@ h2 {
 .about_box_title {
     position: relative;
     animation-name:zoomInAnime;
-	animation-duration:0.5s;
+	animation-duration: 1s;
 	animation-fill-mode:forwards;
-}
-
-@keyframes zoomInAnime{
-  from {
-	transform: scale(0.6);
-  }
-
-  to {
-      transform: scale(1);
-  }
 }
 
 .blue_toge {
@@ -2396,7 +2393,7 @@ form.c_form.confirm_form {
 
 /******** MV ********/
     .title {
-        display: inline-block;
+        display: block;
         text-align: center;
     }
     .main_title {
@@ -2548,8 +2545,12 @@ form.c_form.confirm_form {
       }
 
 /******** TOP-ABOUT ********/
+    .anime_wrap {
+        overflow: visible;
+    }
     .about {
         padding-top: 300px;
+        overflow: hidden;
     }
     .about_top {
         width: 100%;
@@ -2594,6 +2595,7 @@ form.c_form.confirm_form {
         left: 50%;
         bottom: 110%;
         transform: translateX(-50%);
+        width: 100%;
     }
     /*bound text animetions*/
 @keyframes showTextFromBottom{
@@ -2875,6 +2877,7 @@ form.c_form.confirm_form {
         align-items: center;
     }
     .modal_img {
+        max-width: 100%;
         width: 70%;
     }
     #modal,
@@ -3083,7 +3086,9 @@ form.c_form.confirm_form {
     }
     .title_feeling {
         font-size: 45px;
-        padding: 0 0 30px 0;
+        padding: 0 56px 30px 0;
+        display: flex;
+        justify-content: end;
     }
     .main_title {
         width: 57%;
@@ -3240,6 +3245,10 @@ form.c_form.confirm_form {
     padding-left: 30px;
 }
 
+#ModalSp > img {
+    max-width: 100%;
+}
+
 }
 
 @media screen and (max-width: 400px) {
@@ -3267,14 +3276,14 @@ form.c_form.confirm_form {
 
     .title_desing {
         font-size: 45px;
-        padding: 24px 300px 30px 15px;
+        padding: 24px 155px 30px 15px;
     }
     .title_feeling {
         font-size: 45px;
-        padding: 0 0 30px 0;
+        padding: 0 20px 30px 0;
     }
     .main_title {
-        width: 57%;
+        width: 77%;
         height: 200px;
         font-size: 80px;
     }
@@ -3284,7 +3293,7 @@ form.c_form.confirm_form {
     }
     .title_thinking {
         font-size: 45px;
-        padding-left: 40px;
+        padding-left: 100px;
     }
     img.kira_orn_solid {
         width: 70px;
@@ -3331,12 +3340,12 @@ form.c_form.confirm_form {
     }  
     .sub_good_sp {
         font-size: 48px;
-        bottom: 155%;
+        bottom: 149%;
         text-shadow: 3px 3px 0 #ff7041;
     }
     .sub_about {
         font-size: 55px;
-        bottom: 119%;
+        bottom: 112%;
     }
     .about_top_photo_sp {
         width: 55%;
@@ -3439,14 +3448,15 @@ form.c_form.confirm_form {
         height: 40px;
         gap: 30px;
         padding-left: 20px;
+        box-sizing: border-box;
     }
     .footer_item {
         font-size: 14px;
     }
 
     .pagetop_btn {
-        width: 70px;
-        height: 70px;
+        width: 17%;
+        height: 9%;
         right: 15px;
         bottom: 10px;
     }

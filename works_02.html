@@ -77,7 +77,7 @@
                 20〜50代の女性をターゲットにした<br class="sp_br">架空の美容室「LIFE hair design」のWebサイトを制作しました。<br>
                 コーポレートカラーであるピンクを基調に<br class="sp_br">シンプルで女性らしいデザインを意識しています。<br>
 
-                サイト全体は余白を多めに取り、やさしい印象を与える線画のイラストを使用することで、<br>ナチュラルかつ上品な雰囲気を表現しました。<br>
+                サイト全体は余白を多めに取り、<br class="sp_br">やさしい印象を与える線画のイラストを使用することで、<br>ナチュラルかつ上品な雰囲気を表現しました。<br>
 
             <p class="works_detail_text_3">
                 また、「お店の雰囲気や人が感じられるサイトに<br class="sp_br">したい」という要望を受け、<br>スタイル写真や店内の様子が伝わる<br
@@ -158,6 +158,26 @@
                 }
                 $('.sp_btn').toggleClass('open')
             })
+
+            // ナビゲーションボタン
+            $(function () {
+                // ハンバーガーメニューボタンがクリックされたときのイベントハンドラを設定
+                $(".sp_btn").click(function () {
+
+                    // 現在のbodyタグのoverflowスタイルを確認
+                    if ($("body").css("overflow") === "hidden") {
+
+                        // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+                        $("body").css({ height: "", overflow: "" });
+
+                    } else {
+
+                        // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
+                        $("body").css({ height: "100%", overflow: "hidden" });
+
+                    }
+                });
+            });
 
             document.getElementById("openModal").addEventListener("click", function () {
                 document.getElementById("modal").style.display = "block";

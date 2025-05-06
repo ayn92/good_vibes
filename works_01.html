@@ -82,7 +82,7 @@
                     mobile<span><span class="dli-plus_sp"></span></span></button>
                 <div id="modalSp" style="display: none;">
                     <button id="closeModalSp"><span class="close_batsu"></span>CLOSE</button>
-                    <img src="./image/png/portfolio_whole_sp.png" alt="ポートフォリオ_SP">
+                    <img class="modal_img" src="./image/png/portfolio_whole_sp.png" alt="ポートフォリオ_SP">
                 </div>
             </div>
 
@@ -174,6 +174,26 @@
                 }
                 $('.sp_btn').toggleClass('open')
             })
+
+            // ナビゲーションボタン
+            $(function () {
+                // ハンバーガーメニューボタンがクリックされたときのイベントハンドラを設定
+                $(".sp_btn").click(function () {
+
+                    // 現在のbodyタグのoverflowスタイルを確認
+                    if ($("body").css("overflow") === "hidden") {
+
+                        // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+                        $("body").css({ height: "", overflow: "" });
+
+                    } else {
+
+                        // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
+                        $("body").css({ height: "100%", overflow: "hidden" });
+
+                    }
+                });
+            });
 
 
             document.getElementById("openModal").addEventListener("click", function () {
