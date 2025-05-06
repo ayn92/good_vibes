@@ -1239,6 +1239,32 @@ p.about_text_3 {
     font-size: 60px;
     padding: 10px 0 38px 0;
 }
+/*bound text animetions*/
+@keyframes showTextFromBottom{
+    0%{
+      transform: translateY( 100% );
+    }
+    50%{
+      transform: translateY( -20% );
+    }
+    100%{
+      transform: translateY( 0px );
+    }
+  }
+  .name_en.displayed span, 
+  .name_ja.displayed span {
+    animation: showText 1s backwards;
+    display: inline-block;
+  }
+  .name_en.displayed > span, 
+  .name_ja.displayed > span {
+    overflow: hidden;
+  }
+  .name_en.displayed > span > span,
+  .name_ja.displayed > span > span {
+    animation: showTextFromBottom 0.5s backwards;
+  }
+
 .prf_contens {
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
     font-style: normal;
@@ -1625,17 +1651,31 @@ a {
     padding: 80px 0 30px 0;
     line-height: 1.65;
 }
+
+.works_detail {
+    width: 30%;
+}
+
+.works_detail_text_box {
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    counter-reset: item;
+}
 .works_detail_text_2 {
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
     font-style: normal;
     font-weight: 300;
     color: #344699;
     font-size: 18px;
-    padding-bottom: 80px;
     line-height: 1.65;
     display: flex;
     justify-content: center;
     text-align: left;
+    padding-left:1em;
+	text-indent:-1em;
+    margin-bottom: 20px;
 }
 .works_detail_text_3 {
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
@@ -1645,6 +1685,8 @@ a {
     font-size: 18px;
     padding-bottom: 50px;
     line-height: 1.65;
+    padding-left:1em;
+	text-indent:-1em;
 }
 .works_detail_sub {
     font-family: "hiragino-kaku-gothic-pron", sans-serif;
@@ -1732,7 +1774,7 @@ p.detail_box_contens {
     display: flex;
     align-items: center; /* 垂直中心 */
     justify-content: center; /* 水平中心 */
-    margin: 50px 0 25px 0;
+    margin: 25px 0 25px 0;
     padding: 10px;
 }
 .point:before, .point:after {
