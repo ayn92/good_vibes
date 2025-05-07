@@ -2261,9 +2261,7 @@ form.c_form.confirm_form {
 }
 
 @media screen and (max-width: 1085px) {
-    .prf_me {
 
-    }
 }
 
 @media screen and (max-width: 945px) {
@@ -2657,14 +2655,14 @@ form.c_form.confirm_form {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        bottom: 140%;
+        bottom: 148%;
     }
     .sub_about {
         color: #ff7041;
         padding-bottom: 115px;
         position: absolute;
         left: 50%;
-        bottom: 110%;
+        bottom: 117%;
         transform: translateX(-50%);
         width: 100%;
         font-size: 65px;
@@ -2701,12 +2699,12 @@ form.c_form.confirm_form {
     .about_top_photo_sp {
         display: block;
         width: 60%;
-        transform: translateX(15%);
-        margin-top: -176px;
+        transform: translateX(33%);
+        margin-top: -207px;
     }
     .name {
         position: absolute;
-        top: 41%;
+        top: 26%;
         left: 18%;
     }
     .about_top_text {
@@ -3059,8 +3057,8 @@ form.c_form.confirm_form {
     }
     .about_text {
         position: absolute;
-        top: 59%;
-        left: 28%;
+        top: 60%;
+        left: 30%;
         z-index: 2000;
     }
     .about_text p {
