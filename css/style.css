@@ -2622,7 +2622,6 @@ form.c_form.confirm_form {
     }
     .about {
         padding-top: 334px;
-        overflow: hidden;
     }
     .about_top {
         width: 100%;
@@ -3275,7 +3274,7 @@ form.c_form.confirm_form {
         bottom: 146%;
     }
     .sub_about {
-        bottom: 113%;
+        bottom: 115%;
     }
     .about_top_text p {
         font-size: 15px;
