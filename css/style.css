@@ -1285,14 +1285,12 @@ p.about_text_3 {
     text-align: center;
     display: flex;
     align-items: center;
-    gap: 50px;
+    justify-content: space-between;
 }
 .prf_me_title_box {
-    padding: 80px;
+    padding: 80px 20px;
 }
-.prf_title {
-    width: 380px;
-}
+
 /*bound text animetions*/
 @keyframes showTextFromBottom{
     0%{
@@ -2262,6 +2260,12 @@ form.c_form.confirm_form {
     }
 }
 
+@media screen and (max-width: 1085px) {
+    .prf_me {
+
+    }
+}
+
 @media screen and (max-width: 945px) {
     .title_desing,
     .title_feeling,
@@ -2686,6 +2690,7 @@ form.c_form.confirm_form {
   .sub_good_sp.displayed,
   .sub_about.displayed {
     overflow: hidden;
+    width: 100%;
   }
   .sub_good_sp.displayed > span > span,
   .sub_about.displayed > span > span{
@@ -3092,8 +3097,10 @@ form.c_form.confirm_form {
         z-index: 1000;
     }
     .prf_me_title_box {
-        padding: 60px;
         display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 60px 0;
     }
 
     .sp_about_myphoto {
@@ -3370,6 +3377,12 @@ form.c_form.confirm_form {
     width: 71%;
 }
 
+}
+
+@media screen and (max-width: 420px){
+    .prf_me_title_box {
+        font-size: 45px;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -3713,6 +3726,13 @@ form.c_form.confirm_form {
     }
     h3.works_contens_title {
         padding: 5px 0 10px 66px;
+    }
+}
+
+@media screen and (max-width: 365px){
+    .prf_me_title_box {
+        font-size: 35px;
+        gap: 17px;
     }
 }
 
