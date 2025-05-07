@@ -133,9 +133,9 @@
 
                 <div class="about_top_text">
                     <p>ものづくりを通じて、<br class="sp_br">ポジティブな感情を分かち合い、<br>
-                        お客様と共に価値あるものを創り上げていきたい。</p>
+                        お客様と共に価値あるものを<br class="sp_br">創り上げていきたい。</p>
                     <p>言葉では伝えきれない想いを、<br class="sp_br">心に響くかたちで表現し、<br>
-                        より良いものを、より良い形でお届けいたします。</p>
+                        より良いものを、より良い形で<br class="sp_br">お届けいたします。</p>
                     <p>お客様のお役に立てれば幸いです。</p>
                 </div>
 
@@ -289,15 +289,6 @@
 
     <script>
         // ローディング
-        $(window).on("load", function () {
-            if ($("#loading").is(':visible')) {
-                $("body").addClass("remove-scrolling");
-                $("#loading").delay(4000).fadeOut("slow", function () {
-                    $("body").removeClass("remove-scrolling");
-                });
-            }
-        });
-
         $(window).on('load', function () {
             $("#splash-logo").delay(1200).fadeOut('slow');//ロゴを1.2秒でフェードアウトする記述
 

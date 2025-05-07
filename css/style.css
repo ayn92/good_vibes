@@ -5,7 +5,7 @@ body.loaded {
 
 body > #splash { 
     background:#f4f2ef;/*遷移アニメーションと同じ色を指定*/
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 10000;
@@ -26,6 +26,7 @@ body {
 }
 body.appear{
     background:#344699;/*画面を開いた後の背景色を指定*/
+    overflow-x: hidden;
 }
 .top_page header, .home div:nth-of-type(2) {
     opacity: 0;
@@ -1115,6 +1116,7 @@ h2 {
     gap: 44px;
     align-items: center;
     padding-left: 50px;
+    box-sizing: border-box;
 }
 
 .footer_item {
@@ -1285,10 +1287,34 @@ p.about_text_3 {
     align-items: center;
     gap: 50px;
 }
-
-.prf_me > h2 {
-    padding: 100px;
+.prf_me_title_box {
+    padding: 80px;
 }
+.prf_title {
+    width: 380px;
+}
+/*bound text animetions*/
+@keyframes showTextFromBottom{
+    0%{
+      transform: translateY( 100% );
+    }
+    50%{
+      transform: translateY( -20% );
+    }
+    100%{
+      transform: translateY( 0px );
+    }
+  }
+  .prf_title.displayed span {
+    animation: showText 1s backwards;
+    display: inline-block;
+  }
+  .prf_title.displayed {
+    overflow: hidden;
+  }
+  .prf_title.displayed > span > span {
+    animation: showTextFromBottom 0.5s backwards;
+  }
 
 .me_dog,
 .dog_hover {
@@ -2591,7 +2617,7 @@ form.c_form.confirm_form {
         overflow: visible;
     }
     .about {
-        padding-top: 300px;
+        padding-top: 334px;
         overflow: hidden;
     }
     .about_top {
@@ -3013,30 +3039,13 @@ form.c_form.confirm_form {
     .concept {
         color: #334699;
         font-size: 70px;
-        top: 49%;
+        top: 40%;
+        left: 37%;
+        animation-name:zoomInAnime;
+	    animation-duration: 1s;
+	    animation-fill-mode:forwards;
     }
-    /*bound text animetions*/
-@keyframes showTextFromBottom{
-    0%{
-      transform: translateY( 100% );
-    }
-    50%{
-      transform: translateY( -20% );
-    }
-    100%{
-      transform: translateY( 0px );
-    }
-  }
-  .concept.displayed span {
-    animation: showText 1s backwards;
-    display: inline-block;
-  }
-  .concept.displayed {
-    overflow: hidden;
-  }
-  .concept.displayed > span > span {
-    animation: showTextFromBottom 0.5s backwards;
-  }
+
     .about_prf {
         display: block;
         margin-top: 300px;
@@ -3046,12 +3055,12 @@ form.c_form.confirm_form {
     }
     .about_text {
         position: absolute;
-        top: 60%;
-        left: 29%;
+        top: 59%;
+        left: 28%;
         z-index: 2000;
     }
     .about_text p {
-        font-size: 18px;
+        font-size: 17px;
         top: 25%;
         left: 16%;
         z-index: 3000;
@@ -3081,6 +3090,10 @@ form.c_form.confirm_form {
         left: 30%;
         top: 29.3%;
         z-index: 1000;
+    }
+    .prf_me_title_box {
+        padding: 60px;
+        display: flex;
     }
 
     .sp_about_myphoto {
@@ -3156,7 +3169,7 @@ form.c_form.confirm_form {
         justify-content: end;
     }
     .main_title {
-        width: 57%;
+        width: 63%;
         height: 200px;
         font-size: 80px;
     }
@@ -3204,6 +3217,18 @@ form.c_form.confirm_form {
     }
     .about_contents {
         top: 46%;
+    }
+    .naminami_sp {
+        width: 300px;
+    }
+    .desing {
+        width: 150px;
+    }
+    .coding {
+        width: 150px;
+    }
+    .movie {
+        width: 125px;
     }
     .sub_works {
         font-size: 77px;
@@ -3379,9 +3404,9 @@ form.c_form.confirm_form {
         padding: 0 30px 30px 0;
     }
     .main_title {
-        width: 80%;
-        height: 200px;
-        font-size: 80px;
+        width: 76%;
+        height: 172px;
+        font-size: 66px;
     }
     .title_idea {
         font-size: 35px;
@@ -3447,6 +3472,9 @@ form.c_form.confirm_form {
         width: 55%;
         transform: translateX(40%);
     }
+    .about_contents {
+        top: 40%;
+    }
     .name {
         font-size: 40px;
         top: 33%;
@@ -3454,9 +3482,6 @@ form.c_form.confirm_form {
     }
     .about_top_text {
         margin-bottom: 20px;
-    }
-    .about_top_text p {
-        font-size: 16px;
     }
     .about_btn {
         padding: 0;
@@ -3698,14 +3723,19 @@ form.c_form.confirm_form {
     }
     
     .about_top_photo_sp {
-        width: 45%;
-        transform: translateX(62%);
+        width: 50%;
+        transform: translateX(50%);
     }
     .sub_about {
-        bottom: 114%;
+        bottom: 113%;
+    }
+    .sub_good_sp {
+        bottom: 148%;
     }
     .name {
-        top: 22%;
+        font-size: 40px;
+        top: 25%;
+        left: 26%;
     }
 
     .naminami_sp {
@@ -3769,22 +3799,22 @@ form.c_form.confirm_form {
         left: 8%;
     }
     p.about_text_2, p.about_text_3 { 
-        padding: 0;
+        padding-top: 12px;
     }
     .about_prf {
         margin-top: 60px;
     }
     .name_ja {
-        top: 35%;
+        top: 36.1%;
         left: 38%;
     }
     .name_en {
-        left: 13%;
-        top: 35.8%;
+        left: 11%;
+        top: 37%;
     }
 
     .sub_works {
-        padding-bottom: 40px;
+        padding-bottom: 18px;
     }
     .slick-slide img {
         border-radius: 34px;
