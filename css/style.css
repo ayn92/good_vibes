@@ -2248,6 +2248,9 @@ form.c_form.confirm_form {
     .title_thinking {
         font-size: 70px;
     }
+    .sub_works {
+        padding-bottom: 30px;
+    }
 
 }
 
@@ -2261,6 +2264,9 @@ form.c_form.confirm_form {
 }
 
 @media screen and (max-width: 1085px) {
+    .prf_me {
+        font-size: 90px;
+    }
 
 }
 
@@ -2470,6 +2476,7 @@ form.c_form.confirm_form {
         width: 80%;
         height: 300px;
         margin-bottom: 30px;
+        font-size: 120px;
     }
     .title_desing{
         padding: 24px 260px 30px 0;
@@ -3269,10 +3276,10 @@ form.c_form.confirm_form {
     }
     .sub_good_sp {
         font-size: 55px;
-        bottom: 146%;
+        bottom: 150%;
     }
     .sub_about {
-        bottom: 115%;
+        bottom: 117%;
     }
     .about_top_text p {
         font-size: 15px;
@@ -3282,7 +3289,7 @@ form.c_form.confirm_form {
     }
     .name {
         font-size: 50px;
-        top: 33%;
+        top: 27%;
         left: 20%;
     }
     .sub_good_skill,
@@ -3319,6 +3326,9 @@ form.c_form.confirm_form {
     }
     .prf_me {
         font-size: 53px;
+    }
+    .concept {
+        left: 30%;
     }
     .works_detail_sub {
         padding-left: 88px;
@@ -3476,18 +3486,18 @@ form.c_form.confirm_form {
     }
     .sub_about {
         font-size: 55px;
-        bottom: 113%;
+        bottom: 115%;
     }
     .about_top_photo_sp {
         width: 55%;
         transform: translateX(40%);
     }
     .about_contents {
-        top: 40%;
+        top: 30%;
     }
     .name {
         font-size: 40px;
-        top: 33%;
+        top: 26%;
         left: 26%;
     }
     .about_top_text {
@@ -3667,7 +3677,8 @@ form.c_form.confirm_form {
         margin-right: -130px;
     }
     .concept {
-        top: 42%;
+        top: 35%;
+        left: 25%;
         font-size: 68px;
     }
 
@@ -3690,13 +3701,13 @@ form.c_form.confirm_form {
     }
     .name_ja {
         font-size: 18px;
-        top: 33.7%;
+        top: 34.7%;
         left: 41%;
     }
     .name_en {
         font-size: 35px;
         left: 20%;
-        top: 34.4%;
+        top: 35.4%;
     }
     .prf_contens {
         font-size: 14px;
@@ -3742,16 +3753,17 @@ form.c_form.confirm_form {
     .about_top_photo_sp {
         width: 50%;
         transform: translateX(50%);
+        margin-top: -48px;
     }
     .sub_about {
-        bottom: 113%;
+        bottom: 89%;
     }
     .sub_good_sp {
-        bottom: 148%;
+        bottom: 116%;
     }
     .name {
         font-size: 40px;
-        top: 25%;
+        top: 41%;
         left: 26%;
     }
 
@@ -3808,7 +3820,8 @@ form.c_form.confirm_form {
         margin: 10px;
     }
     .concept {
-        top: 39%;
+        top: 32%;
+        left: 22%;
         font-size: 63px;
     }
     .about_text {
@@ -3822,12 +3835,12 @@ form.c_form.confirm_form {
         margin-top: 60px;
     }
     .name_ja {
-        top: 36.1%;
+        top: 35.4%;
         left: 38%;
     }
     .name_en {
         left: 11%;
-        top: 37%;
+        top: 36.2%;
     }
 
     .sub_works {
